@@ -11,6 +11,7 @@ Browse the reference at [Rowseta Data Sets](https://rowseta.com/guides/data-sets
 | `schema-source/` | Pinned JSON snapshot, source article links, provenance and checksum |
 | `csv/datasets/` | One column reference CSV per dataset |
 | `csv/` | Combined columns, dataset index, joins and unresolved foreign keys |
+| `sql/sqlserver/` | One SQL Server `CREATE TABLE` script per dataset, plus `all-tables.sql` |
 | `diagrams/` | [Index of 41 area diagrams](diagrams/README.md), with external table stubs |
 | `scripts/` | Offline generator and validation scripts |
 
@@ -24,7 +25,21 @@ The dataset index uses the first source article as its area and source link. Com
 
 ## Keys and joins
 
-Source types and sizes are kept exactly as published, so you can map them to any database. Primary keys and joins are informational. BDS keys can repeat across differential files, so build a current, deduplicated view of your exports before relying on a key. A join expresses a known reference, not a guarantee of complete matching rows.
+Source types and sizes are kept exactly as published in the CSVs, so you can map them to any database. Primary keys and joins are informational. BDS keys can repeat across differential files, so build a current, deduplicated view of your exports before relying on a key. A join expresses a known reference, not a guarantee of complete matching rows.
+
+## Load tables into SQL Server
+
+`sql/sqlserver/` has one script per dataset (for example [users.sql](sql/sqlserver/users.sql)) and [all-tables.sql](sql/sqlserver/all-tables.sql), which creates all 144 tables. They target SQL Server 2016 or later and create tables in the `dbo` schema. Table names follow the BDS extract naming, such as `[dbo].[ContentUserProgress]`. Columns keep the source order and the Brightspace types, and every column allows NULL. Text longer than 4,000 characters becomes `nvarchar(max)`.
+
+Create or choose an empty database, then run the script with sqlcmd or open it in SSMS and execute it:
+
+```sh
+sqlcmd -S localhost -d YourDatabase -E -b -i sql/sqlserver/all-tables.sql
+```
+
+Each script drops its table if it exists before creating it, so running it again resets the table and deletes any rows in it.
+
+Primary keys and joins appear as comments only. No key or foreign key constraints are created, because BDS keys can repeat across differential files. The scripts create empty tables. Load the rows from your own BDS CSV extracts, then build a current, deduplicated view.
 
 ## Rebuild and verify
 
@@ -36,11 +51,13 @@ npm run check
 npm test
 ```
 
-The generator verifies the [recorded SHA-256](schema-source/SOURCE.md) against the bytes on disk and writes only generated CSVs and diagrams. The snapshot is stored with LF line endings; a CRLF copy fails validation. It uses a fixed random seed and sorts files and relationships by slug. It never refreshes the snapshot. Repeated builds produce the same bytes and LF line endings.
+The generator verifies the [recorded SHA-256](schema-source/SOURCE.md) against the bytes on disk and writes only generated CSVs, SQL Server scripts and diagrams. The snapshot is stored with LF line endings; a CRLF copy fails validation. It uses a fixed random seed and sorts files and relationships by slug. It never refreshes the snapshot. Repeated builds produce the same bytes and LF line endings.
 
-`npm run check` rebuilds in memory to find missing, changed or extra generated files, checks every CSV against the source, validates SVG XML, boxes and exact join edges, and scans files for private details. It also tests the validators with deliberately invalid inputs. `npm test` runs the same checks.
+`npm run check` rebuilds in memory to find missing, changed or extra generated files, checks every CSV and SQL Server script against the source, validates SVG XML, boxes and exact join edges, and scans files for private details. It also tests the validators with deliberately invalid inputs. `npm test` runs the same checks.
 
 Optionally add `.leak-patterns.local` at the repository root to scan for extra private terms. Use one case-insensitive literal term per line; blank lines and lines starting with `#` are ignored. This file is gitignored, excluded from the scan itself, and never required.
+
+To prove the SQL Server scripts really load, run `npm run check:sqlserver` on Windows with sqlcmd and SQL Server LocalDB installed. It creates a throwaway LocalDB database, runs every script and `all-tables.sql` twice, compares every column with `INFORMATION_SCHEMA.COLUMNS`, and drops the database. It is not part of `npm run check` and skips with a message when sqlcmd or LocalDB is missing.
 
 ## About and licences
 
@@ -48,4 +65,4 @@ Maintained by BentoBits Inc., the makers of Rowseta. Rowseta provides a browsabl
 
 This project is not affiliated with or endorsed by D2L. Brightspace is a trademark of D2L Corporation. The schema facts are compiled from [D2L's public Brightspace Data Sets documentation](https://community.d2l.com/brightspace/kb/categories/1229-brightspace-data-sets). The underlying documentation remains D2L's and is linked, not copied.
 
-The [MIT licence](LICENSE) covers `scripts/` and `package.json`. [CC BY 4.0](LICENSE-SCHEMA.md) covers `schema-source/` (the BentoBits compilation of facts from D2L's public documentation), `csv/` and `diagrams/`. Please retain the attribution when sharing the schema compilation.
+The [MIT licence](LICENSE) covers `scripts/` and `package.json`. [CC BY 4.0](LICENSE-SCHEMA.md) covers `schema-source/` (the BentoBits compilation of facts from D2L's public documentation), `csv/`, `sql/` and `diagrams/`. Please retain the attribution when sharing the schema compilation.

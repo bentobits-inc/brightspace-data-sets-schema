@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { read, snapshot, files } from './lib/common.mjs';
 import { parseCsv } from './lib/parse-csv.mjs';
+import { mapType, tableName } from './lib/sqlserver.mjs';
 
 // CSV expectations are independent of the generator implementation.
 const header = ['dataset', 'column', 'position', 'type', 'size', 'primary_key',
@@ -48,10 +49,35 @@ async function checkUnresolved() {
   assert.equal(unresolved.length, 102);
 }
 
+async function checkSqlServer() {
+  const dir = 'sql/sqlserver';
+  assert.deepEqual((await files(dir)).sort(), [...datasets.map((d) => `${dir}/${d.slug}.sql`), `${dir}/all-tables.sql`].sort());
+  const tables = new Set();
+  const all = await read(`${dir}/all-tables.sql`);
+  for (const d of datasets) {
+    const rows = parseCsv(await read(`csv/datasets/${d.slug}.csv`)).slice(1);
+    const table = tableName(d.name);
+    assert(!tables.has(table.toLowerCase()), `Duplicate table name ${table}`);
+    tables.add(table.toLowerCase());
+    const sql = await read(`${dir}/${d.slug}.sql`);
+    const m = /^DROP TABLE IF EXISTS \[dbo\]\.\[(\w+)\];\nCREATE TABLE \[dbo\]\.\[\1\] \(\n([\s\S]*?)\n\);$/m.exec(sql);
+    assert(m && m[1] === table, `${d.slug}: table statement`);
+    const expected = rows.map((r) => `    [${r[1]}] ${mapType(r[3], r[4]).sql} NULL`);
+    assert.deepEqual(m[2].split('\n').map((l) => l.replace(/,$/, '')), expected, `${d.slug}: columns`);
+    assert(!/\b(PRIMARY|FOREIGN|REFERENCES|CONSTRAINT|NOT NULL)\b/i.test(sql.replace(/^--.*$/gm, '')), `${d.slug}: no constraints`);
+    assert(all.includes(m[0]), `${d.slug}: missing from all-tables.sql`);
+  }
+  assert.equal(tables.size, 144);
+  assert.equal((all.match(/^CREATE TABLE /gm) || []).length, 144);
+  assert.throws(() => mapType('geography', '8'), /Unknown type/);
+  assert.throws(() => mapType('bigint', '4'), /Unknown size/);
+}
+
 assert.equal(datasets.length, 144);
 assert.deepEqual((await files('csv/datasets')).sort(), datasets.map((d) => `csv/datasets/${d.slug}.csv`).sort());
 assert.deepEqual(parseCsv('a,b\n"a,b","a""b"\n'), [['a', 'b'], ['a,b', 'a"b']]);
 assert.throws(() => parseCsv('a\n"unfinished'));
 await checkCsv();
 await checkUnresolved();
-console.log('Schema fidelity verified: 144 dataset CSVs, 1601 columns, 258 joins, 102 unresolved foreign keys.');
+await checkSqlServer();
+console.log('Schema fidelity verified: 144 dataset CSVs, 1601 columns, 258 joins, 102 unresolved foreign keys, 144 SQL Server table scripts.');

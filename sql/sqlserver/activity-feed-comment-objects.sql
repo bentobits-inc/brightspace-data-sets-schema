@@ -1,0 +1,21 @@
+-- Activity Feed Comment Objects
+-- Brightspace Data Sets schema compilation, Copyright (c) 2026 BentoBits Inc.,
+-- compiled from D2L's public Brightspace Data Sets documentation (snapshot checked on 2026-10-31),
+-- licensed under CC BY 4.0. Brightspace is a trademark of D2L Corporation; not affiliated with or endorsed by D2L.
+
+-- Primary key (informational, not enforced): CommentId
+-- BDS keys can repeat across differential files, so no constraints are created.
+-- Join (informational): LastModifiedBy -> Users.UserId
+-- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
+-- Join (informational): PostId -> ActivityFeedPostObjects.PostId
+DROP TABLE IF EXISTS [dbo].[ActivityFeedCommentObjects];
+CREATE TABLE [dbo].[ActivityFeedCommentObjects] (
+    [OrgUnitId] int NULL,
+    [CommentId] uniqueidentifier NULL,
+    [LastModifiedBy] int NULL,
+    [LastModified] datetime2 NULL,
+    [Content] nvarchar(3072) NULL,
+    [IsDeleted] bit NULL,
+    [PostId] uniqueidentifier NULL,
+    [Version] bigint NULL
+);

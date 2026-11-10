@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { root, read, snapshot, sorted, joinKey, csv, files } from './lib/common.mjs';
 import { diagramFiles } from './lib/diagrams.mjs';
+import { sqlServerOutputs } from './lib/sqlserver.mjs';
 
 async function verifySource() {
   const recorded = (await read('schema-source/SOURCE.md')).match(/SHA-256:\s*`([a-f0-9]{64})`/);
@@ -40,13 +41,13 @@ function outputs(schema) {
     ...joins.map((j) => [j.from, j.column, j.to, j.toColumn, j.kind])]));
   result.set('csv/unresolved-foreign-keys.csv', csv([['dataset', 'column'],
     ...sorted(schema.unresolvedFks, (u) => `${u.dataset}|${u.column}`).map((u) => [u.dataset, u.column])]));
-  return new Map([...result, ...diagramFiles(schema)]);
+  return new Map([...result, ...diagramFiles(schema), ...sqlServerOutputs(schema).files]);
 }
 
 async function build(check) {
   await verifySource();
   const generated = outputs(await snapshot());
-  const existing = (await Promise.all(['csv', 'diagrams'].map(files))).flat();
+  const existing = (await Promise.all(['csv', 'diagrams', 'sql'].map(files))).flat();
   const extra = existing.filter((path) => !generated.has(path));
   if (extra.length) throw new Error(`Extra generated files: ${extra.join(', ')}`);
   const mismatches = [];
