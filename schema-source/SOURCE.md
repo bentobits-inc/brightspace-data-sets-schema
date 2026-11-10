@@ -8,4 +8,4 @@ SHA-256: `b9218bf10d303b9d48f887ad59b42d265e30f19685b3238ae8749068383cdf33`
 
 The generator verifies this SHA-256 before generating or checking outputs. The snapshot is pinned; rebuilding does not fetch new documentation. Article URLs, revision numbers and update dates are recorded in the snapshot. The first article ID assigns a dataset to its diagram area.
 
-The [D2L Brightspace Data Sets knowledge base](https://community.d2l.com/brightspace/kb/categories/1229-brightspace-data-sets) is the underlying documentation. The documentation remains D2L's and is linked, not copied. This repository publishes the BentoBits compilation of schema facts under CC BY 4.0; see [LICENSE-SCHEMA.md](../LICENSE-SCHEMA.md).
+The [D2L Brightspace Data Sets knowledge base](https://community.d2l.com/brightspace/kb/categories/1229-brightspace-data-sets) is the underlying documentation. Schema metadata was transcribed from the linked D2L documentation. D2L's explanatory text, screenshots and original diagrams are not reproduced. The licence for the BentoBits compilation is in [LICENSE-SCHEMA.md](../LICENSE-SCHEMA.md).

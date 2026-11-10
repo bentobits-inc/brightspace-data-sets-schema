@@ -77,8 +77,11 @@ try {
   for (const path of [...files.keys()].filter((p) => !p.endsWith('all-tables.sql'))) inDb(['-i', join(root, path)]);
   console.log(`Ran ${tables.length} individual scripts.`);
   inDb(['-i', join(root, 'sql/sqlserver/all-tables.sql')]);
+  inDb(['-Q', 'INSERT INTO [dbo].[Users] ([UserId]) VALUES (42)']);
   inDb(['-i', join(root, 'sql/sqlserver/all-tables.sql')]);
-  console.log('Ran all-tables.sql twice (rerunnable).');
+  const kept = inDb(['-h', '-1', '-W', '-Q', 'SET NOCOUNT ON; SELECT COUNT(*) FROM [dbo].[Users] WHERE [UserId] = 42']).trim();
+  assert.equal(kept, '1', 'Rerunning a script must not delete rows');
+  console.log('Ran all-tables.sql twice (rerunnable, rows kept).');
   const columns = await verify(tables);
   console.log(`Verified ${tables.length} tables and ${columns} columns against INFORMATION_SCHEMA.COLUMNS (type, length, precision, scale, nullability); no constraints.`);
 } catch (error) {

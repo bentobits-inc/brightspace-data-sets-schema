@@ -1,14 +1,14 @@
--- All 144 Brightspace Data Sets tables for SQL Server 2016 or later. Safe to run again.
--- Brightspace Data Sets schema compilation, Copyright (c) 2026 BentoBits Inc.,
--- compiled from D2L's public Brightspace Data Sets documentation (snapshot checked on 2026-10-31),
--- licensed under CC BY 4.0. Brightspace is a trademark of D2L Corporation; not affiliated with or endorsed by D2L.
+-- All 144 Brightspace Data Sets tables for SQL Server 2016 or later. Safe to run again: existing tables and rows are never dropped or changed.
+-- Brightspace Data Sets table script, Copyright (c) 2026 BentoBits Inc., licensed under the MIT licence.
+-- Schema metadata was transcribed from D2L's public Brightspace Data Sets documentation (snapshot checked on 2026-10-31).
+-- Brightspace is a trademark of D2L Corporation; not affiliated with or endorsed by D2L.
 
 -- Accommodations Profile Log
 -- Primary key (informational, not enforced): AccommodatedUserId, OrgUnitId, LastModified
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[AccommodationsProfileLog];
+IF OBJECT_ID(N'[dbo].[AccommodationsProfileLog]', N'U') IS NULL
 CREATE TABLE [dbo].[AccommodationsProfileLog] (
     [AccommodatedUserId] bigint NULL,
     [OrgUnitId] bigint NULL,
@@ -26,7 +26,7 @@ CREATE TABLE [dbo].[AccommodationsProfileLog] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): ToolId -> Tools.ToolId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ActivityExemptionsLog];
+IF OBJECT_ID(N'[dbo].[ActivityExemptionsLog]', N'U') IS NULL
 CREATE TABLE [dbo].[ActivityExemptionsLog] (
     [OrgUnitId] int NULL,
     [UserId] int NULL,
@@ -45,7 +45,7 @@ CREATE TABLE [dbo].[ActivityExemptionsLog] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): PostId -> ActivityFeedPostObjects.PostId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ActivityFeedCommentLog];
+IF OBJECT_ID(N'[dbo].[ActivityFeedCommentLog]', N'U') IS NULL
 CREATE TABLE [dbo].[ActivityFeedCommentLog] (
     [LogId] uniqueidentifier NULL,
     [UserId] int NULL,
@@ -63,7 +63,7 @@ CREATE TABLE [dbo].[ActivityFeedCommentLog] (
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): PostId -> ActivityFeedPostObjects.PostId
-DROP TABLE IF EXISTS [dbo].[ActivityFeedCommentObjects];
+IF OBJECT_ID(N'[dbo].[ActivityFeedCommentObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[ActivityFeedCommentObjects] (
     [OrgUnitId] int NULL,
     [CommentId] uniqueidentifier NULL,
@@ -81,7 +81,7 @@ CREATE TABLE [dbo].[ActivityFeedCommentObjects] (
 -- Join (informational): DropboxId -> AssignmentSummary.DropboxId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ActivityFeedPostLog];
+IF OBJECT_ID(N'[dbo].[ActivityFeedPostLog]', N'U') IS NULL
 CREATE TABLE [dbo].[ActivityFeedPostLog] (
     [LogId] uniqueidentifier NULL,
     [UserId] int NULL,
@@ -102,7 +102,7 @@ CREATE TABLE [dbo].[ActivityFeedPostLog] (
 -- Join (informational): DropboxId -> AssignmentSummary.DropboxId
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[ActivityFeedPostObjects];
+IF OBJECT_ID(N'[dbo].[ActivityFeedPostObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[ActivityFeedPostObjects] (
     [OrgUnitId] int NULL,
     [PostId] uniqueidentifier NULL,
@@ -122,7 +122,7 @@ CREATE TABLE [dbo].[ActivityFeedPostObjects] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[AIConsumption];
+IF OBJECT_ID(N'[dbo].[AIConsumption]', N'U') IS NULL
 CREATE TABLE [dbo].[AIConsumption] (
     [ConsumptionId] nvarchar(255) NULL,
     [UserId] int NULL,
@@ -137,7 +137,7 @@ CREATE TABLE [dbo].[AIConsumption] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DeletedByUserId -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[Announcements];
+IF OBJECT_ID(N'[dbo].[Announcements]', N'U') IS NULL
 CREATE TABLE [dbo].[Announcements] (
     [AnnouncementId] bigint NULL,
     [OrgUnitId] bigint NULL,
@@ -163,7 +163,7 @@ CREATE TABLE [dbo].[Announcements] (
 -- Join (informational): DropboxId -> AssignmentSummary.DropboxId
 -- Join (informational): ModifiedBy -> Users.UserId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[AssignmentSpecialAccess];
+IF OBJECT_ID(N'[dbo].[AssignmentSpecialAccess]', N'U') IS NULL
 CREATE TABLE [dbo].[AssignmentSpecialAccess] (
     [DropboxId] bigint NULL,
     [UserId] int NULL,
@@ -182,7 +182,7 @@ CREATE TABLE [dbo].[AssignmentSpecialAccess] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DropboxId -> AssignmentSummary.DropboxId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[AssignmentSubmissionDetails];
+IF OBJECT_ID(N'[dbo].[AssignmentSubmissionDetails]', N'U') IS NULL
 CREATE TABLE [dbo].[AssignmentSubmissionDetails] (
     [SubmissionId] bigint NULL,
     [DropboxId] bigint NULL,
@@ -204,7 +204,7 @@ CREATE TABLE [dbo].[AssignmentSubmissionDetails] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DropboxId -> AssignmentSummary.DropboxId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[AssignmentSubmissions];
+IF OBJECT_ID(N'[dbo].[AssignmentSubmissions]', N'U') IS NULL
 CREATE TABLE [dbo].[AssignmentSubmissions] (
     [DropboxId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -229,7 +229,7 @@ CREATE TABLE [dbo].[AssignmentSubmissions] (
 -- Primary key (informational, not enforced): DropboxId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[AssignmentSummary];
+IF OBJECT_ID(N'[dbo].[AssignmentSummary]', N'U') IS NULL
 CREATE TABLE [dbo].[AssignmentSummary] (
     [DropboxId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -261,7 +261,7 @@ CREATE TABLE [dbo].[AssignmentSummary] (
 -- Primary key (informational, not enforced): AttendanceRegisterId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[AttendanceRegisters];
+IF OBJECT_ID(N'[dbo].[AttendanceRegisters]', N'U') IS NULL
 CREATE TABLE [dbo].[AttendanceRegisters] (
     [AttendanceRegisterId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -280,7 +280,7 @@ CREATE TABLE [dbo].[AttendanceRegisters] (
 -- Primary key (informational, not enforced): SchemeId, SchemeSymbolId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[AttendanceSchemes];
+IF OBJECT_ID(N'[dbo].[AttendanceSchemes]', N'U') IS NULL
 CREATE TABLE [dbo].[AttendanceSchemes] (
     [SchemeId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -298,7 +298,7 @@ CREATE TABLE [dbo].[AttendanceSchemes] (
 -- Primary key (informational, not enforced): AttendanceSessionId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): AttendanceRegisterId -> AttendanceRegisters.AttendanceRegisterId
-DROP TABLE IF EXISTS [dbo].[AttendanceSessions];
+IF OBJECT_ID(N'[dbo].[AttendanceSessions]', N'U') IS NULL
 CREATE TABLE [dbo].[AttendanceSessions] (
     [AttendanceSessionId] bigint NULL,
     [AttendanceRegisterId] bigint NULL,
@@ -314,7 +314,7 @@ CREATE TABLE [dbo].[AttendanceSessions] (
 -- Primary key (informational, not enforced): UserId, AttendanceSessionId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): AttendanceSessionId -> AttendanceSessions.AttendanceSessionId
-DROP TABLE IF EXISTS [dbo].[AttendanceUserSessions];
+IF OBJECT_ID(N'[dbo].[AttendanceUserSessions]', N'U') IS NULL
 CREATE TABLE [dbo].[AttendanceUserSessions] (
     [UserId] int NULL,
     [AttendanceSessionId] bigint NULL,
@@ -329,7 +329,7 @@ CREATE TABLE [dbo].[AttendanceUserSessions] (
 -- Primary key (informational, not enforced): ContentId, RevisionId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ContentId -> MediaObjects.ContentId
-DROP TABLE IF EXISTS [dbo].[AudioVideoProcessed];
+IF OBJECT_ID(N'[dbo].[AudioVideoProcessed]', N'U') IS NULL
 CREATE TABLE [dbo].[AudioVideoProcessed] (
     [ContentId] uniqueidentifier NULL,
     [RevisionId] uniqueidentifier NULL,
@@ -348,7 +348,7 @@ CREATE TABLE [dbo].[AudioVideoProcessed] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[AuditorRelationshipsLog];
+IF OBJECT_ID(N'[dbo].[AuditorRelationshipsLog]', N'U') IS NULL
 CREATE TABLE [dbo].[AuditorRelationshipsLog] (
     [AuditorId] int NULL,
     [UserToAuditId] int NULL,
@@ -361,7 +361,7 @@ CREATE TABLE [dbo].[AuditorRelationshipsLog] (
 -- Award Objects
 -- Primary key (informational, not enforced): AwardId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[AwardObjects];
+IF OBJECT_ID(N'[dbo].[AwardObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[AwardObjects] (
     [AwardId] bigint NULL,
     [Name] nvarchar(256) NULL,
@@ -387,7 +387,7 @@ CREATE TABLE [dbo].[AwardObjects] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): RevokedBy -> Users.UserId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[AwardsIssued];
+IF OBJECT_ID(N'[dbo].[AwardsIssued]', N'U') IS NULL
 CREATE TABLE [dbo].[AwardsIssued] (
     [AwardId] bigint NULL,
     [OrgUnitId] bigint NULL,
@@ -410,7 +410,7 @@ CREATE TABLE [dbo].[AwardsIssued] (
 -- Brightspace Email Log
 -- Primary key (informational, not enforced): MailId, RecipientAddress, RecipientType
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[BrightspaceEmailLog];
+IF OBJECT_ID(N'[dbo].[BrightspaceEmailLog]', N'U') IS NULL
 CREATE TABLE [dbo].[BrightspaceEmailLog] (
     [MailId] int NULL,
     [SenderUserId] int NULL,
@@ -427,7 +427,7 @@ CREATE TABLE [dbo].[BrightspaceEmailLog] (
 -- Join (informational): CreatedByUserId -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CalendarEvents];
+IF OBJECT_ID(N'[dbo].[CalendarEvents]', N'U') IS NULL
 CREATE TABLE [dbo].[CalendarEvents] (
     [ScheduleId] bigint NULL,
     [OrgUnitId] bigint NULL,
@@ -451,7 +451,7 @@ CREATE TABLE [dbo].[CalendarEvents] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ChecklistId -> ChecklistObjects.ChecklistId
 -- Join (informational): DeletedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ChecklistCategoryDetails];
+IF OBJECT_ID(N'[dbo].[ChecklistCategoryDetails]', N'U') IS NULL
 CREATE TABLE [dbo].[ChecklistCategoryDetails] (
     [CategoryId] bigint NULL,
     [ChecklistId] bigint NULL,
@@ -471,7 +471,7 @@ CREATE TABLE [dbo].[ChecklistCategoryDetails] (
 -- Join (informational): DeletedBy -> Users.UserId
 -- Join (informational): ItemId -> ChecklistItemDetails.ItemId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ChecklistCompletions];
+IF OBJECT_ID(N'[dbo].[ChecklistCompletions]', N'U') IS NULL
 CREATE TABLE [dbo].[ChecklistCompletions] (
     [UserId] int NULL,
     [DateCompleted] datetime2 NULL,
@@ -488,7 +488,7 @@ CREATE TABLE [dbo].[ChecklistCompletions] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CategoryId -> ChecklistCategoryDetails.CategoryId
 -- Join (informational): DeletedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ChecklistItemDetails];
+IF OBJECT_ID(N'[dbo].[ChecklistItemDetails]', N'U') IS NULL
 CREATE TABLE [dbo].[ChecklistItemDetails] (
     [ItemId] bigint NULL,
     [CategoryId] bigint NULL,
@@ -510,7 +510,7 @@ CREATE TABLE [dbo].[ChecklistItemDetails] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DeletedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[ChecklistObjects];
+IF OBJECT_ID(N'[dbo].[ChecklistObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[ChecklistObjects] (
     [ChecklistId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -531,7 +531,7 @@ CREATE TABLE [dbo].[ChecklistObjects] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ObjectId -> CompetencyObjects.ObjectId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[CompetencyActivities];
+IF OBJECT_ID(N'[dbo].[CompetencyActivities]', N'U') IS NULL
 CREATE TABLE [dbo].[CompetencyActivities] (
     [ActivityId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -556,7 +556,7 @@ CREATE TABLE [dbo].[CompetencyActivities] (
 -- Primary key (informational, not enforced): ActivityId, ActivityLogId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CompetencyActivityLog];
+IF OBJECT_ID(N'[dbo].[CompetencyActivityLog]', N'U') IS NULL
 CREATE TABLE [dbo].[CompetencyActivityLog] (
     [ActivityId] bigint NULL,
     [ActivityLogId] bigint NULL,
@@ -572,7 +572,7 @@ CREATE TABLE [dbo].[CompetencyActivityLog] (
 -- Join (informational): ActivityId -> CompetencyActivities.ActivityId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CompetencyActivityResults];
+IF OBJECT_ID(N'[dbo].[CompetencyActivityResults]', N'U') IS NULL
 CREATE TABLE [dbo].[CompetencyActivityResults] (
     [ActivityId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -593,7 +593,7 @@ CREATE TABLE [dbo].[CompetencyActivityResults] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ModifiedBy -> Users.UserId
 -- Join (informational): ObjectId -> CompetencyObjects.ObjectId
-DROP TABLE IF EXISTS [dbo].[CompetencyLog];
+IF OBJECT_ID(N'[dbo].[CompetencyLog]', N'U') IS NULL
 CREATE TABLE [dbo].[CompetencyLog] (
     [CompetencyLogId] bigint NULL,
     [LogTypeId] int NULL,
@@ -614,7 +614,7 @@ CREATE TABLE [dbo].[CompetencyLog] (
 -- Primary key (informational, not enforced): ObjectId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[CompetencyObjects];
+IF OBJECT_ID(N'[dbo].[CompetencyObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[CompetencyObjects] (
     [ObjectId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -634,7 +634,7 @@ CREATE TABLE [dbo].[CompetencyObjects] (
 -- Primary key (informational, not enforced): ObjectId, ParentObjectId, BaseObjectID, EntryTime
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ObjectId -> CompetencyObjects.ObjectId
-DROP TABLE IF EXISTS [dbo].[CompetencyStructure];
+IF OBJECT_ID(N'[dbo].[CompetencyStructure]', N'U') IS NULL
 CREATE TABLE [dbo].[CompetencyStructure] (
     [ObjectId] bigint NULL,
     [ParentObjectId] bigint NULL,
@@ -649,7 +649,7 @@ CREATE TABLE [dbo].[CompetencyStructure] (
 -- Join (informational): ContentObjectId -> ContentObjects.ContentObjectId
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[ContentFilesPropertiesLog];
+IF OBJECT_ID(N'[dbo].[ContentFilesPropertiesLog]', N'U') IS NULL
 CREATE TABLE [dbo].[ContentFilesPropertiesLog] (
     [OrgUnitId] int NULL,
     [ContentObjectId] int NULL,
@@ -668,7 +668,7 @@ CREATE TABLE [dbo].[ContentFilesPropertiesLog] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): ToolId -> Tools.ToolId
-DROP TABLE IF EXISTS [dbo].[ContentObjects];
+IF OBJECT_ID(N'[dbo].[ContentObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[ContentObjects] (
     [ContentObjectId] int NULL,
     [OrgUnitId] int NULL,
@@ -704,7 +704,7 @@ CREATE TABLE [dbo].[ContentObjects] (
 -- Join (informational): ContentObjectId -> ContentObjects.ContentObjectId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ContentUserCompletion];
+IF OBJECT_ID(N'[dbo].[ContentUserCompletion]', N'U') IS NULL
 CREATE TABLE [dbo].[ContentUserCompletion] (
     [ContentObjectId] int NULL,
     [OrgUnitId] int NULL,
@@ -723,7 +723,7 @@ CREATE TABLE [dbo].[ContentUserCompletion] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ContentObjectId -> ContentObjects.ContentObjectId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ContentUserProgress];
+IF OBJECT_ID(N'[dbo].[ContentUserProgress]', N'U') IS NULL
 CREATE TABLE [dbo].[ContentUserProgress] (
     [ContentObjectId] int NULL,
     [UserId] int NULL,
@@ -745,7 +745,7 @@ CREATE TABLE [dbo].[ContentUserProgress] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CourseAccess];
+IF OBJECT_ID(N'[dbo].[CourseAccess]', N'U') IS NULL
 CREATE TABLE [dbo].[CourseAccess] (
     [OrgUnitId] int NULL,
     [UserId] int NULL,
@@ -757,7 +757,7 @@ CREATE TABLE [dbo].[CourseAccess] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CourseAccessLog];
+IF OBJECT_ID(N'[dbo].[CourseAccessLog]', N'U') IS NULL
 CREATE TABLE [dbo].[CourseAccessLog] (
     [OrgUnitId] int NULL,
     [UserId] int NULL,
@@ -770,7 +770,7 @@ CREATE TABLE [dbo].[CourseAccessLog] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): AwardId -> AwardObjects.AwardId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[CourseAwards];
+IF OBJECT_ID(N'[dbo].[CourseAwards]', N'U') IS NULL
 CREATE TABLE [dbo].[CourseAwards] (
     [AssociationId] bigint NULL,
     [AwardId] bigint NULL,
@@ -788,7 +788,7 @@ CREATE TABLE [dbo].[CourseAwards] (
 -- Primary key (informational, not enforced): CopyCourseJobId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CourseCopyLogs];
+IF OBJECT_ID(N'[dbo].[CourseCopyLogs]', N'U') IS NULL
 CREATE TABLE [dbo].[CourseCopyLogs] (
     [SourceOrgUnitId] int NULL,
     [DestinationOrgUnitId] int NULL,
@@ -808,7 +808,7 @@ CREATE TABLE [dbo].[CourseCopyLogs] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): RoleId -> RoleDetails.RoleId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CoursePublisherLaunches];
+IF OBJECT_ID(N'[dbo].[CoursePublisherLaunches]', N'U') IS NULL
 CREATE TABLE [dbo].[CoursePublisherLaunches] (
     [LaunchId] uniqueidentifier NULL,
     [OrgUnitId] int NULL,
@@ -825,7 +825,7 @@ CREATE TABLE [dbo].[CoursePublisherLaunches] (
 -- Course Publisher Recipients
 -- Primary key (informational, not enforced): RecipientID
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[CoursePublisherRecipients];
+IF OBJECT_ID(N'[dbo].[CoursePublisherRecipients]', N'U') IS NULL
 CREATE TABLE [dbo].[CoursePublisherRecipients] (
     [RecipientID] uniqueidentifier NULL,
     [Name] nvarchar(256) NULL,
@@ -836,7 +836,7 @@ CREATE TABLE [dbo].[CoursePublisherRecipients] (
 -- CPD Categories
 -- Primary key (informational, not enforced): CategoryId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[CPDCategories];
+IF OBJECT_ID(N'[dbo].[CPDCategories]', N'U') IS NULL
 CREATE TABLE [dbo].[CPDCategories] (
     [CategoryId] int NULL,
     [Name] nvarchar(256) NULL,
@@ -849,7 +849,7 @@ CREATE TABLE [dbo].[CPDCategories] (
 -- Primary key (informational, not enforced): PrincipalId, CategoryId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CategoryId -> CPDCategories.CategoryId
-DROP TABLE IF EXISTS [dbo].[CPDJobTargets];
+IF OBJECT_ID(N'[dbo].[CPDJobTargets]', N'U') IS NULL
 CREATE TABLE [dbo].[CPDJobTargets] (
     [PrincipalId] int NULL,
     [CategoryId] int NULL,
@@ -867,7 +867,7 @@ CREATE TABLE [dbo].[CPDJobTargets] (
 -- CPD Methods
 -- Primary key (informational, not enforced): MethodId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[CPDMethods];
+IF OBJECT_ID(N'[dbo].[CPDMethods]', N'U') IS NULL
 CREATE TABLE [dbo].[CPDMethods] (
     [MethodId] int NULL,
     [Name] nvarchar(4000) NULL,
@@ -882,7 +882,7 @@ CREATE TABLE [dbo].[CPDMethods] (
 -- Join (informational): QuestionId -> CPDQuestions.QuestionId
 -- Join (informational): RecordId -> CPDUserRecords.RecordId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CPDQuestionAnswers];
+IF OBJECT_ID(N'[dbo].[CPDQuestionAnswers]', N'U') IS NULL
 CREATE TABLE [dbo].[CPDQuestionAnswers] (
     [AnswerId] int NULL,
     [AnswerText] nvarchar(4000) NULL,
@@ -898,7 +898,7 @@ CREATE TABLE [dbo].[CPDQuestionAnswers] (
 -- CPD Questions
 -- Primary key (informational, not enforced): QuestionId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[CPDQuestions];
+IF OBJECT_ID(N'[dbo].[CPDQuestions]', N'U') IS NULL
 CREATE TABLE [dbo].[CPDQuestions] (
     [QuestionId] int NULL,
     [QuestionText] nvarchar(4000) NULL,
@@ -911,7 +911,7 @@ CREATE TABLE [dbo].[CPDQuestions] (
 -- Primary key (informational, not enforced): RecordId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CPDUserRecords];
+IF OBJECT_ID(N'[dbo].[CPDUserRecords]', N'U') IS NULL
 CREATE TABLE [dbo].[CPDUserRecords] (
     [RecordId] int NULL,
     [RecordName] nvarchar(256) NULL,
@@ -934,7 +934,7 @@ CREATE TABLE [dbo].[CPDUserRecords] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CategoryId -> CPDCategories.CategoryId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CPDUserTargets];
+IF OBJECT_ID(N'[dbo].[CPDUserTargets]', N'U') IS NULL
 CREATE TABLE [dbo].[CPDUserTargets] (
     [PrincipalId] int NULL,
     [CategoryId] int NULL,
@@ -954,7 +954,7 @@ CREATE TABLE [dbo].[CPDUserTargets] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CreatedById -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[CreatorPracticesAdoption];
+IF OBJECT_ID(N'[dbo].[CreatorPracticesAdoption]', N'U') IS NULL
 CREATE TABLE [dbo].[CreatorPracticesAdoption] (
     [ActivityInstanceId] int NULL,
     [CreatedById] int NULL,
@@ -972,7 +972,7 @@ CREATE TABLE [dbo].[CreatorPracticesAdoption] (
 -- Join (informational): ActivityInstanceId -> CreatorPracticesAdoption.ActivityInstanceId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[CreatorPracticesEngagement];
+IF OBJECT_ID(N'[dbo].[CreatorPracticesEngagement]', N'U') IS NULL
 CREATE TABLE [dbo].[CreatorPracticesEngagement] (
     [PracticeEngagementId] int NULL,
     [UserId] int NULL,
@@ -988,7 +988,7 @@ CREATE TABLE [dbo].[CreatorPracticesEngagement] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DeletedByUserId -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[DiscussionForums];
+IF OBJECT_ID(N'[dbo].[DiscussionForums]', N'U') IS NULL
 CREATE TABLE [dbo].[DiscussionForums] (
     [OrgUnitId] int NULL,
     [ForumId] bigint NULL,
@@ -1016,7 +1016,7 @@ CREATE TABLE [dbo].[DiscussionForums] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): TopicId -> DiscussionTopics.TopicId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[DiscussionPosts];
+IF OBJECT_ID(N'[dbo].[DiscussionPosts]', N'U') IS NULL
 CREATE TABLE [dbo].[DiscussionPosts] (
     [OrgUnitId] int NULL,
     [TopicId] bigint NULL,
@@ -1046,7 +1046,7 @@ CREATE TABLE [dbo].[DiscussionPosts] (
 -- Join (informational): PostId -> DiscussionPosts.PostId
 -- Join (informational): TopicId -> DiscussionTopics.TopicId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[DiscussionPostsReadStatus];
+IF OBJECT_ID(N'[dbo].[DiscussionPostsReadStatus]', N'U') IS NULL
 CREATE TABLE [dbo].[DiscussionPostsReadStatus] (
     [TopicId] bigint NULL,
     [UserId] int NULL,
@@ -1062,7 +1062,7 @@ CREATE TABLE [dbo].[DiscussionPostsReadStatus] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): TopicId -> DiscussionTopics.TopicId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[DiscussionTopicUserScores];
+IF OBJECT_ID(N'[dbo].[DiscussionTopicUserScores]', N'U') IS NULL
 CREATE TABLE [dbo].[DiscussionTopicUserScores] (
     [UserId] int NULL,
     [TopicId] bigint NULL,
@@ -1078,7 +1078,7 @@ CREATE TABLE [dbo].[DiscussionTopicUserScores] (
 -- Join (informational): DeletedByUserId -> Users.UserId
 -- Join (informational): ForumId -> DiscussionForums.ForumId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[DiscussionTopics];
+IF OBJECT_ID(N'[dbo].[DiscussionTopics]', N'U') IS NULL
 CREATE TABLE [dbo].[DiscussionTopics] (
     [OrgUnitId] int NULL,
     [TopicId] bigint NULL,
@@ -1116,7 +1116,7 @@ CREATE TABLE [dbo].[DiscussionTopics] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): RoleId -> RoleDetails.RoleId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[EnrollmentsAndWithdrawals];
+IF OBJECT_ID(N'[dbo].[EnrollmentsAndWithdrawals]', N'U') IS NULL
 CREATE TABLE [dbo].[EnrollmentsAndWithdrawals] (
     [LogId] bigint NULL,
     [UserId] int NULL,
@@ -1131,7 +1131,7 @@ CREATE TABLE [dbo].[EnrollmentsAndWithdrawals] (
 -- Primary key (informational, not enforced): OrgUnitId, GradeSchemeId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[GradeBookSettings];
+IF OBJECT_ID(N'[dbo].[GradeBookSettings]', N'U') IS NULL
 CREATE TABLE [dbo].[GradeBookSettings] (
     [OrgUnitId] int NULL,
     [GradeSchemeId] bigint NULL,
@@ -1147,7 +1147,7 @@ CREATE TABLE [dbo].[GradeBookSettings] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DeletedByUserId -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[GradeObjects];
+IF OBJECT_ID(N'[dbo].[GradeObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[GradeObjects] (
     [GradeObjectId] int NULL,
     [OrgUnitId] int NULL,
@@ -1187,7 +1187,7 @@ CREATE TABLE [dbo].[GradeObjects] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): GradeObjectId -> GradeObjects.GradeObjectId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[GradeObjectsLog];
+IF OBJECT_ID(N'[dbo].[GradeObjectsLog]', N'U') IS NULL
 CREATE TABLE [dbo].[GradeObjectsLog] (
     [LogId] bigint NULL,
     [Name] nvarchar(50) NULL,
@@ -1209,7 +1209,7 @@ CREATE TABLE [dbo].[GradeObjectsLog] (
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[GradeResults];
+IF OBJECT_ID(N'[dbo].[GradeResults]', N'U') IS NULL
 CREATE TABLE [dbo].[GradeResults] (
     [GradeObjectId] int NULL,
     [OrgUnitId] int NULL,
@@ -1234,7 +1234,7 @@ CREATE TABLE [dbo].[GradeResults] (
 -- Primary key (informational, not enforced): GradeSchemeRangeId, GradeSchemeId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): GradeSchemeId -> GradeSchemes.GradeSchemeId
-DROP TABLE IF EXISTS [dbo].[GradeSchemeRanges];
+IF OBJECT_ID(N'[dbo].[GradeSchemeRanges]', N'U') IS NULL
 CREATE TABLE [dbo].[GradeSchemeRanges] (
     [GradeSchemeRangeId] bigint NULL,
     [GradeSchemeId] bigint NULL,
@@ -1249,7 +1249,7 @@ CREATE TABLE [dbo].[GradeSchemeRanges] (
 -- Primary key (informational, not enforced): GradeSchemeId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[GradeSchemes];
+IF OBJECT_ID(N'[dbo].[GradeSchemes]', N'U') IS NULL
 CREATE TABLE [dbo].[GradeSchemes] (
     [GradeSchemeId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -1263,7 +1263,7 @@ CREATE TABLE [dbo].[GradeSchemes] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[IntelligentAgentObjects];
+IF OBJECT_ID(N'[dbo].[IntelligentAgentObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[IntelligentAgentObjects] (
     [AgentId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -1294,7 +1294,7 @@ CREATE TABLE [dbo].[IntelligentAgentObjects] (
 -- Primary key (informational, not enforced): AgentRunId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): AgentId -> IntelligentAgentObjects.AgentId
-DROP TABLE IF EXISTS [dbo].[IntelligentAgentRunLog];
+IF OBJECT_ID(N'[dbo].[IntelligentAgentRunLog]', N'U') IS NULL
 CREATE TABLE [dbo].[IntelligentAgentRunLog] (
     [AgentId] bigint NULL,
     [AgentRunId] bigint NULL,
@@ -1315,7 +1315,7 @@ CREATE TABLE [dbo].[IntelligentAgentRunLog] (
 -- Join (informational): AgentRunId -> IntelligentAgentRunLog.AgentRunId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[IntelligentAgentRunUsers];
+IF OBJECT_ID(N'[dbo].[IntelligentAgentRunUsers]', N'U') IS NULL
 CREATE TABLE [dbo].[IntelligentAgentRunUsers] (
     [AgentId] bigint NULL,
     [AgentRunId] bigint NULL,
@@ -1333,7 +1333,7 @@ CREATE TABLE [dbo].[IntelligentAgentRunUsers] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): RoleId -> RoleDetails.RoleId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[JITProvisionedUsersLog];
+IF OBJECT_ID(N'[dbo].[JITProvisionedUsersLog]', N'U') IS NULL
 CREATE TABLE [dbo].[JITProvisionedUsersLog] (
     [UserId] int NULL,
     [MappingField] nvarchar(32) NULL,
@@ -1350,7 +1350,7 @@ CREATE TABLE [dbo].[JITProvisionedUsersLog] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ModifiedBy -> Users.UserId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[LocalAuthenticationSecurityLog];
+IF OBJECT_ID(N'[dbo].[LocalAuthenticationSecurityLog]', N'U') IS NULL
 CREATE TABLE [dbo].[LocalAuthenticationSecurityLog] (
     [UserId] int NULL,
     [Action] nvarchar(70) NULL,
@@ -1362,7 +1362,7 @@ CREATE TABLE [dbo].[LocalAuthenticationSecurityLog] (
 -- Primary key (informational, not enforced): DeploymentID, Timestamp
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[LTIAdvantageDeploymentAudit];
+IF OBJECT_ID(N'[dbo].[LTIAdvantageDeploymentAudit]', N'U') IS NULL
 CREATE TABLE [dbo].[LTIAdvantageDeploymentAudit] (
     [Action] nvarchar(10) NULL,
     [DeploymentID] nvarchar(36) NULL,
@@ -1402,7 +1402,7 @@ CREATE TABLE [dbo].[LTIAdvantageDeploymentAudit] (
 -- Primary key (informational, not enforced): ClientId, Timestamp
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[LTIAdvantageRegistrationAudit];
+IF OBJECT_ID(N'[dbo].[LTIAdvantageRegistrationAudit]', N'U') IS NULL
 CREATE TABLE [dbo].[LTIAdvantageRegistrationAudit] (
     [Action] nvarchar(10) NULL,
     [ClientId] nvarchar(255) NULL,
@@ -1429,7 +1429,7 @@ CREATE TABLE [dbo].[LTIAdvantageRegistrationAudit] (
 -- LTI Launches
 -- Primary key (informational, not enforced): LTILaunchId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[LTILaunches];
+IF OBJECT_ID(N'[dbo].[LTILaunches]', N'U') IS NULL
 CREATE TABLE [dbo].[LTILaunches] (
     [LTILaunchId] uniqueidentifier NULL,
     [UserId] int NULL,
@@ -1454,7 +1454,7 @@ CREATE TABLE [dbo].[LTILaunches] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[LTILinkMigrationAudit];
+IF OBJECT_ID(N'[dbo].[LTILinkMigrationAudit]', N'U') IS NULL
 CREATE TABLE [dbo].[LTILinkMigrationAudit] (
     [LTIMigrationId] uniqueidentifier NULL,
     [UserId] bigint NULL,
@@ -1478,7 +1478,7 @@ CREATE TABLE [dbo].[LTILinkMigrationAudit] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[LTILinks];
+IF OBJECT_ID(N'[dbo].[LTILinks]', N'U') IS NULL
 CREATE TABLE [dbo].[LTILinks] (
     [LtiLinkId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -1518,7 +1518,7 @@ CREATE TABLE [dbo].[LTILinks] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ContentId -> MediaObjects.ContentId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[MediaConsumptionLog];
+IF OBJECT_ID(N'[dbo].[MediaConsumptionLog]', N'U') IS NULL
 CREATE TABLE [dbo].[MediaConsumptionLog] (
     [LogId] uniqueidentifier NULL,
     [UserId] int NULL,
@@ -1533,7 +1533,7 @@ CREATE TABLE [dbo].[MediaConsumptionLog] (
 -- Media Objects
 -- Primary key (informational, not enforced): ContentId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[MediaObjects];
+IF OBJECT_ID(N'[dbo].[MediaObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[MediaObjects] (
     [ContentId] uniqueidentifier NULL,
     [Title] nvarchar(1000) NULL,
@@ -1546,7 +1546,7 @@ CREATE TABLE [dbo].[MediaObjects] (
 -- Primary key (informational, not enforced): OrgUnitId, AncestorOrgUnitId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[OrganizationalUnitAncestors];
+IF OBJECT_ID(N'[dbo].[OrganizationalUnitAncestors]', N'U') IS NULL
 CREATE TABLE [dbo].[OrganizationalUnitAncestors] (
     [OrgUnitId] int NULL,
     [AncestorOrgUnitId] int NULL,
@@ -1558,7 +1558,7 @@ CREATE TABLE [dbo].[OrganizationalUnitAncestors] (
 -- Primary key (informational, not enforced): OrgUnitId, DescendantOrgUnitId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[OrganizationalUnitDescendants];
+IF OBJECT_ID(N'[dbo].[OrganizationalUnitDescendants]', N'U') IS NULL
 CREATE TABLE [dbo].[OrganizationalUnitDescendants] (
     [OrgUnitId] int NULL,
     [DescendantOrgUnitId] int NULL,
@@ -1570,7 +1570,7 @@ CREATE TABLE [dbo].[OrganizationalUnitDescendants] (
 -- Primary key (informational, not enforced): OrgUnitId, ParentOrgUnitId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[OrganizationalUnitParents];
+IF OBJECT_ID(N'[dbo].[OrganizationalUnitParents]', N'U') IS NULL
 CREATE TABLE [dbo].[OrganizationalUnitParents] (
     [OrgUnitId] int NULL,
     [ParentOrgUnitId] int NULL,
@@ -1583,7 +1583,7 @@ CREATE TABLE [dbo].[OrganizationalUnitParents] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[OrganizationalUnitRecentAccess];
+IF OBJECT_ID(N'[dbo].[OrganizationalUnitRecentAccess]', N'U') IS NULL
 CREATE TABLE [dbo].[OrganizationalUnitRecentAccess] (
     [OrgUnitId] int NULL,
     [UserId] int NULL,
@@ -1593,7 +1593,7 @@ CREATE TABLE [dbo].[OrganizationalUnitRecentAccess] (
 -- Organizational Units
 -- Primary key (informational, not enforced): OrgUnitId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[OrganizationalUnits];
+IF OBJECT_ID(N'[dbo].[OrganizationalUnits]', N'U') IS NULL
 CREATE TABLE [dbo].[OrganizationalUnits] (
     [OrgUnitId] int NULL,
     [Organization] nvarchar(50) NULL,
@@ -1616,7 +1616,7 @@ CREATE TABLE [dbo].[OrganizationalUnits] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[OutcomeDetails];
+IF OBJECT_ID(N'[dbo].[OutcomeDetails]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomeDetails] (
     [OutcomeId] uniqueidentifier NULL,
     [OutcomeDefinitionSource] nvarchar(1000) NULL,
@@ -1636,7 +1636,7 @@ CREATE TABLE [dbo].[OutcomeDetails] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[OutcomesAlignedToToolObjects];
+IF OBJECT_ID(N'[dbo].[OutcomesAlignedToToolObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesAlignedToToolObjects] (
     [ObjectType] int NULL,
     [ObjectId] nvarchar(255) NULL,
@@ -1654,7 +1654,7 @@ CREATE TABLE [dbo].[OutcomesAlignedToToolObjects] (
 -- Primary key (informational, not enforced): CheckpointId, DemonstrationId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DemonstrationId -> OutcomesDemonstrations.DemonstrationId
-DROP TABLE IF EXISTS [dbo].[OutcomesAssessedCheckpoints];
+IF OBJECT_ID(N'[dbo].[OutcomesAssessedCheckpoints]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesAssessedCheckpoints] (
     [CheckpointId] uniqueidentifier NULL,
     [DemonstrationId] uniqueidentifier NULL,
@@ -1679,7 +1679,7 @@ CREATE TABLE [dbo].[OutcomesAssessedCheckpoints] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): RegistryId -> OutcomesSetCourse.RegistryId
 -- Join (informational): ScaleId -> OutcomesScaleDefinition.ScaleId
-DROP TABLE IF EXISTS [dbo].[OutcomesCourseSpecificScales];
+IF OBJECT_ID(N'[dbo].[OutcomesCourseSpecificScales]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesCourseSpecificScales] (
     [OrgUnitId] int NULL,
     [RegistryId] uniqueidentifier NULL,
@@ -1695,7 +1695,7 @@ CREATE TABLE [dbo].[OutcomesCourseSpecificScales] (
 -- Primary key (informational, not enforced): DemonstrationId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): LastModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[OutcomesDemonstrations];
+IF OBJECT_ID(N'[dbo].[OutcomesDemonstrations]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesDemonstrations] (
     [DemonstrationId] uniqueidentifier NULL,
     [ExplicitlyEnteredScaleLevelId] uniqueidentifier NULL,
@@ -1719,7 +1719,7 @@ CREATE TABLE [dbo].[OutcomesDemonstrations] (
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OutcomeId -> OutcomeDetails.OutcomeId
-DROP TABLE IF EXISTS [dbo].[OutcomesInRegistries];
+IF OBJECT_ID(N'[dbo].[OutcomesInRegistries]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesInRegistries] (
     [OutcomeId] uniqueidentifier NULL,
     [RegistryId] uniqueidentifier NULL,
@@ -1737,7 +1737,7 @@ CREATE TABLE [dbo].[OutcomesInRegistries] (
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OutcomeId -> OutcomeDetails.OutcomeId
 -- Join (informational): RegistryId -> OutcomesSetCourse.RegistryId
-DROP TABLE IF EXISTS [dbo].[OutcomesRubricAlignments];
+IF OBJECT_ID(N'[dbo].[OutcomesRubricAlignments]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesRubricAlignments] (
     [RubricId] bigint NULL,
     [CriterionId] bigint NULL,
@@ -1755,7 +1755,7 @@ CREATE TABLE [dbo].[OutcomesRubricAlignments] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[OutcomesScaleDefinition];
+IF OBJECT_ID(N'[dbo].[OutcomesScaleDefinition]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesScaleDefinition] (
     [ScaleId] uniqueidentifier NULL,
     [Name] nvarchar(1000) NULL,
@@ -1775,7 +1775,7 @@ CREATE TABLE [dbo].[OutcomesScaleDefinition] (
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): ScaleId -> OutcomesScaleDefinition.ScaleId
-DROP TABLE IF EXISTS [dbo].[OutcomesScaleLevelDefinition];
+IF OBJECT_ID(N'[dbo].[OutcomesScaleLevelDefinition]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesScaleLevelDefinition] (
     [ScaleLevelId] uniqueidentifier NULL,
     [ScaleId] uniqueidentifier NULL,
@@ -1796,7 +1796,7 @@ CREATE TABLE [dbo].[OutcomesScaleLevelDefinition] (
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): ScaleId -> OutcomesScaleDefinition.ScaleId
-DROP TABLE IF EXISTS [dbo].[OutcomesSetCourse];
+IF OBJECT_ID(N'[dbo].[OutcomesSetCourse]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesSetCourse] (
     [RegistryId] uniqueidentifier NULL,
     [OrgUnitId] bigint NULL,
@@ -1817,7 +1817,7 @@ CREATE TABLE [dbo].[OutcomesSetCourse] (
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): ScaleId -> OutcomesScaleDefinition.ScaleId
-DROP TABLE IF EXISTS [dbo].[OutcomesSetOrg];
+IF OBJECT_ID(N'[dbo].[OutcomesSetOrg]', N'U') IS NULL
 CREATE TABLE [dbo].[OutcomesSetOrg] (
     [OutcomeSetId] bigint NULL,
     [OutcomeSetName] nvarchar(256) NULL,
@@ -1835,7 +1835,7 @@ CREATE TABLE [dbo].[OutcomesSetOrg] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[PortfolioCategories];
+IF OBJECT_ID(N'[dbo].[PortfolioCategories]', N'U') IS NULL
 CREATE TABLE [dbo].[PortfolioCategories] (
     [CategoryId] uniqueidentifier NULL,
     [OrgUnitId] int NULL,
@@ -1852,7 +1852,7 @@ CREATE TABLE [dbo].[PortfolioCategories] (
 -- Join (informational): CategoryId -> PortfolioCategories.CategoryId
 -- Join (informational): EvidenceId -> PortfolioEvidenceObjects.EvidenceId
 -- Join (informational): LastModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[PortfolioEvidenceCategories];
+IF OBJECT_ID(N'[dbo].[PortfolioEvidenceCategories]', N'U') IS NULL
 CREATE TABLE [dbo].[PortfolioEvidenceCategories] (
     [CategoryId] uniqueidentifier NULL,
     [EvidenceId] uniqueidentifier NULL,
@@ -1867,7 +1867,7 @@ CREATE TABLE [dbo].[PortfolioEvidenceCategories] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[PortfolioEvidenceLog];
+IF OBJECT_ID(N'[dbo].[PortfolioEvidenceLog]', N'U') IS NULL
 CREATE TABLE [dbo].[PortfolioEvidenceLog] (
     [LogId] uniqueidentifier NULL,
     [ParentObjectId] uniqueidentifier NULL,
@@ -1885,7 +1885,7 @@ CREATE TABLE [dbo].[PortfolioEvidenceLog] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[PortfolioEvidenceObjects];
+IF OBJECT_ID(N'[dbo].[PortfolioEvidenceObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[PortfolioEvidenceObjects] (
     [EvidenceId] uniqueidentifier NULL,
     [OwnerId] int NULL,
@@ -1907,7 +1907,7 @@ CREATE TABLE [dbo].[PortfolioEvidenceObjects] (
 -- Primary key (informational, not enforced): PreRequisiteId, UserId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[PreRequisiteConditionsMet];
+IF OBJECT_ID(N'[dbo].[PreRequisiteConditionsMet]', N'U') IS NULL
 CREATE TABLE [dbo].[PreRequisiteConditionsMet] (
     [PreRequisiteId] int NULL,
     [UserId] int NULL,
@@ -1919,7 +1919,7 @@ CREATE TABLE [dbo].[PreRequisiteConditionsMet] (
 -- Question Answer Options
 -- Primary key (informational, not enforced): AnswerId, QuestionId, QuestionVersionId, AnswerOptionId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[QuestionAnswerOptions];
+IF OBJECT_ID(N'[dbo].[QuestionAnswerOptions]', N'U') IS NULL
 CREATE TABLE [dbo].[QuestionAnswerOptions] (
     [AnswerId] bigint NULL,
     [AnswerText] nvarchar(1000) NULL,
@@ -1932,7 +1932,7 @@ CREATE TABLE [dbo].[QuestionAnswerOptions] (
 -- Question Answers
 -- Primary key (informational, not enforced): AnswerId, QuestionId, QuestionVersionId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[QuestionAnswers];
+IF OBJECT_ID(N'[dbo].[QuestionAnswers]', N'U') IS NULL
 CREATE TABLE [dbo].[QuestionAnswers] (
     [AnswerId] bigint NULL,
     [QuestionId] bigint NULL,
@@ -1947,7 +1947,7 @@ CREATE TABLE [dbo].[QuestionAnswers] (
 -- Question Library
 -- Primary key (informational, not enforced): QuestionId, QuestionVersionId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[QuestionLibrary];
+IF OBJECT_ID(N'[dbo].[QuestionLibrary]', N'U') IS NULL
 CREATE TABLE [dbo].[QuestionLibrary] (
     [QuestionId] bigint NULL,
     [QuestionVersionId] bigint NULL,
@@ -1967,7 +1967,7 @@ CREATE TABLE [dbo].[QuestionLibrary] (
 -- Question Pools
 -- Primary key (informational, not enforced): SectionId, QuestionId, QuestionVersionId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[QuestionPools];
+IF OBJECT_ID(N'[dbo].[QuestionPools]', N'U') IS NULL
 CREATE TABLE [dbo].[QuestionPools] (
     [SectionId] bigint NULL,
     [QuestionId] bigint NULL,
@@ -1979,7 +1979,7 @@ CREATE TABLE [dbo].[QuestionPools] (
 -- Question Relationships
 -- Primary key (informational, not enforced): ObjectId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[QuestionRelationships];
+IF OBJECT_ID(N'[dbo].[QuestionRelationships]', N'U') IS NULL
 CREATE TABLE [dbo].[QuestionRelationships] (
     [CollectionId] bigint NULL,
     [QuestionId] bigint NULL,
@@ -2006,7 +2006,7 @@ CREATE TABLE [dbo].[QuestionRelationships] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): QuizId -> QuizObjects.QuizId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[QuizAttempts];
+IF OBJECT_ID(N'[dbo].[QuizAttempts]', N'U') IS NULL
 CREATE TABLE [dbo].[QuizAttempts] (
     [AttemptId] bigint NULL,
     [QuizId] bigint NULL,
@@ -2035,7 +2035,7 @@ CREATE TABLE [dbo].[QuizAttempts] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): AttemptId -> QuizAttempts.AttemptId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[QuizAttemptsLog];
+IF OBJECT_ID(N'[dbo].[QuizAttemptsLog]', N'U') IS NULL
 CREATE TABLE [dbo].[QuizAttemptsLog] (
     [LogId] bigint NULL,
     [AttemptId] bigint NULL,
@@ -2054,7 +2054,7 @@ CREATE TABLE [dbo].[QuizAttemptsLog] (
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[QuizObjects];
+IF OBJECT_ID(N'[dbo].[QuizObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[QuizObjects] (
     [QuizId] bigint NULL,
     [QuizName] nvarchar(256) NULL,
@@ -2102,7 +2102,7 @@ CREATE TABLE [dbo].[QuizObjects] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[QuizSurveySections];
+IF OBJECT_ID(N'[dbo].[QuizSurveySections]', N'U') IS NULL
 CREATE TABLE [dbo].[QuizSurveySections] (
     [CollectionId] bigint NULL,
     [SectionId] bigint NULL,
@@ -2128,7 +2128,7 @@ CREATE TABLE [dbo].[QuizSurveySections] (
 -- Primary key (informational, not enforced): AttemptId, QuestionId, QuestionVersionId, AnswerId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): AttemptId -> QuizAttempts.AttemptId
-DROP TABLE IF EXISTS [dbo].[QuizUserAnswerResponses];
+IF OBJECT_ID(N'[dbo].[QuizUserAnswerResponses]', N'U') IS NULL
 CREATE TABLE [dbo].[QuizUserAnswerResponses] (
     [AttemptId] bigint NULL,
     [AttemptNumber] int NULL,
@@ -2150,7 +2150,7 @@ CREATE TABLE [dbo].[QuizUserAnswerResponses] (
 -- Join (informational): AttemptId -> QuizAttempts.AttemptId
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): SectionId -> QuizSurveySections.SectionId
-DROP TABLE IF EXISTS [dbo].[QuizUserAnswers];
+IF OBJECT_ID(N'[dbo].[QuizUserAnswers]', N'U') IS NULL
 CREATE TABLE [dbo].[QuizUserAnswers] (
     [AttemptId] bigint NULL,
     [QuestionId] bigint NULL,
@@ -2176,7 +2176,7 @@ CREATE TABLE [dbo].[QuizUserAnswers] (
 -- Primary key (informational, not enforced): PreRequisiteId, ResultId, OrgUnitId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[ReleaseConditionObjects];
+IF OBJECT_ID(N'[dbo].[ReleaseConditionObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[ReleaseConditionObjects] (
     [PreRequisiteId] int NULL,
     [ResultId] int NULL,
@@ -2198,7 +2198,7 @@ CREATE TABLE [dbo].[ReleaseConditionObjects] (
 -- Primary key (informational, not enforced): ResultId, UserId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ReleaseConditionResults];
+IF OBJECT_ID(N'[dbo].[ReleaseConditionResults]', N'U') IS NULL
 CREATE TABLE [dbo].[ReleaseConditionResults] (
     [ResultId] int NULL,
     [UserId] int NULL,
@@ -2211,7 +2211,7 @@ CREATE TABLE [dbo].[ReleaseConditionResults] (
 -- Primary key (informational, not enforced): CourseOfferingId, SourceCourseId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CreatedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[ReofferCourse];
+IF OBJECT_ID(N'[dbo].[ReofferCourse]', N'U') IS NULL
 CREATE TABLE [dbo].[ReofferCourse] (
     [CourseOfferingId] int NULL,
     [SourceCourseId] int NULL,
@@ -2223,7 +2223,7 @@ CREATE TABLE [dbo].[ReofferCourse] (
 -- Primary key (informational, not enforced): RoleId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DeletedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[RoleDetails];
+IF OBJECT_ID(N'[dbo].[RoleDetails]', N'U') IS NULL
 CREATE TABLE [dbo].[RoleDetails] (
     [RoleId] int NULL,
     [RoleName] nvarchar(120) NULL,
@@ -2263,7 +2263,7 @@ CREATE TABLE [dbo].[RoleDetails] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): RubricId -> RubricObjects.RubricId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[RubricAssessment];
+IF OBJECT_ID(N'[dbo].[RubricAssessment]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricAssessment] (
     [RubricId] bigint NULL,
     [OrgUnitId] int NULL,
@@ -2287,7 +2287,7 @@ CREATE TABLE [dbo].[RubricAssessment] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): CriterionId -> RubricObjectCriteria.CriterionId
 -- Join (informational): RubricId -> RubricObjects.RubricId
-DROP TABLE IF EXISTS [dbo].[RubricAssessmentCriteria];
+IF OBJECT_ID(N'[dbo].[RubricAssessmentCriteria]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricAssessmentCriteria] (
     [AssessmentId] bigint NULL,
     [RubricId] bigint NULL,
@@ -2302,7 +2302,7 @@ CREATE TABLE [dbo].[RubricAssessmentCriteria] (
 -- Rubric Criteria Levels
 -- Primary key (informational, not enforced): RubricId, CriterionId, LevelId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[RubricCriteriaLevels];
+IF OBJECT_ID(N'[dbo].[RubricCriteriaLevels]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricCriteriaLevels] (
     [RubricId] bigint NULL,
     [CriterionId] bigint NULL,
@@ -2318,7 +2318,7 @@ CREATE TABLE [dbo].[RubricCriteriaLevels] (
 -- Primary key (informational, not enforced): CriterionId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): RubricId -> RubricObjects.RubricId
-DROP TABLE IF EXISTS [dbo].[RubricObjectCriteria];
+IF OBJECT_ID(N'[dbo].[RubricObjectCriteria]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricObjectCriteria] (
     [RubricId] bigint NULL,
     [CriterionId] bigint NULL,
@@ -2335,7 +2335,7 @@ CREATE TABLE [dbo].[RubricObjectCriteria] (
 -- Primary key (informational, not enforced): LevelId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): RubricId -> RubricObjects.RubricId
-DROP TABLE IF EXISTS [dbo].[RubricObjectLevels];
+IF OBJECT_ID(N'[dbo].[RubricObjectLevels]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricObjectLevels] (
     [RubricId] bigint NULL,
     [LevelId] bigint NULL,
@@ -2352,7 +2352,7 @@ CREATE TABLE [dbo].[RubricObjectLevels] (
 -- Rubric Objects
 -- Primary key (informational, not enforced): RubricId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[RubricObjects];
+IF OBJECT_ID(N'[dbo].[RubricObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricObjects] (
     [RubricId] bigint NULL,
     [Name] nvarchar(256) NULL,
@@ -2372,7 +2372,7 @@ CREATE TABLE [dbo].[RubricObjects] (
 -- Join (informational): CriterionId -> RubricObjectCriteria.CriterionId
 -- Join (informational): LevelId -> RubricObjectLevels.LevelId
 -- Join (informational): RubricId -> RubricObjects.RubricId
-DROP TABLE IF EXISTS [dbo].[RubricsEdit];
+IF OBJECT_ID(N'[dbo].[RubricsEdit]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricsEdit] (
     [AuditLogId] uniqueidentifier NULL,
     [RubricId] bigint NULL,
@@ -2392,7 +2392,7 @@ CREATE TABLE [dbo].[RubricsEdit] (
 -- Primary key (informational, not enforced): ActivityId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ScormObjectId -> SCORMObjects.ScormObjectId
-DROP TABLE IF EXISTS [dbo].[SCORMActivities];
+IF OBJECT_ID(N'[dbo].[SCORMActivities]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMActivities] (
     [ActivityId] uniqueidentifier NULL,
     [ScormObjectId] uniqueidentifier NULL,
@@ -2413,7 +2413,7 @@ CREATE TABLE [dbo].[SCORMActivities] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ActivityId -> SCORMActivities.ActivityId
 -- Join (informational): VisitId -> SCORMVisits.VisitId
-DROP TABLE IF EXISTS [dbo].[SCORMActivityAttempts];
+IF OBJECT_ID(N'[dbo].[SCORMActivityAttempts]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMActivityAttempts] (
     [VisitId] uniqueidentifier NULL,
     [ActivityId] uniqueidentifier NULL,
@@ -2433,7 +2433,7 @@ CREATE TABLE [dbo].[SCORMActivityAttempts] (
 -- Join (informational): ActivityId -> SCORMActivities.ActivityId
 -- Join (informational): InteractionId -> SCORMInteractions.InteractionId
 -- Join (informational): VisitId -> SCORMVisits.VisitId
-DROP TABLE IF EXISTS [dbo].[SCORMInteractionAttempts];
+IF OBJECT_ID(N'[dbo].[SCORMInteractionAttempts]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMInteractionAttempts] (
     [VisitId] uniqueidentifier NULL,
     [InteractionId] uniqueidentifier NULL,
@@ -2452,7 +2452,7 @@ CREATE TABLE [dbo].[SCORMInteractionAttempts] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): InteractionId -> SCORMInteractions.InteractionId
 -- Join (informational): ObjectiveId -> SCORMObjectives.ObjectiveId
-DROP TABLE IF EXISTS [dbo].[SCORMInteractionObjectives];
+IF OBJECT_ID(N'[dbo].[SCORMInteractionObjectives]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMInteractionObjectives] (
     [InteractionId] uniqueidentifier NULL,
     [ObjectiveId] uniqueidentifier NULL,
@@ -2463,7 +2463,7 @@ CREATE TABLE [dbo].[SCORMInteractionObjectives] (
 -- Primary key (informational, not enforced): InteractionId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ActivityId -> SCORMActivities.ActivityId
-DROP TABLE IF EXISTS [dbo].[SCORMInteractions];
+IF OBJECT_ID(N'[dbo].[SCORMInteractions]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMInteractions] (
     [InteractionId] uniqueidentifier NULL,
     [ActivityId] uniqueidentifier NULL,
@@ -2480,7 +2480,7 @@ CREATE TABLE [dbo].[SCORMInteractions] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ObjectiveId -> SCORMObjectives.ObjectiveId
 -- Join (informational): VisitId -> SCORMVisits.VisitId
-DROP TABLE IF EXISTS [dbo].[SCORMObjectiveAttempts];
+IF OBJECT_ID(N'[dbo].[SCORMObjectiveAttempts]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMObjectiveAttempts] (
     [VisitId] uniqueidentifier NULL,
     [ObjectiveId] uniqueidentifier NULL,
@@ -2498,7 +2498,7 @@ CREATE TABLE [dbo].[SCORMObjectiveAttempts] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ActivityId -> SCORMActivities.ActivityId
 -- Join (informational): ScormObjectId -> SCORMObjects.ScormObjectId
-DROP TABLE IF EXISTS [dbo].[SCORMObjectives];
+IF OBJECT_ID(N'[dbo].[SCORMObjectives]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMObjectives] (
     [ObjectiveId] uniqueidentifier NULL,
     [ScormObjectId] uniqueidentifier NULL,
@@ -2517,7 +2517,7 @@ CREATE TABLE [dbo].[SCORMObjectives] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[SCORMObjects];
+IF OBJECT_ID(N'[dbo].[SCORMObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMObjects] (
     [ScormObjectId] uniqueidentifier NULL,
     [OrgUnitId] int NULL,
@@ -2538,7 +2538,7 @@ CREATE TABLE [dbo].[SCORMObjects] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): ScormObjectId -> SCORMObjects.ScormObjectId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[SCORMVisits];
+IF OBJECT_ID(N'[dbo].[SCORMVisits]', N'U') IS NULL
 CREATE TABLE [dbo].[SCORMVisits] (
     [VisitId] uniqueidentifier NULL,
     [ScormObjectId] uniqueidentifier NULL,
@@ -2559,7 +2559,7 @@ CREATE TABLE [dbo].[SCORMVisits] (
 -- Primary key (informational, not enforced): HistoryID
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[SessionHistory];
+IF OBJECT_ID(N'[dbo].[SessionHistory]', N'U') IS NULL
 CREATE TABLE [dbo].[SessionHistory] (
     [SessionId] bigint NULL,
     [OrgId] int NULL,
@@ -2575,7 +2575,7 @@ CREATE TABLE [dbo].[SessionHistory] (
 -- Primary key (informational, not enforced): BatchId, OriginalSourceOrgUnitId, Timestamp
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[SISCourseMergeLog];
+IF OBJECT_ID(N'[dbo].[SISCourseMergeLog]', N'U') IS NULL
 CREATE TABLE [dbo].[SISCourseMergeLog] (
     [BatchId] uniqueidentifier NULL,
     [JobType] nvarchar(32) NULL,
@@ -2593,7 +2593,7 @@ CREATE TABLE [dbo].[SISCourseMergeLog] (
 -- Primary key (informational, not enforced): SourceCourseDeployId, SourceCourseOrgUnitId, TargetCourseOrgUnitId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[SourceCourseDeployHistory];
+IF OBJECT_ID(N'[dbo].[SourceCourseDeployHistory]', N'U') IS NULL
 CREATE TABLE [dbo].[SourceCourseDeployHistory] (
     [SourceCourseDeployId] bigint NULL,
     [SourceCourseOrgUnitId] int NULL,
@@ -2610,7 +2610,7 @@ CREATE TABLE [dbo].[SourceCourseDeployHistory] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): SurveyId -> SurveyObjects.SurveyId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[SurveyAttempts];
+IF OBJECT_ID(N'[dbo].[SurveyAttempts]', N'U') IS NULL
 CREATE TABLE [dbo].[SurveyAttempts] (
     [AttemptId] bigint NULL,
     [SurveyId] bigint NULL,
@@ -2631,7 +2631,7 @@ CREATE TABLE [dbo].[SurveyAttempts] (
 -- Join (informational): CreatedBy -> Users.UserId
 -- Join (informational): LastModifiedBy -> Users.UserId
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[SurveyObjects];
+IF OBJECT_ID(N'[dbo].[SurveyObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[SurveyObjects] (
     [SurveyId] bigint NULL,
     [SurveyName] nvarchar(1000) NULL,
@@ -2663,7 +2663,7 @@ CREATE TABLE [dbo].[SurveyObjects] (
 -- Primary key (informational, not enforced): AttemptId, QuestionId, QuestionVersionId, AnswerId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): AttemptId -> SurveyAttempts.AttemptId
-DROP TABLE IF EXISTS [dbo].[SurveyUserAnswerResponses];
+IF OBJECT_ID(N'[dbo].[SurveyUserAnswerResponses]', N'U') IS NULL
 CREATE TABLE [dbo].[SurveyUserAnswerResponses] (
     [AttemptId] bigint NULL,
     [AttemptNumber] int NULL,
@@ -2684,7 +2684,7 @@ CREATE TABLE [dbo].[SurveyUserAnswerResponses] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): AttemptId -> SurveyAttempts.AttemptId
 -- Join (informational): LastModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[SurveyUserAnswers];
+IF OBJECT_ID(N'[dbo].[SurveyUserAnswers]', N'U') IS NULL
 CREATE TABLE [dbo].[SurveyUserAnswers] (
     [AttemptId] bigint NULL,
     [QuestionId] bigint NULL,
@@ -2706,7 +2706,7 @@ CREATE TABLE [dbo].[SurveyUserAnswers] (
 -- Primary key (informational, not enforced): SessionId, UserId, Timestamp, State
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[SystemAccessLog];
+IF OBJECT_ID(N'[dbo].[SystemAccessLog]', N'U') IS NULL
 CREATE TABLE [dbo].[SystemAccessLog] (
     [SessionId] nvarchar(36) NULL,
     [UserId] int NULL,
@@ -2723,7 +2723,7 @@ CREATE TABLE [dbo].[SystemAccessLog] (
 -- Primary key (informational, not enforced): UserId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[SystemAccessSummary];
+IF OBJECT_ID(N'[dbo].[SystemAccessSummary]', N'U') IS NULL
 CREATE TABLE [dbo].[SystemAccessSummary] (
     [UserId] int NULL,
     [ImpersonatingUserId] int NULL,
@@ -2734,7 +2734,7 @@ CREATE TABLE [dbo].[SystemAccessSummary] (
 -- Tools
 -- Primary key (informational, not enforced): ToolId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[Tools];
+IF OBJECT_ID(N'[dbo].[Tools]', N'U') IS NULL
 CREATE TABLE [dbo].[Tools] (
     [ToolId] int NULL,
     [Name] nvarchar(50) NULL,
@@ -2747,7 +2747,7 @@ CREATE TABLE [dbo].[Tools] (
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): DropboxId -> AssignmentSummary.DropboxId
 -- Join (informational): SubmissionId -> AssignmentSubmissionDetails.SubmissionId
-DROP TABLE IF EXISTS [dbo].[TurnItInSubmissions];
+IF OBJECT_ID(N'[dbo].[TurnItInSubmissions]', N'U') IS NULL
 CREATE TABLE [dbo].[TurnItInSubmissions] (
     [DropboxId] bigint NULL,
     [SubmissionId] bigint NULL,
@@ -2765,7 +2765,7 @@ CREATE TABLE [dbo].[TurnItInSubmissions] (
 -- Primary key (informational, not enforced): AttributeId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): ModifiedBy -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[UserAttributeDefinitions];
+IF OBJECT_ID(N'[dbo].[UserAttributeDefinitions]', N'U') IS NULL
 CREATE TABLE [dbo].[UserAttributeDefinitions] (
     [AttributeId] nvarchar(128) NULL,
     [Name] nvarchar(128) NULL,
@@ -2784,7 +2784,7 @@ CREATE TABLE [dbo].[UserAttributeDefinitions] (
 -- Join (informational): AttributeId -> UserAttributeDefinitions.AttributeId
 -- Join (informational): ModifiedBy -> Users.UserId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[UserAttributeValues];
+IF OBJECT_ID(N'[dbo].[UserAttributeValues]', N'U') IS NULL
 CREATE TABLE [dbo].[UserAttributeValues] (
     [UserId] int NULL,
     [AttributeId] nvarchar(128) NULL,
@@ -2801,7 +2801,7 @@ CREATE TABLE [dbo].[UserAttributeValues] (
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
 -- Join (informational): RoleId -> RoleDetails.RoleId
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[UserEnrollments];
+IF OBJECT_ID(N'[dbo].[UserEnrollments]', N'U') IS NULL
 CREATE TABLE [dbo].[UserEnrollments] (
     [OrgUnitId] int NULL,
     [UserId] int NULL,
@@ -2815,7 +2815,7 @@ CREATE TABLE [dbo].[UserEnrollments] (
 -- Primary key (informational, not enforced): LoginAttemptId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): UserId -> Users.UserId
-DROP TABLE IF EXISTS [dbo].[UserLogins];
+IF OBJECT_ID(N'[dbo].[UserLogins]', N'U') IS NULL
 CREATE TABLE [dbo].[UserLogins] (
     [UserId] int NULL,
     [UserName] nvarchar(256) NULL,
@@ -2831,7 +2831,7 @@ CREATE TABLE [dbo].[UserLogins] (
 -- Users
 -- Primary key (informational, not enforced): UserId
 -- BDS keys can repeat across differential files, so no constraints are created.
-DROP TABLE IF EXISTS [dbo].[Users];
+IF OBJECT_ID(N'[dbo].[Users]', N'U') IS NULL
 CREATE TABLE [dbo].[Users] (
     [UserId] int NULL,
     [UserName] nvarchar(270) NULL,
@@ -2851,7 +2851,7 @@ CREATE TABLE [dbo].[Users] (
 -- Primary key (informational, not enforced): MeetingId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
-DROP TABLE IF EXISTS [dbo].[VirtualClassroomUsage];
+IF OBJECT_ID(N'[dbo].[VirtualClassroomUsage]', N'U') IS NULL
 CREATE TABLE [dbo].[VirtualClassroomUsage] (
     [OrgUnitId] int NULL,
     [CourseName] nvarchar(255) NULL,

@@ -43,9 +43,9 @@ export const tableName = (name) => name.replace(/[^A-Za-z0-9]+/g, ' ').trim().sp
   .map((w) => w[0].toUpperCase() + w.slice(1)).join('');
 const q = (id) => `[${id.replaceAll(']', ']]')}]`;
 
-const credit = '-- Brightspace Data Sets schema compilation, Copyright (c) 2026 BentoBits Inc.,\n'
-  + "-- compiled from D2L's public Brightspace Data Sets documentation (snapshot checked on 2026-10-31),\n"
-  + '-- licensed under CC BY 4.0. Brightspace is a trademark of D2L Corporation; not affiliated with or endorsed by D2L.\n';
+const credit = '-- Brightspace Data Sets table script, Copyright (c) 2026 BentoBits Inc., licensed under the MIT licence.\n'
+  + "-- Schema metadata was transcribed from D2L's public Brightspace Data Sets documentation (snapshot checked on 2026-10-31).\n"
+  + '-- Brightspace is a trademark of D2L Corporation; not affiliated with or endorsed by D2L.\n';
 
 // Returns { tables: [{ slug, table, name, columns: [{ name, sql, expected }] }], files: Map }.
 export function sqlServerOutputs(schema) {
@@ -71,7 +71,7 @@ export function sqlServerOutputs(schema) {
     files.set(`sql/sqlserver/${t.slug}.sql`, `-- ${t.name}\n${credit}\n${body}`);
     return `-- ${t.name}\n${body}`;
   });
-  files.set('sql/sqlserver/all-tables.sql', '-- All 144 Brightspace Data Sets tables for SQL Server 2016 or later. Safe to run again.\n'
+  files.set('sql/sqlserver/all-tables.sql', '-- All 144 Brightspace Data Sets tables for SQL Server 2016 or later. Safe to run again: existing tables and rows are never dropped or changed.\n'
     + `${credit}\n${bodies.join('\n')}`);
   return { tables, files };
 }
@@ -82,7 +82,7 @@ function tableBody(t, slugTable) {
   lines.push('-- BDS keys can repeat across differential files, so no constraints are created.');
   for (const j of t.joins) lines.push(`-- Join (informational): ${j.column} -> ${slugTable.get(j.to)}.${j.toColumn}`);
   const id = `${q('dbo')}.${q(t.table)}`;
-  lines.push(`DROP TABLE IF EXISTS ${id};`, `CREATE TABLE ${id} (`);
+  lines.push(`IF OBJECT_ID(N'${id}', N'U') IS NULL`, `CREATE TABLE ${id} (`);
   lines.push(t.columns.map((c) => `    ${q(c.name)} ${c.sql} NULL`).join(',\n'));
   lines.push(');', '');
   return lines.join('\n');

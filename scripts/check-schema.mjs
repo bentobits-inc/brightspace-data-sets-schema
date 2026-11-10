@@ -60,7 +60,7 @@ async function checkSqlServer() {
     assert(!tables.has(table.toLowerCase()), `Duplicate table name ${table}`);
     tables.add(table.toLowerCase());
     const sql = await read(`${dir}/${d.slug}.sql`);
-    const m = /^DROP TABLE IF EXISTS \[dbo\]\.\[(\w+)\];\nCREATE TABLE \[dbo\]\.\[\1\] \(\n([\s\S]*?)\n\);$/m.exec(sql);
+    const m = /^IF OBJECT_ID\(N'\[dbo\]\.\[(\w+)\]', N'U'\) IS NULL\nCREATE TABLE \[dbo\]\.\[\1\] \(\n([\s\S]*?)\n\);$/m.exec(sql);
     assert(m && m[1] === table, `${d.slug}: table statement`);
     const expected = rows.map((r) => `    [${r[1]}] ${mapType(r[3], r[4]).sql} NULL`);
     assert.deepEqual(m[2].split('\n').map((l) => l.replace(/,$/, '')), expected, `${d.slug}: columns`);
