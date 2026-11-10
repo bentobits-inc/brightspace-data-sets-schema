@@ -1,0 +1,12 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+SCORM Objects,ScormObjectId,1,uniqueidentifier,16,true,false,,
+SCORM Objects,OrgUnitId,2,int,4,false,true,organizational-units,OrgUnitId
+SCORM Objects,ContentObjectId,3,int,4,false,true,,
+SCORM Objects,ContentServiceContentId,4,uniqueidentifier,16,false,false,,
+SCORM Objects,ContentServiceRevisionId,5,uniqueidentifier,16,false,false,,
+SCORM Objects,ContentServiceTopicId,6,uniqueidentifier,16,false,false,,
+SCORM Objects,Title,7,nvarchar,1000,false,false,,
+SCORM Objects,Description,8,nvarchar,1000,false,false,,
+SCORM Objects,LearningStandard,9,nvarchar,100,false,false,,
+SCORM Objects,LastModified,10,datetime2,8,false,false,,
+SCORM Objects,LastModifiedBy,11,int,4,false,true,users,UserId

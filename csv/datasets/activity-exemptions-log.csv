@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Activity Exemptions Log,OrgUnitId,1,int,4,false,true,organizational-units,OrgUnitId
+Activity Exemptions Log,UserId,2,int,4,false,true,users,UserId
+Activity Exemptions Log,ObjectId,3,int,4,false,false,,
+Activity Exemptions Log,ActivityId,4,varchar,225,false,false,,
+Activity Exemptions Log,LogTypeName,5,varchar,50,false,false,,
+Activity Exemptions Log,LastModifiedUtc,6,datetime2,8,false,false,,
+Activity Exemptions Log,LastModifiedBy,7,int,4,false,true,users,UserId
+Activity Exemptions Log,ActivityExemptionsLogId,8,bigint,8,true,false,,
+Activity Exemptions Log,ToolId,9,int,4,false,true,tools,ToolId

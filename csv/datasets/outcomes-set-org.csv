@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes Set Org,OutcomeSetId,1,bigint,8,true,false,,
+Outcomes Set Org,OutcomeSetName,2,nvarchar,256,false,false,,
+Outcomes Set Org,RegistryId,3,uniqueidentifier,16,false,false,,
+Outcomes Set Org,CreatedDate,4,datetime2,8,false,false,,
+Outcomes Set Org,CreatedBy,5,int,4,false,true,users,UserId
+Outcomes Set Org,LastModifiedDate,6,datetime2,8,false,false,,
+Outcomes Set Org,LastModifiedBy,7,int,4,false,true,users,UserId
+Outcomes Set Org,IsDeleted,8,bit,1,false,false,,
+Outcomes Set Org,ScaleId,9,uniqueidentifier,16,false,true,outcomes-scale-definition,ScaleId

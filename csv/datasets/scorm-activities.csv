@@ -1,0 +1,13 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+SCORM Activities,ActivityId,1,uniqueidentifier,16,true,false,,
+SCORM Activities,ScormObjectId,2,uniqueidentifier,16,false,true,scorm-objects,ScormObjectId
+SCORM Activities,ParentActivityId,3,uniqueidentifier,16,false,true,,
+SCORM Activities,NumChildren,4,int,4,false,false,,
+SCORM Activities,InternalId,5,nvarchar,255,false,false,,
+SCORM Activities,Title,6,nvarchar,200,false,false,,
+SCORM Activities,CompletionThreshold,7,float,24,false,false,,
+SCORM Activities,PassingScore,8,float,24,false,false,,
+SCORM Activities,PassingScoreUsed,9,bit,1,false,false,,
+SCORM Activities,ScoreMin,10,float,24,false,false,,
+SCORM Activities,ScoreMax,11,float,24,false,false,,
+SCORM Activities,LastModified,12,datetime2,8,false,false,,

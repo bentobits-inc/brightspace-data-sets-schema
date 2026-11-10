@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+User Logins,UserId,1,int,4,false,true,users,UserId
+User Logins,UserName,2,nvarchar,256,false,false,,
+User Logins,IP,3,varchar,64,false,false,,
+User Logins,SessionId,4,int,4,false,false,,
+User Logins,StatusType,5,nvarchar,50,false,false,,
+User Logins,AttemptDate,6,datetime2,8,false,false,,
+User Logins,ImpersonatingUserId,7,int,4,false,true,,
+User Logins,LoginAttemptId,8,nvarchar,36,true,false,,
+User Logins,LoginSource,9,nvarchar,50,false,false,,

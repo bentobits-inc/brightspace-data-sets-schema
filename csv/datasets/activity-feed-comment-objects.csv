@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Activity Feed Comment Objects,OrgUnitId,1,int,4,false,true,organizational-units,OrgUnitId
+Activity Feed Comment Objects,CommentId,2,uniqueidentifier,16,true,false,,
+Activity Feed Comment Objects,LastModifiedBy,3,int,4,false,true,users,UserId
+Activity Feed Comment Objects,LastModified,4,datetime2,8,false,false,,
+Activity Feed Comment Objects,Content,5,nvarchar,3072,false,false,,
+Activity Feed Comment Objects,IsDeleted,6,bit,1,false,false,,
+Activity Feed Comment Objects,PostId,7,uniqueidentifier,16,false,true,activity-feed-post-objects,PostId
+Activity Feed Comment Objects,Version,8,bigint,8,false,false,,

@@ -1,0 +1,19 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Quiz Survey Sections,CollectionId,1,bigint,8,false,true,,
+Quiz Survey Sections,SectionId,2,bigint,8,true,false,,
+Quiz Survey Sections,Name,3,nvarchar,256,false,false,,
+Quiz Survey Sections,NameIsDisplayed,4,bit,1,false,false,,
+Quiz Survey Sections,IsQuestionPool,5,bit,1,false,false,,
+Quiz Survey Sections,SectionText,6,nvarchar,1000,false,false,,
+Quiz Survey Sections,SectionTextIsHTML,7,bit,1,false,false,,
+Quiz Survey Sections,IsSectionTextHidden,8,bit,1,false,false,,
+Quiz Survey Sections,QuestionPoints,9,decimal,"19, 9",false,false,,
+Quiz Survey Sections,NumQuestions,10,int,4,false,false,,
+Quiz Survey Sections,NumChoices,11,int,4,false,false,,
+Quiz Survey Sections,Shuffle,12,bit,1,false,false,,
+Quiz Survey Sections,CreationDate,13,datetime2,8,false,false,,
+Quiz Survey Sections,CreatedBy,14,bigint,8,false,true,users,UserId
+Quiz Survey Sections,LastModified,15,datetime2,8,false,false,,
+Quiz Survey Sections,LastModifiedBy,16,bigint,8,false,true,users,UserId
+Quiz Survey Sections,IsDeleted,17,bit,1,false,false,,
+Quiz Survey Sections,Version,18,bigint,8,false,false,,

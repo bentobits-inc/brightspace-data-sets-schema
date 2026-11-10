@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Media Consumption Log,LogId,1,uniqueidentifier,16,true,false,,
+Media Consumption Log,UserId,2,int,4,false,true,users,UserId
+Media Consumption Log,ContentId,3,uniqueidentifier,16,false,true,media-objects,ContentId
+Media Consumption Log,RevisionId,4,uniqueidentifier,16,false,false,,
+Media Consumption Log,ContentType,5,nvarchar,5,false,false,,
+Media Consumption Log,ClientApp,6,nvarchar,32,false,false,,
+Media Consumption Log,DateConsumed,7,datetime2,8,false,false,,
+Media Consumption Log,DurationPercentageWatched,8,int,4,false,false,,

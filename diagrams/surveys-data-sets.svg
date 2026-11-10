@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="512" viewBox="0 0 1500 512" font-family="monospace" fill="#172c44">
+<title>Surveys data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="512" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Surveys data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="survey-attempts" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 238 H 492 V 92 H 518 V 390 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-attempts.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="survey-attempts" data-from-column="SurveyId" data-to-dataset="survey-objects" data-to-column="SurveyId" data-join-kind="key" d="M 480 238 H 495 V 89 H 515 V 220 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-attempts.SurveyId to survey-objects.SurveyId (key)</title></path>
+<path data-from-dataset="survey-attempts" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 480 238 H 498 V 86 H 1002 V 390 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-attempts.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="survey-objects" data-from-column="CreatedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 220 H 991 V 83 H 999 V 390 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-objects.CreatedBy to users.UserId (user)</title></path>
+<path data-from-dataset="survey-objects" data-from-column="LastModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 220 H 994 V 80 H 996 V 390 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-objects.LastModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="survey-objects" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 970 220 H 997 V 77 H 503 V 390 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-objects.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="survey-user-answer-responses" data-from-column="AttemptId" data-to-dataset="survey-attempts" data-to-column="AttemptId" data-join-kind="key" d="M 1460 220 H 1472 V 92 H 28 V 238 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-user-answer-responses.AttemptId to survey-attempts.AttemptId (key)</title></path>
+<path data-from-dataset="survey-user-answers" data-from-column="AttemptId" data-to-dataset="survey-attempts" data-to-column="AttemptId" data-join-kind="key" d="M 480 426 H 495 V 295 H 25 V 238 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-user-answers.AttemptId to survey-attempts.AttemptId (key)</title></path>
+<path data-from-dataset="survey-user-answers" data-from-column="LastModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 426 H 498 V 292 H 1002 V 390 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>survey-user-answers.LastModifiedBy to users.UserId (user)</title></path>
+<rect data-kind="full" data-dataset="survey-attempts" x="40" y="108" width="440" height="142" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="survey-attempts" x="54" y="132" font-size="14" font-weight="bold">Survey Attempts</text>
+<text data-box-dataset="survey-attempts" data-row-dataset="survey-attempts" data-row-column="AttemptId" x="54" y="150" font-size="12">PK AttemptId</text>
+<text data-box-dataset="survey-attempts" data-row-dataset="survey-attempts" data-row-column="SurveyId" x="54" y="168" font-size="12">FK SurveyId &gt; Survey Objects</text>
+<text data-box-dataset="survey-attempts" data-row-dataset="survey-attempts" data-row-column="UserId" x="54" y="186" font-size="12">FK UserId &gt; Users</text>
+<text data-box-dataset="survey-attempts" data-row-dataset="survey-attempts" data-row-column="OrgUnitId" x="54" y="204" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="survey-attempts" data-row-dataset="survey-attempts" data-row-column="AttemptedFromOrgUnitId" x="54" y="222" font-size="12">FK AttemptedFromOrgUnitId</text>
+<rect data-kind="full" data-dataset="survey-objects" x="530" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="survey-objects" x="544" y="132" font-size="14" font-weight="bold">Survey Objects</text>
+<text data-box-dataset="survey-objects" data-row-dataset="survey-objects" data-row-column="SurveyId" x="544" y="150" font-size="12">PK SurveyId</text>
+<text data-box-dataset="survey-objects" data-row-dataset="survey-objects" data-row-column="OrgUnitId" x="544" y="168" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="survey-objects" data-row-dataset="survey-objects" data-row-column="CreatedBy" x="544" y="186" font-size="12">FK CreatedBy &gt; Users</text>
+<text data-box-dataset="survey-objects" data-row-dataset="survey-objects" data-row-column="LastModifiedBy" x="544" y="204" font-size="12">FK LastModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="survey-user-answer-responses" x="1020" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="survey-user-answer-responses" x="1034" y="132" font-size="14" font-weight="bold">Survey User Answer Responses</text>
+<text data-box-dataset="survey-user-answer-responses" data-row-dataset="survey-user-answer-responses" data-row-column="AttemptId" x="1034" y="150" font-size="12">PK FK AttemptId &gt; Survey Attempts</text>
+<text data-box-dataset="survey-user-answer-responses" data-row-dataset="survey-user-answer-responses" data-row-column="QuestionId" x="1034" y="168" font-size="12">PK FK QuestionId</text>
+<text data-box-dataset="survey-user-answer-responses" data-row-dataset="survey-user-answer-responses" data-row-column="QuestionVersionId" x="1034" y="186" font-size="12">PK FK QuestionVersionId</text>
+<text data-box-dataset="survey-user-answer-responses" data-row-dataset="survey-user-answer-responses" data-row-column="AnswerId" x="1034" y="204" font-size="12">PK FK AnswerId</text>
+<rect data-kind="full" data-dataset="survey-user-answers" x="40" y="314" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="survey-user-answers" x="54" y="338" font-size="14" font-weight="bold">Survey User Answers</text>
+<text data-box-dataset="survey-user-answers" data-row-dataset="survey-user-answers" data-row-column="AttemptId" x="54" y="356" font-size="12">PK FK AttemptId &gt; Survey Attempts</text>
+<text data-box-dataset="survey-user-answers" data-row-dataset="survey-user-answers" data-row-column="QuestionId" x="54" y="374" font-size="12">PK FK QuestionId</text>
+<text data-box-dataset="survey-user-answers" data-row-dataset="survey-user-answers" data-row-column="QuestionVersionId" x="54" y="392" font-size="12">PK FK QuestionVersionId</text>
+<text data-box-dataset="survey-user-answers" data-row-dataset="survey-user-answers" data-row-column="LastModifiedBy" x="54" y="410" font-size="12">FK LastModifiedBy &gt; Users</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="530" y="314" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="544" y="338" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="544" y="356" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="544" y="374" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="users" x="1020" y="314" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="1034" y="338" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="1034" y="356" font-size="12">External table</text>
+<text data-box-dataset="users" x="1034" y="374" font-size="12">See its own area for columns</text>
+</svg>

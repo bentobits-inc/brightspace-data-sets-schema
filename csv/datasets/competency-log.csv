@@ -1,0 +1,14 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Competency Log,CompetencyLogId,1,bigint,8,true,false,,
+Competency Log,LogTypeId,2,int,4,false,false,,
+Competency Log,LogTypeName,3,varchar,19,false,false,,
+Competency Log,ObjectId,4,bigint,8,false,true,competency-objects,ObjectId
+Competency Log,ObjectTypeId,5,int,4,false,false,,
+Competency Log,ObjectTypeName,6,varchar,18,false,false,,
+Competency Log,ObjectVersion,7,int,4,false,false,,
+Competency Log,LogDateTime,8,datetime2,8,false,false,,
+Competency Log,ModifiedBy,9,bigint,8,false,true,users,UserId
+Competency Log,IndirectObjectId,10,bigint,8,false,false,,
+Competency Log,IndirectObjectTypeName,11,varchar,18,false,false,,
+Competency Log,IndirectObjectTypeId,12,int,4,false,false,,
+Competency Log,IndirectObjectVersion,13,int,4,false,false,,

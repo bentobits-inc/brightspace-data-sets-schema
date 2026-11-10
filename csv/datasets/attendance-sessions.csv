@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Attendance Sessions,AttendanceSessionId,1,bigint,8,true,false,,
+Attendance Sessions,AttendanceRegisterId,2,bigint,8,false,true,attendance-registers,AttendanceRegisterId
+Attendance Sessions,Name,3,nvarchar,128,false,false,,
+Attendance Sessions,Description,4,nvarchar,256,false,false,,
+Attendance Sessions,SortOrder,5,int,4,false,false,,
+Attendance Sessions,Version,6,bigint,8,false,false,,
+Attendance Sessions,DateDeleted,7,datetime2,8,false,false,,
+Attendance Sessions,DeletedBy,8,int,4,false,false,,

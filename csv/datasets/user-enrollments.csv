@@ -1,0 +1,7 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+User Enrollments,OrgUnitId,1,int,4,true,true,organizational-units,OrgUnitId
+User Enrollments,UserId,2,int,4,true,true,users,UserId
+User Enrollments,RoleName,3,nvarchar,60,false,false,,
+User Enrollments,EnrollmentDate,4,datetime2,8,false,false,,
+User Enrollments,EnrollmentType,5,varchar,50,false,false,,
+User Enrollments,RoleId,6,int,4,false,true,role-details,RoleId

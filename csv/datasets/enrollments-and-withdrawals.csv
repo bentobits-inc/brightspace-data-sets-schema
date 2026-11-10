@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Enrollments and Withdrawals,LogId,1,bigint,8,true,false,,
+Enrollments and Withdrawals,UserId,2,int,4,false,true,users,UserId
+Enrollments and Withdrawals,OrgUnitId,3,int,4,false,true,organizational-units,OrgUnitId
+Enrollments and Withdrawals,RoleId,4,int,4,false,true,role-details,RoleId
+Enrollments and Withdrawals,Action,5,varchar,50,false,false,,
+Enrollments and Withdrawals,ModifiedByUserId,6,int,4,false,false,,
+Enrollments and Withdrawals,EnrollmentDate,7,datetime2,8,false,false,,

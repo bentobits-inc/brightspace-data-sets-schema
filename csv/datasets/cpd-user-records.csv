@@ -1,0 +1,15 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+CPD User Records,RecordId,1,int,4,true,false,,
+CPD User Records,RecordName,2,nvarchar,256,false,false,,
+CPD User Records,State,3,nvarchar,50,false,false,,
+CPD User Records,UserId,4,int,8,false,true,users,UserId
+CPD User Records,Category,5,int,8,false,true,,
+CPD User Records,Method,6,int,8,false,true,,
+CPD User Records,CreditMinutes,7,int,8,false,false,,
+CPD User Records,Evidence,8,nvarchar,4000,false,false,,
+CPD User Records,Type,9,nvarchar,50,false,false,,
+CPD User Records,Grade,10,decimal,"4, 3",false,false,,
+CPD User Records,DateCompleted,11,datetime2,8,false,false,,
+CPD User Records,LastModified,12,datetime2,8,false,false,,
+CPD User Records,DateDeleted,13,datetime2,8,false,false,,
+CPD User Records,Version,14,bigint,8,false,false,,

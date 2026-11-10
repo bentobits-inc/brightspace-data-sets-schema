@@ -1,0 +1,6 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Media Objects,ContentId,1,uniqueidentifier,16,true,false,,
+Media Objects,Title,2,nvarchar,1000,false,false,,
+Media Objects,RevisionCount,3,int,4,false,false,,
+Media Objects,OwnerId,4,int,4,false,true,,
+Media Objects,LastModified,5,datetime2,8,false,false,,

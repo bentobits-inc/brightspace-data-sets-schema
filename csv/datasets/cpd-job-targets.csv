@@ -1,0 +1,12 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+CPD Job Targets,PrincipalId,1,int,4,true,false,,
+CPD Job Targets,CategoryId,2,int,4,true,true,cpd-categories,CategoryId
+CPD Job Targets,JobTitle,3,nvarchar,256,false,false,,
+CPD Job Targets,StructuredMinutes,4,int,4,false,false,,
+CPD Job Targets,UnstructuredMinutes,5,int,4,false,false,,
+CPD Job Targets,StructuredRecordCount,6,int,4,false,false,,
+CPD Job Targets,UnstructuredRecordCount,7,int,4,false,false,,
+CPD Job Targets,StartDate,8,datetime2,8,false,false,,
+CPD Job Targets,DateDeleted,9,datetime2,8,false,false,,
+CPD Job Targets,LastModified,10,datetime2,8,false,false,,
+CPD Job Targets,Version,11,bigint,8,false,false,,

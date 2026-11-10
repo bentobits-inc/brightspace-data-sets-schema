@@ -1,0 +1,5 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Local Authentication Security Log,UserId,1,int,4,true,true,users,UserId
+Local Authentication Security Log,Action,2,nvarchar,70,true,false,,
+Local Authentication Security Log,ModifiedBy,3,int,4,true,true,users,UserId
+Local Authentication Security Log,ModifiedDate,4,datetime2,8,true,false,,

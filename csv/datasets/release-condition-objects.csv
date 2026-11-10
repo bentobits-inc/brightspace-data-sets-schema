@@ -1,0 +1,15 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Release Condition Objects,PreRequisiteId,1,int,4,true,true,,
+Release Condition Objects,ResultId,2,int,4,true,false,,
+Release Condition Objects,OrgUnitId,3,int,4,true,true,organizational-units,OrgUnitId
+Release Condition Objects,Name,4,varchar,64,false,false,,
+Release Condition Objects,IsNegativeCondition,5,bit,1,false,false,,
+Release Condition Objects,PreRequisiteToolId,6,int,4,false,true,,
+Release Condition Objects,Id1,7,int,4,false,false,,
+Release Condition Objects,Id2,8,int,4,false,false,,
+Release Condition Objects,ResultToolId,9,int,4,false,true,,
+Release Condition Objects,UsesPercentage,10,bit,1,false,false,,
+Release Condition Objects,OperatorTypeDesc,11,varchar,3,false,false,,
+Release Condition Objects,Version,12,bigint,8,false,false,,
+Release Condition Objects,Guid1,13,uniqueidentifier,16,false,false,,
+Release Condition Objects,Guid2,14,uniqueidentifier,16,false,false,,

@@ -1,0 +1,18 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Assignment Submissions,DropboxId,1,bigint,8,true,true,assignment-summary,DropboxId
+Assignment Submissions,OrgUnitId,2,int,4,false,true,organizational-units,OrgUnitId
+Assignment Submissions,SubmitterId,3,bigint,8,true,true,,
+Assignment Submissions,SubmitterType,4,varchar,5,true,false,,
+Assignment Submissions,FileSubmissionCount,5,int,4,false,false,,
+Assignment Submissions,TotalFileSize,6,bigint,8,false,false,,
+Assignment Submissions,FeedbackUserId,7,int,4,false,true,,
+Assignment Submissions,FeedbackIsRead,8,bit,1,false,false,,
+Assignment Submissions,Score,9,decimal,"19, 9",false,false,,
+Assignment Submissions,IsGraded,10,bit,1,false,false,,
+Assignment Submissions,LastSubmissionDate,11,datetime2,8,false,false,,
+Assignment Submissions,Feedback,12,nvarchar,1000,false,false,,
+Assignment Submissions,FeedbackLastModified,13,datetime2,8,false,false,,
+Assignment Submissions,FeedbackReadDate,14,datetime2,8,false,false,,
+Assignment Submissions,CompletionDate,15,datetime2,8,false,false,,
+Assignment Submissions,IsDeleted,16,bit,1,false,false,,
+Assignment Submissions,Version,17,bigint,8,false,false,,

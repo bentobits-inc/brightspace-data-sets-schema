@@ -1,0 +1,14 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Content User Progress,ContentObjectId,1,int,4,true,true,content-objects,ContentObjectId
+Content User Progress,UserId,2,int,4,true,true,users,UserId
+Content User Progress,CompletedDate,3,datetime2,8,false,false,,
+Content User Progress,LastVisited,4,datetime2,8,false,false,,
+Content User Progress,IsRead,5,bit,1,false,false,,
+Content User Progress,NumRealVisits,6,int,4,false,false,,
+Content User Progress,NumFakeVisits,7,int,4,false,false,,
+Content User Progress,TotalTime,8,bigint,8,false,false,,
+Content User Progress,IsVisited,9,bit,1,false,false,,
+Content User Progress,IsCurrentBookmark,10,bit,1,false,false,,
+Content User Progress,IsSelfAssessComplete,11,bit,1,false,false,,
+Content User Progress,LastModified,12,datetime2,8,false,false,,
+Content User Progress,Version,13,bigint,8,false,false,,

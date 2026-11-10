@@ -1,0 +1,15 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Portfolio Evidence Objects,EvidenceId,1,uniqueidentifier,16,true,false,,
+Portfolio Evidence Objects,OwnerId,2,int,4,false,true,,
+Portfolio Evidence Objects,OrgUnitId,3,int,4,false,true,organizational-units,OrgUnitId
+Portfolio Evidence Objects,EvidenceType,4,nvarchar,30,false,false,,
+Portfolio Evidence Objects,Title,5,nvarchar,1000,false,false,,
+Portfolio Evidence Objects,IsApproved,6,bit,1,false,false,,
+Portfolio Evidence Objects,IsSpotlighted,7,bit,1,false,false,,
+Portfolio Evidence Objects,IsSharedToParents,8,bit,1,false,false,,
+Portfolio Evidence Objects,IsDeleted,9,bit,1,false,false,,
+Portfolio Evidence Objects,IsRecoverableByInstructor,10,bit,1,false,false,,
+Portfolio Evidence Objects,LastModified,11,datetime2,8,false,false,,
+Portfolio Evidence Objects,LastModifiedBy,12,int,4,false,true,users,UserId
+Portfolio Evidence Objects,IsSharedWithInstructor,13,bit,1,false,false,,
+Portfolio Evidence Objects,DateSharedWithInstructor,14,datetime2,8,false,false,,

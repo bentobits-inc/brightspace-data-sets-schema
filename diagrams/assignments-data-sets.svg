@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="682" viewBox="0 0 1500 682" font-family="monospace" fill="#172c44">
+<title>Assignments data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="682" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Assignments data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="assignment-special-access" data-from-column="DropboxId" data-to-dataset="assignment-summary" data-to-column="DropboxId" data-join-kind="key" d="M 480 202 H 492 V 92 H 28 V 426 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>assignment-special-access.DropboxId to assignment-summary.DropboxId (key)</title></path>
+<path data-from-dataset="assignment-special-access" data-from-column="ModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 202 H 495 V 89 H 25 V 596 H 40" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>assignment-special-access.ModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="assignment-special-access" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 480 202 H 498 V 86 H 22 V 596 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>assignment-special-access.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="assignment-submission-details" data-from-column="DropboxId" data-to-dataset="assignment-summary" data-to-column="DropboxId" data-join-kind="key" d="M 970 220 H 991 V 83 H 19 V 426 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>assignment-submission-details.DropboxId to assignment-summary.DropboxId (key)</title></path>
+<path data-from-dataset="assignment-submission-details" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 970 220 H 994 V 80 H 16 V 596 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>assignment-submission-details.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="assignment-submissions" data-from-column="DropboxId" data-to-dataset="assignment-summary" data-to-column="DropboxId" data-join-kind="key" d="M 1460 238 H 1487 V 77 H 13 V 426 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>assignment-submissions.DropboxId to assignment-summary.DropboxId (key)</title></path>
+<path data-from-dataset="assignment-submissions" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 1460 238 H 1472 V 92 H 1008 V 390 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>assignment-submissions.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="assignment-summary" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 426 H 495 V 295 H 1005 V 390 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>assignment-summary.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="turnitin-submissions" data-from-column="DropboxId" data-to-dataset="assignment-summary" data-to-column="DropboxId" data-join-kind="key" d="M 970 444 H 988 V 292 H 22 V 426 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>turnitin-submissions.DropboxId to assignment-summary.DropboxId (key)</title></path>
+<path data-from-dataset="turnitin-submissions" data-from-column="SubmissionId" data-to-dataset="assignment-submission-details" data-to-column="SubmissionId" data-join-kind="key" d="M 970 444 H 991 V 289 H 509 V 220 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>turnitin-submissions.SubmissionId to assignment-submission-details.SubmissionId (key)</title></path>
+<rect data-kind="full" data-dataset="assignment-special-access" x="40" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="assignment-special-access" x="54" y="132" font-size="14" font-weight="bold">Assignment Special Access</text>
+<text data-box-dataset="assignment-special-access" data-row-dataset="assignment-special-access" data-row-column="DropboxId" x="54" y="150" font-size="12">PK FK DropboxId &gt; Assignment Summary</text>
+<text data-box-dataset="assignment-special-access" data-row-dataset="assignment-special-access" data-row-column="UserId" x="54" y="168" font-size="12">PK FK UserId &gt; Users</text>
+<text data-box-dataset="assignment-special-access" data-row-dataset="assignment-special-access" data-row-column="ModifiedBy" x="54" y="186" font-size="12">FK ModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="assignment-submission-details" x="530" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="assignment-submission-details" x="544" y="132" font-size="14" font-weight="bold">Assignment Submission Details</text>
+<text data-box-dataset="assignment-submission-details" data-row-dataset="assignment-submission-details" data-row-column="SubmissionId" x="544" y="150" font-size="12">PK SubmissionId</text>
+<text data-box-dataset="assignment-submission-details" data-row-dataset="assignment-submission-details" data-row-column="DropboxId" x="544" y="168" font-size="12">FK DropboxId &gt; Assignment Summary</text>
+<text data-box-dataset="assignment-submission-details" data-row-dataset="assignment-submission-details" data-row-column="UserId" x="544" y="186" font-size="12">FK UserId &gt; Users</text>
+<text data-box-dataset="assignment-submission-details" data-row-dataset="assignment-submission-details" data-row-column="SubmittedByUserId" x="544" y="204" font-size="12">FK SubmittedByUserId</text>
+<rect data-kind="full" data-dataset="assignment-submissions" x="1020" y="108" width="440" height="142" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="assignment-submissions" x="1034" y="132" font-size="14" font-weight="bold">Assignment Submissions</text>
+<text data-box-dataset="assignment-submissions" data-row-dataset="assignment-submissions" data-row-column="DropboxId" x="1034" y="150" font-size="12">PK FK DropboxId &gt; Assignment Summary</text>
+<text data-box-dataset="assignment-submissions" data-row-dataset="assignment-submissions" data-row-column="OrgUnitId" x="1034" y="168" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="assignment-submissions" data-row-dataset="assignment-submissions" data-row-column="SubmitterId" x="1034" y="186" font-size="12">PK FK SubmitterId</text>
+<text data-box-dataset="assignment-submissions" data-row-dataset="assignment-submissions" data-row-column="SubmitterType" x="1034" y="204" font-size="12">PK SubmitterType</text>
+<text data-box-dataset="assignment-submissions" data-row-dataset="assignment-submissions" data-row-column="FeedbackUserId" x="1034" y="222" font-size="12">FK FeedbackUserId</text>
+<rect data-kind="full" data-dataset="assignment-summary" x="40" y="314" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="assignment-summary" x="54" y="338" font-size="14" font-weight="bold">Assignment Summary</text>
+<text data-box-dataset="assignment-summary" data-row-dataset="assignment-summary" data-row-column="DropboxId" x="54" y="356" font-size="12">PK DropboxId</text>
+<text data-box-dataset="assignment-summary" data-row-dataset="assignment-summary" data-row-column="OrgUnitId" x="54" y="374" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="assignment-summary" data-row-dataset="assignment-summary" data-row-column="GradeItemId" x="54" y="392" font-size="12">FK GradeItemId</text>
+<text data-box-dataset="assignment-summary" data-row-dataset="assignment-summary" data-row-column="ResultId" x="54" y="410" font-size="12">FK ResultId</text>
+<rect data-kind="full" data-dataset="turnitin-submissions" x="530" y="314" width="440" height="142" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="turnitin-submissions" x="544" y="338" font-size="14" font-weight="bold">TurnItIn Submissions</text>
+<text data-box-dataset="turnitin-submissions" data-row-dataset="turnitin-submissions" data-row-column="DropboxId" x="544" y="356" font-size="12">FK DropboxId &gt; Assignment Summary</text>
+<text data-box-dataset="turnitin-submissions" data-row-dataset="turnitin-submissions" data-row-column="SubmissionId" x="544" y="374" font-size="12">PK FK SubmissionId &gt; Assignment Submission</text>
+<text data-box-dataset="turnitin-submissions" data-row-dataset="turnitin-submissions" data-row-column="SubmissionId" x="544" y="392" font-size="12">Details</text>
+<text data-box-dataset="turnitin-submissions" data-row-dataset="turnitin-submissions" data-row-column="FileId" x="544" y="410" font-size="12">PK FileId</text>
+<text data-box-dataset="turnitin-submissions" data-row-dataset="turnitin-submissions" data-row-column="SubmittedBy" x="544" y="428" font-size="12">FK SubmittedBy</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="1020" y="314" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="1034" y="338" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="1034" y="356" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="1034" y="374" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="users" x="40" y="520" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="54" y="544" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="54" y="562" font-size="12">External table</text>
+<text data-box-dataset="users" x="54" y="580" font-size="12">See its own area for columns</text>
+</svg>

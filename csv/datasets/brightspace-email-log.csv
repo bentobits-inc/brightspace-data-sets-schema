@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Brightspace Email Log,MailId,1,int,4,true,false,,
+Brightspace Email Log,SenderUserId,2,int,4,false,true,,
+Brightspace Email Log,SenderAddress,3,nvarchar,256,false,false,,
+Brightspace Email Log,RecipientAddress,4,nvarchar,256,true,false,,
+Brightspace Email Log,RecipientType,5,nvarchar,4,true,false,,
+Brightspace Email Log,DateTimeSent,6,datetime2,8,false,false,,
+Brightspace Email Log,Subject,7,nvarchar,1000,false,false,,

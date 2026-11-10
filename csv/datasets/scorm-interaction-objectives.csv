@@ -1,0 +1,4 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+SCORM Interaction Objectives,InteractionId,1,uniqueidentifier,16,true,true,scorm-interactions,InteractionId
+SCORM Interaction Objectives,ObjectiveId,2,uniqueidentifier,16,true,true,scorm-objectives,ObjectiveId
+SCORM Interaction Objectives,LastModified,3,datetime2,8,false,false,,

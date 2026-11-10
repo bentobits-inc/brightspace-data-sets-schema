@@ -1,0 +1,12 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Survey Attempts,AttemptId,1,bigint,8,true,false,,
+Survey Attempts,SurveyId,2,bigint,8,false,true,survey-objects,SurveyId
+Survey Attempts,UserId,3,int,4,false,true,users,UserId
+Survey Attempts,OrgUnitId,4,int,4,false,true,organizational-units,OrgUnitId
+Survey Attempts,AttemptNumber,5,int,4,false,false,,
+Survey Attempts,TimeStarted,6,datetime2,8,false,false,,
+Survey Attempts,TimeCompleted,7,datetime2,8,false,false,,
+Survey Attempts,AttemptedFromOrgUnitId,8,int,4,false,true,,
+Survey Attempts,OldAttemptNumber,9,int,4,false,false,,
+Survey Attempts,IsDeleted,10,bit,1,false,false,,
+Survey Attempts,Version,11,bigint,8,false,false,,

@@ -1,0 +1,19 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Discussion Forums,OrgUnitId,1,int,4,false,true,organizational-units,OrgUnitId
+Discussion Forums,ForumId,2,bigint,8,true,false,,
+Discussion Forums,Name,3,nvarchar,400,false,false,,
+Discussion Forums,Description,4,nvarchar,1000,false,false,,
+Discussion Forums,MustPostToParticipate,5,bit,1,false,false,,
+Discussion Forums,AllowAnon,6,bit,1,false,false,,
+Discussion Forums,IsHidden,7,bit,1,false,false,,
+Discussion Forums,RequiresApproval,8,bit,1,false,false,,
+Discussion Forums,SortOrder,9,int,4,false,false,,
+Discussion Forums,IsDeleted,10,bit,1,false,false,,
+Discussion Forums,DeletedDate,11,datetime2,8,false,false,,
+Discussion Forums,DeletedByUserId,12,int,4,false,true,users,UserId
+Discussion Forums,ResultId,13,int,4,false,true,,
+Discussion Forums,StartDate,14,datetime2,8,false,false,,
+Discussion Forums,StartDateAvailabilityType,15,smallint,2,false,false,,
+Discussion Forums,EndDate,16,datetime2,8,false,false,,
+Discussion Forums,EndDateAvailabilityType,17,smallint,2,false,false,,
+Discussion Forums,Version,18,bigint,8,false,false,,

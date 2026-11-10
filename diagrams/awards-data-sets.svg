@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="512" viewBox="0 0 1500 512" font-family="monospace" fill="#172c44">
+<title>Awards data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="512" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Awards data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="awards-issued" data-from-column="AwardId" data-to-dataset="award-objects" data-to-column="AwardId" data-join-kind="key" d="M 970 274 H 982 V 92 H 28 V 166 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>awards-issued.AwardId to award-objects.AwardId (key)</title></path>
+<path data-from-dataset="awards-issued" data-from-column="IssuedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 274 H 985 V 89 H 515 V 426 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>awards-issued.IssuedBy to users.UserId (user)</title></path>
+<path data-from-dataset="awards-issued" data-from-column="LastModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 274 H 988 V 86 H 512 V 426 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>awards-issued.LastModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="awards-issued" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 970 274 H 991 V 83 H 19 V 426 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>awards-issued.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="awards-issued" data-from-column="RevokedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 274 H 994 V 80 H 506 V 426 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>awards-issued.RevokedBy to users.UserId (user)</title></path>
+<path data-from-dataset="awards-issued" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 970 274 H 997 V 77 H 503 V 426 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>awards-issued.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="course-awards" data-from-column="AwardId" data-to-dataset="award-objects" data-to-column="AwardId" data-join-kind="key" d="M 1460 202 H 1472 V 92 H 28 V 166 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>course-awards.AwardId to award-objects.AwardId (key)</title></path>
+<path data-from-dataset="course-awards" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 1460 202 H 1475 V 89 H 25 V 426 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>course-awards.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<rect data-kind="full" data-dataset="award-objects" x="40" y="108" width="440" height="70" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="award-objects" x="54" y="132" font-size="14" font-weight="bold">Award Objects</text>
+<text data-box-dataset="award-objects" data-row-dataset="award-objects" data-row-column="AwardId" x="54" y="150" font-size="12">PK AwardId</text>
+<rect data-kind="full" data-dataset="awards-issued" x="530" y="108" width="440" height="178" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="awards-issued" x="544" y="132" font-size="14" font-weight="bold">Awards Issued</text>
+<text data-box-dataset="awards-issued" data-row-dataset="awards-issued" data-row-column="AwardId" x="544" y="150" font-size="12">FK AwardId &gt; Award Objects</text>
+<text data-box-dataset="awards-issued" data-row-dataset="awards-issued" data-row-column="OrgUnitId" x="544" y="168" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="awards-issued" data-row-dataset="awards-issued" data-row-column="UserId" x="544" y="186" font-size="12">FK UserId &gt; Users</text>
+<text data-box-dataset="awards-issued" data-row-dataset="awards-issued" data-row-column="IssuedBy" x="544" y="204" font-size="12">FK IssuedBy &gt; Users</text>
+<text data-box-dataset="awards-issued" data-row-dataset="awards-issued" data-row-column="IssuedId" x="544" y="222" font-size="12">PK IssuedId</text>
+<text data-box-dataset="awards-issued" data-row-dataset="awards-issued" data-row-column="RevokedBy" x="544" y="240" font-size="12">FK RevokedBy &gt; Users</text>
+<text data-box-dataset="awards-issued" data-row-dataset="awards-issued" data-row-column="LastModifiedBy" x="544" y="258" font-size="12">FK LastModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="course-awards" x="1020" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="course-awards" x="1034" y="132" font-size="14" font-weight="bold">Course Awards</text>
+<text data-box-dataset="course-awards" data-row-dataset="course-awards" data-row-column="AssociationId" x="1034" y="150" font-size="12">PK AssociationId</text>
+<text data-box-dataset="course-awards" data-row-dataset="course-awards" data-row-column="AwardId" x="1034" y="168" font-size="12">FK AwardId &gt; Award Objects</text>
+<text data-box-dataset="course-awards" data-row-dataset="course-awards" data-row-column="OrgUnitId" x="1034" y="186" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="40" y="350" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="54" y="374" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="54" y="392" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="54" y="410" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="users" x="530" y="350" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="544" y="374" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="544" y="392" font-size="12">External table</text>
+<text data-box-dataset="users" x="544" y="410" font-size="12">See its own area for columns</text>
+</svg>

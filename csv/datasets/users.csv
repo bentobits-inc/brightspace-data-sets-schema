@@ -1,0 +1,13 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Users,UserId,1,int,4,true,false,,
+Users,UserName,2,nvarchar,270,false,false,,
+Users,OrgDefinedId,3,nvarchar,256,false,false,,
+Users,FirstName,4,nvarchar,64,false,false,,
+Users,MiddleName,5,nvarchar,64,false,false,,
+Users,LastName,6,nvarchar,64,false,false,,
+Users,IsActive,7,bit,1,false,false,,
+Users,ExternalEmail,8,nvarchar,256,false,false,,
+Users,CreationDate,9,datetime2,8,false,false,,
+Users,Version,10,bigint,8,false,false,,
+Users,OrgRoleId,11,int,4,false,false,,
+Users,DateDeleted,12,datetime2,8,false,false,,

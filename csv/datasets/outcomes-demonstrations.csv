@@ -1,0 +1,15 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes Demonstrations,DemonstrationId,1,uniqueidentifier,16,true,false,,
+Outcomes Demonstrations,ExplicitlyEnteredScaleLevelId,2,uniqueidentifier,16,false,true,,
+Outcomes Demonstrations,AutomaticallyGeneratedScaleLevelId,3,uniqueidentifier,16,false,true,,
+Outcomes Demonstrations,AlignedObjectType,4,int,4,false,false,,
+Outcomes Demonstrations,AlignedObjectId,5,nvarchar,1000,false,true,,
+Outcomes Demonstrations,OutcomeId,6,uniqueidentifier,16,false,false,,
+Outcomes Demonstrations,RegistryId,7,uniqueidentifier,16,false,false,,
+Outcomes Demonstrations,IsPublished,8,bit,1,false,false,,
+Outcomes Demonstrations,AssessedUserId,9,int,4,false,true,,
+Outcomes Demonstrations,AssessedDate,10,datetime2,8,false,false,,
+Outcomes Demonstrations,AssessorUserId,11,int,4,false,true,,
+Outcomes Demonstrations,LastModifiedDate,12,datetime2,8,false,false,,
+Outcomes Demonstrations,LastModifiedBy,13,int,4,false,true,users,UserId
+Outcomes Demonstrations,IsDeleted,14,bit,1,false,false,,

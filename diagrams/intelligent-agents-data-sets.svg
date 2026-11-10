@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="458" viewBox="0 0 1500 458" font-family="monospace" fill="#172c44">
+<title>Intelligent Agents data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="458" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Intelligent Agents data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="intelligent-agent-objects" data-from-column="LastModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 220 H 492 V 92 H 518 V 372 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>intelligent-agent-objects.LastModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="intelligent-agent-objects" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 220 H 495 V 89 H 25 V 372 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>intelligent-agent-objects.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="intelligent-agent-run-log" data-from-column="AgentId" data-to-dataset="intelligent-agent-objects" data-to-column="AgentId" data-join-kind="key" d="M 970 202 H 988 V 86 H 22 V 220 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>intelligent-agent-run-log.AgentId to intelligent-agent-objects.AgentId (key)</title></path>
+<path data-from-dataset="intelligent-agent-run-users" data-from-column="AgentId" data-to-dataset="intelligent-agent-objects" data-to-column="AgentId" data-join-kind="key" d="M 1460 220 H 1481 V 83 H 19 V 220 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>intelligent-agent-run-users.AgentId to intelligent-agent-objects.AgentId (key)</title></path>
+<path data-from-dataset="intelligent-agent-run-users" data-from-column="AgentRunId" data-to-dataset="intelligent-agent-run-log" data-to-column="AgentRunId" data-join-kind="key" d="M 1460 220 H 1484 V 80 H 506 V 202 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>intelligent-agent-run-users.AgentRunId to intelligent-agent-run-log.AgentRunId (key)</title></path>
+<path data-from-dataset="intelligent-agent-run-users" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 1460 220 H 1487 V 77 H 13 V 372 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>intelligent-agent-run-users.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="intelligent-agent-run-users" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 1460 220 H 1472 V 92 H 518 V 372 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>intelligent-agent-run-users.UserId to users.UserId (key)</title></path>
+<rect data-kind="full" data-dataset="intelligent-agent-objects" x="40" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="intelligent-agent-objects" x="54" y="132" font-size="14" font-weight="bold">Intelligent Agent Objects</text>
+<text data-box-dataset="intelligent-agent-objects" data-row-dataset="intelligent-agent-objects" data-row-column="AgentId" x="54" y="150" font-size="12">PK AgentId</text>
+<text data-box-dataset="intelligent-agent-objects" data-row-dataset="intelligent-agent-objects" data-row-column="OrgUnitId" x="54" y="168" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="intelligent-agent-objects" data-row-dataset="intelligent-agent-objects" data-row-column="ResultId" x="54" y="186" font-size="12">FK ResultId</text>
+<text data-box-dataset="intelligent-agent-objects" data-row-dataset="intelligent-agent-objects" data-row-column="LastModifiedBy" x="54" y="204" font-size="12">FK LastModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="intelligent-agent-run-log" x="530" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="intelligent-agent-run-log" x="544" y="132" font-size="14" font-weight="bold">Intelligent Agent Run Log</text>
+<text data-box-dataset="intelligent-agent-run-log" data-row-dataset="intelligent-agent-run-log" data-row-column="AgentId" x="544" y="150" font-size="12">FK AgentId &gt; Intelligent Agent Objects</text>
+<text data-box-dataset="intelligent-agent-run-log" data-row-dataset="intelligent-agent-run-log" data-row-column="AgentRunId" x="544" y="168" font-size="12">PK AgentRunId</text>
+<text data-box-dataset="intelligent-agent-run-log" data-row-dataset="intelligent-agent-run-log" data-row-column="RunUserId" x="544" y="186" font-size="12">FK RunUserId</text>
+<rect data-kind="full" data-dataset="intelligent-agent-run-users" x="1020" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="intelligent-agent-run-users" x="1034" y="132" font-size="14" font-weight="bold">Intelligent Agent Run Users</text>
+<text data-box-dataset="intelligent-agent-run-users" data-row-dataset="intelligent-agent-run-users" data-row-column="AgentId" x="1034" y="150" font-size="12">PK FK AgentId &gt; Intelligent Agent Objects</text>
+<text data-box-dataset="intelligent-agent-run-users" data-row-dataset="intelligent-agent-run-users" data-row-column="AgentRunId" x="1034" y="168" font-size="12">PK FK AgentRunId &gt; Intelligent Agent Run Log</text>
+<text data-box-dataset="intelligent-agent-run-users" data-row-dataset="intelligent-agent-run-users" data-row-column="UserId" x="1034" y="186" font-size="12">PK FK UserId &gt; Users</text>
+<text data-box-dataset="intelligent-agent-run-users" data-row-dataset="intelligent-agent-run-users" data-row-column="OrgUnitId" x="1034" y="204" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="40" y="296" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="54" y="320" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="54" y="338" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="54" y="356" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="users" x="530" y="296" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="544" y="320" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="544" y="338" font-size="12">External table</text>
+<text data-box-dataset="users" x="544" y="356" font-size="12">See its own area for columns</text>
+</svg>

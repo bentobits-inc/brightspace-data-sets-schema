@@ -1,0 +1,6 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+PreRequisite Conditions Met,PreRequisiteId,1,int,4,true,false,,
+PreRequisite Conditions Met,UserId,2,int,4,true,true,users,UserId
+PreRequisite Conditions Met,DateMet,3,datetime2,8,false,false,,
+PreRequisite Conditions Met,Action,4,nvarchar,7,false,false,,
+PreRequisite Conditions Met,LastModified,5,datetime2,8,false,false,,

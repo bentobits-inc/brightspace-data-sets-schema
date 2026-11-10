@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes Scale Definition,ScaleId,1,uniqueidentifier,16,true,false,,
+Outcomes Scale Definition,Name,2,nvarchar,1000,false,false,,
+Outcomes Scale Definition,IsDefault,3,bit,1,false,false,,
+Outcomes Scale Definition,UsePercentages,4,bit,1,false,false,,
+Outcomes Scale Definition,CreatedDate,5,datetime2,8,false,false,,
+Outcomes Scale Definition,CreatedBy,6,int,4,false,true,users,UserId
+Outcomes Scale Definition,LastModifiedDate,7,datetime2,8,false,false,,
+Outcomes Scale Definition,LastModifiedBy,8,int,4,false,true,users,UserId
+Outcomes Scale Definition,IsDeleted,9,bit,1,false,false,,
+Outcomes Scale Definition,AchievementThreshold,10,uniqueidentifier,16,false,true,,

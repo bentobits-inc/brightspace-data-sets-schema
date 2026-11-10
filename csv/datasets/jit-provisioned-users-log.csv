@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+JIT Provisioned Users Log,UserId,1,int,4,true,true,users,UserId
+JIT Provisioned Users Log,MappingField,2,nvarchar,32,false,false,,
+JIT Provisioned Users Log,MappingFieldValue,3,nvarchar,270,false,false,,
+JIT Provisioned Users Log,ProviderType,4,nvarchar,32,false,false,,
+JIT Provisioned Users Log,ProviderId,5,nvarchar,1024,false,false,,
+JIT Provisioned Users Log,RoleId,6,int,4,false,true,role-details,RoleId
+JIT Provisioned Users Log,Timestamp,7,datetime2,8,true,false,,
+JIT Provisioned Users Log,Action,8,nvarchar,16,false,false,,

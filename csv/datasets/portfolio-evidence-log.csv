@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Portfolio Evidence Log,LogId,1,uniqueidentifier,16,true,false,,
+Portfolio Evidence Log,ParentObjectId,2,uniqueidentifier,16,false,false,,
+Portfolio Evidence Log,ObjectId,3,uniqueidentifier,16,false,false,,
+Portfolio Evidence Log,ObjectType,4,nvarchar,40,false,false,,
+Portfolio Evidence Log,UserId,5,int,4,false,true,users,UserId
+Portfolio Evidence Log,OrgUnitId,6,int,4,false,true,organizational-units,OrgUnitId
+Portfolio Evidence Log,Action,7,nvarchar,16,false,false,,
+Portfolio Evidence Log,IsMobile,8,bit,1,false,false,,
+Portfolio Evidence Log,ActionDate,9,datetime2,8,false,false,,

@@ -1,0 +1,12 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes Set Course,RegistryId,1,uniqueidentifier,16,true,false,,
+Outcomes Set Course,OrgUnitId,2,bigint,8,false,true,organizational-units,OrgUnitId
+Outcomes Set Course,SourceOutcomeSetId,3,bigint,8,false,true,,
+Outcomes Set Course,IsPrimary,4,bit,1,false,false,,
+Outcomes Set Course,CreatedDate,5,datetime2,8,false,false,,
+Outcomes Set Course,CreatedBy,6,int,4,false,true,users,UserId
+Outcomes Set Course,LastModifiedDate,7,datetime2,8,false,false,,
+Outcomes Set Course,LastModifiedBy,8,int,4,false,true,users,UserId
+Outcomes Set Course,IsDeleted,9,bit,1,false,false,,
+Outcomes Set Course,ScaleId,10,uniqueidentifier,16,false,true,outcomes-scale-definition,ScaleId
+Outcomes Set Course,AchievementThreshold,11,uniqueidentifier,16,false,true,,

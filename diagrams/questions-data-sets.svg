@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="494" viewBox="0 0 1500 494" font-family="monospace" fill="#172c44">
+<title>Questions data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="494" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Questions data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<rect data-kind="full" data-dataset="question-answer-options" x="40" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="question-answer-options" x="54" y="132" font-size="14" font-weight="bold">Question Answer Options</text>
+<text data-box-dataset="question-answer-options" data-row-dataset="question-answer-options" data-row-column="AnswerId" x="54" y="150" font-size="12">PK FK AnswerId</text>
+<text data-box-dataset="question-answer-options" data-row-dataset="question-answer-options" data-row-column="QuestionId" x="54" y="168" font-size="12">PK FK QuestionId</text>
+<text data-box-dataset="question-answer-options" data-row-dataset="question-answer-options" data-row-column="QuestionVersionId" x="54" y="186" font-size="12">PK FK QuestionVersionId</text>
+<text data-box-dataset="question-answer-options" data-row-dataset="question-answer-options" data-row-column="AnswerOptionId" x="54" y="204" font-size="12">PK AnswerOptionId</text>
+<rect data-kind="full" data-dataset="question-answers" x="530" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="question-answers" x="544" y="132" font-size="14" font-weight="bold">Question Answers</text>
+<text data-box-dataset="question-answers" data-row-dataset="question-answers" data-row-column="AnswerId" x="544" y="150" font-size="12">PK AnswerId</text>
+<text data-box-dataset="question-answers" data-row-dataset="question-answers" data-row-column="QuestionId" x="544" y="168" font-size="12">PK FK QuestionId</text>
+<text data-box-dataset="question-answers" data-row-dataset="question-answers" data-row-column="QuestionVersionId" x="544" y="186" font-size="12">PK FK QuestionVersionId</text>
+<rect data-kind="full" data-dataset="question-library" x="1020" y="108" width="440" height="88" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="question-library" x="1034" y="132" font-size="14" font-weight="bold">Question Library</text>
+<text data-box-dataset="question-library" data-row-dataset="question-library" data-row-column="QuestionId" x="1034" y="150" font-size="12">PK QuestionId</text>
+<text data-box-dataset="question-library" data-row-dataset="question-library" data-row-column="QuestionVersionId" x="1034" y="168" font-size="12">PK QuestionVersionId</text>
+<rect data-kind="full" data-dataset="question-pools" x="40" y="296" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="question-pools" x="54" y="320" font-size="14" font-weight="bold">Question Pools</text>
+<text data-box-dataset="question-pools" data-row-dataset="question-pools" data-row-column="SectionId" x="54" y="338" font-size="12">PK FK SectionId</text>
+<text data-box-dataset="question-pools" data-row-dataset="question-pools" data-row-column="QuestionId" x="54" y="356" font-size="12">PK FK QuestionId</text>
+<text data-box-dataset="question-pools" data-row-dataset="question-pools" data-row-column="QuestionVersionId" x="54" y="374" font-size="12">PK FK QuestionVersionId</text>
+<rect data-kind="full" data-dataset="question-relationships" x="530" y="296" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="question-relationships" x="544" y="320" font-size="14" font-weight="bold">Question Relationships</text>
+<text data-box-dataset="question-relationships" data-row-dataset="question-relationships" data-row-column="CollectionId" x="544" y="338" font-size="12">FK CollectionId</text>
+<text data-box-dataset="question-relationships" data-row-dataset="question-relationships" data-row-column="QuestionId" x="544" y="356" font-size="12">FK QuestionId</text>
+<text data-box-dataset="question-relationships" data-row-dataset="question-relationships" data-row-column="QuestionVersionId" x="544" y="374" font-size="12">FK QuestionVersionId</text>
+<text data-box-dataset="question-relationships" data-row-dataset="question-relationships" data-row-column="ObjectId" x="544" y="392" font-size="12">PK ObjectId</text>
+</svg>

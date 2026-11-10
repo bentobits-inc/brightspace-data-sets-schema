@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Creator+ Practices Adoption,ActivityInstanceId,1,int,4,true,false,,
+Creator+ Practices Adoption,CreatedById,2,int,4,false,true,users,UserId
+Creator+ Practices Adoption,OrgUnitId,3,int,4,false,true,organizational-units,OrgUnitId
+Creator+ Practices Adoption,PracticeType,4,nvarchar,32,false,false,,
+Creator+ Practices Adoption,PracticeTitle,5,nvarchar,255,false,false,,
+Creator+ Practices Adoption,ProviderObjectId,6,int,4,false,false,,
+Creator+ Practices Adoption,CreatedDate,7,datetime2,8,false,false,,
+Creator+ Practices Adoption,Version,8,bigint,8,false,false,,

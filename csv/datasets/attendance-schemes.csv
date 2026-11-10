@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Attendance Schemes,SchemeId,1,bigint,8,true,false,,
+Attendance Schemes,OrgUnitId,2,int,4,false,true,organizational-units,OrgUnitId
+Attendance Schemes,SchemeName,3,nvarchar,128,false,false,,
+Attendance Schemes,SchemeSymbolId,4,bigint,8,true,false,,
+Attendance Schemes,SymbolName,5,nvarchar,128,false,false,,
+Attendance Schemes,SymbolValue,6,nvarchar,50,false,false,,
+Attendance Schemes,Percentage,7,decimal,"19, 9",false,false,,
+Attendance Schemes,Version,8,bigint,8,false,false,,
+Attendance Schemes,DateDeleted,9,datetime2,8,false,false,,
+Attendance Schemes,DeletedBy,10,int,4,false,false,,

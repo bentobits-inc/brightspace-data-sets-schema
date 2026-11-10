@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Activity Feed Comment Log,LogId,1,uniqueidentifier,16,true,false,,
+Activity Feed Comment Log,UserId,2,int,4,false,true,users,UserId
+Activity Feed Comment Log,OrgUnitId,3,int,4,false,true,organizational-units,OrgUnitId
+Activity Feed Comment Log,CommentId,4,uniqueidentifier,16,false,false,,
+Activity Feed Comment Log,Action,5,nvarchar,16,false,false,,
+Activity Feed Comment Log,ActionDate,6,datetime2,8,false,false,,
+Activity Feed Comment Log,Content,7,nvarchar,3072,false,false,,
+Activity Feed Comment Log,PostId,8,uniqueidentifier,16,false,true,activity-feed-post-objects,PostId

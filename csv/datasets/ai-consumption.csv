@@ -1,0 +1,7 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+AI Consumption,ConsumptionId,1,nvarchar,255,true,false,,
+AI Consumption,UserId,2,int,4,false,true,users,UserId
+AI Consumption,OrgUnitId,3,int,4,false,true,organizational-units,OrgUnitId
+AI Consumption,Date,4,datetime2,8,false,false,,
+AI Consumption,GenerationCount,5,int,4,false,false,,
+AI Consumption,ConsumptionSource,6,int,4,false,false,,

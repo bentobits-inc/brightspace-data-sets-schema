@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes in Registries,OutcomeId,1,uniqueidentifier,16,true,true,outcome-details,OutcomeId
+Outcomes in Registries,RegistryId,2,uniqueidentifier,16,true,false,,
+Outcomes in Registries,CreatedDate,3,datetime2,8,false,false,,
+Outcomes in Registries,CreatedBy,4,int,4,false,true,users,UserId
+Outcomes in Registries,LastModifiedDate,5,datetime2,8,false,false,,
+Outcomes in Registries,LastModifiedBy,6,int,4,false,true,users,UserId
+Outcomes in Registries,IsDeleted,7,bit,1,false,false,,

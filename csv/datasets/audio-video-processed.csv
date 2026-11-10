@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Audio Video Processed,ContentId,1,uniqueidentifier,16,true,true,media-objects,ContentId
+Audio Video Processed,RevisionId,2,uniqueidentifier,16,true,false,,
+Audio Video Processed,RevisionNumber,3,int,4,false,false,,
+Audio Video Processed,Type,4,nvarchar,5,false,false,,
+Audio Video Processed,Source,5,nvarchar,32,false,false,,
+Audio Video Processed,RevisionSize,6,bigint,8,false,false,,
+Audio Video Processed,Duration,7,int,4,false,false,,
+Audio Video Processed,RequiredTranscoding,8,bit,1,false,false,,
+Audio Video Processed,RequiredTranscribing,9,bit,1,false,false,,
+Audio Video Processed,LastModified,10,datetime2,8,false,false,,

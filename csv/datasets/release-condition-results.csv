@@ -1,0 +1,6 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Release Condition Results,ResultId,1,int,4,true,true,,
+Release Condition Results,UserId,2,int,4,true,true,users,UserId
+Release Condition Results,Met,3,varchar,7,false,false,,
+Release Condition Results,Version,4,bigint,8,false,false,,
+Release Condition Results,DeletedDate,5,datetime2,8,false,false,,

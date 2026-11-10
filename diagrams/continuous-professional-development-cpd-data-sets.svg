@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="628" viewBox="0 0 1500 628" font-family="monospace" fill="#172c44">
+<title>Continuous Professional Development (CPD) data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="628" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Continuous Professional Development (CPD) data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="cpd-job-targets" data-from-column="CategoryId" data-to-dataset="cpd-categories" data-to-column="CategoryId" data-join-kind="key" d="M 970 184 H 982 V 92 H 28 V 166 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>cpd-job-targets.CategoryId to cpd-categories.CategoryId (key)</title></path>
+<path data-from-dataset="cpd-question-answers" data-from-column="QuestionId" data-to-dataset="cpd-questions" data-to-column="QuestionId" data-join-kind="key" d="M 480 372 H 495 V 241 H 515 V 318 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>cpd-question-answers.QuestionId to cpd-questions.QuestionId (key)</title></path>
+<path data-from-dataset="cpd-question-answers" data-from-column="RecordId" data-to-dataset="cpd-user-records" data-to-column="RecordId" data-join-kind="key" d="M 480 372 H 498 V 238 H 1002 V 372 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>cpd-question-answers.RecordId to cpd-user-records.RecordId (key)</title></path>
+<path data-from-dataset="cpd-question-answers" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 480 372 H 501 V 235 H 509 V 524 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>cpd-question-answers.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="cpd-user-records" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 1460 372 H 1484 V 232 H 506 V 524 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>cpd-user-records.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="cpd-user-targets" data-from-column="CategoryId" data-to-dataset="cpd-categories" data-to-column="CategoryId" data-join-kind="key" d="M 480 542 H 507 V 417 H 13 V 166 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>cpd-user-targets.CategoryId to cpd-categories.CategoryId (key)</title></path>
+<path data-from-dataset="cpd-user-targets" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 480 542 H 492 V 432 H 518 V 524 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>cpd-user-targets.UserId to users.UserId (key)</title></path>
+<rect data-kind="full" data-dataset="cpd-categories" x="40" y="108" width="440" height="70" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="cpd-categories" x="54" y="132" font-size="14" font-weight="bold">CPD Categories</text>
+<text data-box-dataset="cpd-categories" data-row-dataset="cpd-categories" data-row-column="CategoryId" x="54" y="150" font-size="12">PK CategoryId</text>
+<rect data-kind="full" data-dataset="cpd-job-targets" x="530" y="108" width="440" height="88" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="cpd-job-targets" x="544" y="132" font-size="14" font-weight="bold">CPD Job Targets</text>
+<text data-box-dataset="cpd-job-targets" data-row-dataset="cpd-job-targets" data-row-column="PrincipalId" x="544" y="150" font-size="12">PK PrincipalId</text>
+<text data-box-dataset="cpd-job-targets" data-row-dataset="cpd-job-targets" data-row-column="CategoryId" x="544" y="168" font-size="12">PK FK CategoryId &gt; CPD Categories</text>
+<rect data-kind="full" data-dataset="cpd-methods" x="1020" y="108" width="440" height="70" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="cpd-methods" x="1034" y="132" font-size="14" font-weight="bold">CPD Methods</text>
+<text data-box-dataset="cpd-methods" data-row-dataset="cpd-methods" data-row-column="MethodId" x="1034" y="150" font-size="12">PK MethodId</text>
+<rect data-kind="full" data-dataset="cpd-question-answers" x="40" y="260" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="cpd-question-answers" x="54" y="284" font-size="14" font-weight="bold">CPD Question Answers</text>
+<text data-box-dataset="cpd-question-answers" data-row-dataset="cpd-question-answers" data-row-column="AnswerId" x="54" y="302" font-size="12">PK AnswerId</text>
+<text data-box-dataset="cpd-question-answers" data-row-dataset="cpd-question-answers" data-row-column="QuestionId" x="54" y="320" font-size="12">FK QuestionId &gt; CPD Questions</text>
+<text data-box-dataset="cpd-question-answers" data-row-dataset="cpd-question-answers" data-row-column="RecordId" x="54" y="338" font-size="12">FK RecordId &gt; CPD User Records</text>
+<text data-box-dataset="cpd-question-answers" data-row-dataset="cpd-question-answers" data-row-column="UserId" x="54" y="356" font-size="12">FK UserId &gt; Users</text>
+<rect data-kind="full" data-dataset="cpd-questions" x="530" y="260" width="440" height="70" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="cpd-questions" x="544" y="284" font-size="14" font-weight="bold">CPD Questions</text>
+<text data-box-dataset="cpd-questions" data-row-dataset="cpd-questions" data-row-column="QuestionId" x="544" y="302" font-size="12">PK QuestionId</text>
+<rect data-kind="full" data-dataset="cpd-user-records" x="1020" y="260" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="cpd-user-records" x="1034" y="284" font-size="14" font-weight="bold">CPD User Records</text>
+<text data-box-dataset="cpd-user-records" data-row-dataset="cpd-user-records" data-row-column="RecordId" x="1034" y="302" font-size="12">PK RecordId</text>
+<text data-box-dataset="cpd-user-records" data-row-dataset="cpd-user-records" data-row-column="UserId" x="1034" y="320" font-size="12">FK UserId &gt; Users</text>
+<text data-box-dataset="cpd-user-records" data-row-dataset="cpd-user-records" data-row-column="Category" x="1034" y="338" font-size="12">FK Category</text>
+<text data-box-dataset="cpd-user-records" data-row-dataset="cpd-user-records" data-row-column="Method" x="1034" y="356" font-size="12">FK Method</text>
+<rect data-kind="full" data-dataset="cpd-user-targets" x="40" y="448" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="cpd-user-targets" x="54" y="472" font-size="14" font-weight="bold">CPD User Targets</text>
+<text data-box-dataset="cpd-user-targets" data-row-dataset="cpd-user-targets" data-row-column="PrincipalId" x="54" y="490" font-size="12">PK PrincipalId</text>
+<text data-box-dataset="cpd-user-targets" data-row-dataset="cpd-user-targets" data-row-column="CategoryId" x="54" y="508" font-size="12">PK FK CategoryId &gt; CPD Categories</text>
+<text data-box-dataset="cpd-user-targets" data-row-dataset="cpd-user-targets" data-row-column="UserId" x="54" y="526" font-size="12">FK UserId &gt; Users</text>
+<rect data-kind="stub" data-dataset="users" x="530" y="448" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="544" y="472" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="544" y="490" font-size="12">External table</text>
+<text data-box-dataset="users" x="544" y="508" font-size="12">See its own area for columns</text>
+</svg>

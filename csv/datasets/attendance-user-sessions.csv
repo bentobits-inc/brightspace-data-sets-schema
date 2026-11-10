@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Attendance User Sessions,UserId,1,int,4,true,false,,
+Attendance User Sessions,AttendanceSessionId,2,bigint,8,true,true,attendance-sessions,AttendanceSessionId
+Attendance User Sessions,SchemeSymbolId,3,bigint,8,false,true,,
+Attendance User Sessions,LastModified,4,datetime2,8,false,false,,
+Attendance User Sessions,LastModifiedBy,5,int,4,false,false,,
+Attendance User Sessions,IsDeleted,6,bit,1,false,false,,
+Attendance User Sessions,Version,7,bigint,8,false,false,,

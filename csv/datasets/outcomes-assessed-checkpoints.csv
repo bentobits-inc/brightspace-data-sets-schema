@@ -1,0 +1,15 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes Assessed Checkpoints,CheckpointId,1,uniqueidentifier,16,true,false,,
+Outcomes Assessed Checkpoints,DemonstrationId,2,uniqueidentifier,16,true,true,outcomes-demonstrations,DemonstrationId
+Outcomes Assessed Checkpoints,Feedback,3,nvarchar,1000,false,false,,
+Outcomes Assessed Checkpoints,ConfigDecayRate,4,int,4,false,false,,
+Outcomes Assessed Checkpoints,ConfigAggregationMethod,5,int,4,false,false,,
+Outcomes Assessed Checkpoints,ConfigIncludedActivities,6,int,4,false,false,,
+Outcomes Assessed Checkpoints,ConfigMultipleAttemptStrategy,7,int,4,false,false,,
+Outcomes Assessed Checkpoints,ConfigRecentlyAssessedActivityCount,8,int,4,false,false,,
+Outcomes Assessed Checkpoints,ConfigTieBreaker,9,int,4,false,false,,
+Outcomes Assessed Checkpoints,LastModifiedDate,10,datetime2,8,false,false,,
+Outcomes Assessed Checkpoints,LastModifiedBy,11,int,4,false,false,,
+Outcomes Assessed Checkpoints,IsDeleted,12,bit,1,false,false,,
+Outcomes Assessed Checkpoints,HasMetAchievementThreshold,13,bit,1,false,false,,
+Outcomes Assessed Checkpoints,AchievedLevelId,14,uniqueidentifier,16,false,false,,

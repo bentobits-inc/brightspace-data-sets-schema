@@ -1,0 +1,5 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+System Access Summary,UserId,1,int,4,true,true,users,UserId
+System Access Summary,ImpersonatingUserId,2,int,4,false,true,,
+System Access Summary,LastSystemAccess,3,datetime2,8,false,false,,
+System Access Summary,Source,4,nvarchar,20,false,false,,

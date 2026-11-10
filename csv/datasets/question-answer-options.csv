@@ -1,0 +1,7 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Question Answer Options,AnswerId,1,bigint,8,true,true,,
+Question Answer Options,AnswerText,2,nvarchar,1000,false,false,,
+Question Answer Options,Weight,3,decimal,"19, 9",false,false,,
+Question Answer Options,QuestionId,4,bigint,8,true,true,,
+Question Answer Options,QuestionVersionId,5,bigint,8,true,true,,
+Question Answer Options,AnswerOptionId,6,int,4,true,false,,

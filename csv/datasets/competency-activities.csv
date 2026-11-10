@@ -1,0 +1,18 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Competency Activities,ActivityId,1,bigint,8,true,false,,
+Competency Activities,OrgUnitId,2,int,4,false,true,organizational-units,OrgUnitId
+Competency Activities,ActivityName,3,nvarchar,256,false,false,,
+Competency Activities,ActivityTypeId,4,int,4,false,false,,
+Competency Activities,AssessmentType,5,varchar,7,false,false,,
+Competency Activities,ObjectLookupId,6,bigint,8,false,false,,
+Competency Activities,RubricId,7,bigint,8,false,false,,
+Competency Activities,LevelId,8,bigint,8,false,false,,
+Competency Activities,RubricCriterionId,9,bigint,8,false,false,,
+Competency Activities,AssessmentThresholdCriteria,10,varchar,2,false,false,,
+Competency Activities,AssessmentThreshold,11,decimal,"19, 9",false,false,,
+Competency Activities,IsAutoEval,12,bit,1,false,false,,
+Competency Activities,RubricName,13,nvarchar,256,false,false,,
+Competency Activities,RubricLevelRequired,14,nvarchar,256,false,false,,
+Competency Activities,ObjectId,15,bigint,8,false,true,competency-objects,ObjectId
+Competency Activities,ActivityType,16,nvarchar,50,false,false,,
+Competency Activities,Version,17,bigint,8,false,false,,

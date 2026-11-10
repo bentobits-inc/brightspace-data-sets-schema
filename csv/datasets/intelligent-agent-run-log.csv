@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Intelligent Agent Run Log,AgentId,1,bigint,8,false,true,intelligent-agent-objects,AgentId
+Intelligent Agent Run Log,AgentRunId,2,bigint,8,true,false,,
+Intelligent Agent Run Log,IsPracticeRun,3,bit,1,false,false,,
+Intelligent Agent Run Log,IsRunNow,4,bit,1,false,false,,
+Intelligent Agent Run Log,NumUsers,5,int,4,false,false,,
+Intelligent Agent Run Log,NumUsersWithErrors,6,int,4,false,false,,
+Intelligent Agent Run Log,NumUsersWithInfos,7,int,4,false,false,,
+Intelligent Agent Run Log,NumUsersWithWarnings,8,int,4,false,false,,
+Intelligent Agent Run Log,RunUserId,9,int,4,false,true,,
+Intelligent Agent Run Log,RunDate,10,datetime2,8,false,false,,

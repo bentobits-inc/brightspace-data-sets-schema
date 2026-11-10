@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Creator+ Practices Engagement,PracticeEngagementId,1,int,4,true,false,,
+Creator+ Practices Engagement,UserId,2,int,4,false,true,users,UserId
+Creator+ Practices Engagement,OrgUnitId,3,int,4,false,true,organizational-units,OrgUnitId
+Creator+ Practices Engagement,CompletionStatus,4,nvarchar,10,false,false,,
+Creator+ Practices Engagement,ActivityInstanceId,5,int,4,false,true,creator-practices-adoption,ActivityInstanceId
+Creator+ Practices Engagement,CompletionDate,6,datetime2,8,false,false,,
+Creator+ Practices Engagement,Version,7,bigint,8,false,false,,

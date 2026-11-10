@@ -1,0 +1,13 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Checklist Objects,ChecklistId,1,bigint,8,true,false,,
+Checklist Objects,OrgUnitId,2,int,4,false,true,organizational-units,OrgUnitId
+Checklist Objects,Name,3,nvarchar,512,false,false,,
+Checklist Objects,Description,4,nvarchar,1000,false,false,,
+Checklist Objects,DescriptionIsHtml,5,bit,1,false,false,,
+Checklist Objects,SharedUserId,6,int,4,false,true,,
+Checklist Objects,DisplayInNewWindow,7,bit,1,false,false,,
+Checklist Objects,SortOrder,8,int,4,false,false,,
+Checklist Objects,Version,9,bigint,8,false,false,,
+Checklist Objects,ResultId,10,int,4,false,true,,
+Checklist Objects,DateDeleted,11,datetime2,8,false,false,,
+Checklist Objects,DeletedBy,12,int,4,false,true,users,UserId

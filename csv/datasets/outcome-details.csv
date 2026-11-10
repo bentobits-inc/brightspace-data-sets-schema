@@ -1,0 +1,12 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcome Details,OutcomeId,1,uniqueidentifier,16,true,false,,
+Outcome Details,OutcomeDefinitionSource,2,nvarchar,1000,false,false,,
+Outcome Details,OutcomeDefinitionId,3,nvarchar,128,false,false,,
+Outcome Details,ParentOutcomeId,4,uniqueidentifier,16,false,false,,
+Outcome Details,Description,5,nvarchar,1000,false,false,,
+Outcome Details,Notation,6,nvarchar,1000,false,false,,
+Outcome Details,CreatedDate,7,datetime2,8,false,false,,
+Outcome Details,CreatedBy,8,int,4,false,true,users,UserId
+Outcome Details,LastModifiedDate,9,datetime2,8,false,false,,
+Outcome Details,LastModifiedBy,10,int,4,false,true,users,UserId
+Outcome Details,IsDeleted,11,bit,1,false,false,,

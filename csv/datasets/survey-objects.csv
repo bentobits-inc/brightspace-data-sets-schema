@@ -1,0 +1,25 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Survey Objects,SurveyId,1,bigint,8,true,false,,
+Survey Objects,SurveyName,2,nvarchar,1000,false,false,,
+Survey Objects,CategoryId,3,bigint,8,false,false,,
+Survey Objects,OrgUnitId,4,int,4,false,true,organizational-units,OrgUnitId
+Survey Objects,Description,5,nvarchar,1000,false,false,,
+Survey Objects,DescriptionEnabled,6,bit,1,false,false,,
+Survey Objects,HasInstantFeedback,7,bit,1,false,false,,
+Survey Objects,IsAnonymous,8,bit,1,false,false,,
+Survey Objects,IsVisible,9,bit,1,false,false,,
+Survey Objects,SubmissionMessage,10,nvarchar,1000,false,false,,
+Survey Objects,Footer,11,nvarchar,1000,false,false,,
+Survey Objects,FooterIsDisplayed,12,bit,1,false,false,,
+Survey Objects,StartDate,13,datetime2,8,false,false,,
+Survey Objects,EndDate,14,datetime2,8,false,false,,
+Survey Objects,DisplayInCalendar,15,bit,1,false,false,,
+Survey Objects,ResultId,16,bigint,8,false,false,,
+Survey Objects,AttemptsAllowed,17,int,4,false,false,,
+Survey Objects,SortOrder,18,int,4,false,false,,
+Survey Objects,CreatedBy,19,int,4,false,true,users,UserId
+Survey Objects,IsDeleted,20,bit,1,false,false,,
+Survey Objects,LastModified,21,datetime2,8,false,false,,
+Survey Objects,LastModifiedBy,22,int,4,false,true,users,UserId
+Survey Objects,Version,23,bigint,8,false,false,,
+Survey Objects,CategoryName,24,nvarchar,256,false,false,,

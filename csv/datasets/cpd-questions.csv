@@ -1,0 +1,6 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+CPD Questions,QuestionId,1,int,4,true,false,,
+CPD Questions,QuestionText,2,nvarchar,4000,false,false,,
+CPD Questions,LastModified,3,datetime2,8,false,false,,
+CPD Questions,DateDeleted,4,datetime2,8,false,false,,
+CPD Questions,Version,5,bigint,8,false,false,,

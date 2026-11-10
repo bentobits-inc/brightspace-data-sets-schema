@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="306" viewBox="0 0 520 306" font-family="monospace" fill="#172c44">
+<title>Email data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="520" height="306" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Email data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<rect data-kind="full" data-dataset="brightspace-email-log" x="40" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="brightspace-email-log" x="54" y="132" font-size="14" font-weight="bold">Brightspace Email Log</text>
+<text data-box-dataset="brightspace-email-log" data-row-dataset="brightspace-email-log" data-row-column="MailId" x="54" y="150" font-size="12">PK MailId</text>
+<text data-box-dataset="brightspace-email-log" data-row-dataset="brightspace-email-log" data-row-column="SenderUserId" x="54" y="168" font-size="12">FK SenderUserId</text>
+<text data-box-dataset="brightspace-email-log" data-row-dataset="brightspace-email-log" data-row-column="RecipientAddress" x="54" y="186" font-size="12">PK RecipientAddress</text>
+<text data-box-dataset="brightspace-email-log" data-row-dataset="brightspace-email-log" data-row-column="RecipientType" x="54" y="204" font-size="12">PK RecipientType</text>
+</svg>

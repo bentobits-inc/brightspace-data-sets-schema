@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Checklist Category Details,CategoryId,1,bigint,8,true,false,,
+Checklist Category Details,ChecklistId,2,bigint,8,false,true,checklist-objects,ChecklistId
+Checklist Category Details,Name,3,nvarchar,512,false,false,,
+Checklist Category Details,Description,4,nvarchar,1000,false,false,,
+Checklist Category Details,DescriptionIsHtml,5,bit,1,false,false,,
+Checklist Category Details,SortOrder,6,int,4,false,false,,
+Checklist Category Details,LastModifiedUtc,7,datetime2,8,false,false,,
+Checklist Category Details,DateDeleted,8,datetime2,8,false,false,,
+Checklist Category Details,DeletedBy,9,int,4,false,true,users,UserId
+Checklist Category Details,Version,10,bigint,8,false,false,,

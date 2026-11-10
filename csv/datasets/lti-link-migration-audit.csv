@@ -1,0 +1,16 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+LTI Link Migration Audit,LTIMigrationId,1,uniqueidentifier,16,true,false,,
+LTI Link Migration Audit,UserId,2,bigint,8,false,true,users,UserId
+LTI Link Migration Audit,MigrationDate,3,datetime2,8,false,false,,
+LTI Link Migration Audit,OrgUnitId,4,bigint,8,false,true,organizational-units,OrgUnitId
+LTI Link Migration Audit,LinkId,5,bigint,8,false,true,,
+LTI Link Migration Audit,LinkURL,6,nvarchar,2000,false,false,,
+LTI Link Migration Audit,LinkName,7,nvarchar,200,false,false,,
+LTI Link Migration Audit,ClientId,8,nvarchar,255,false,false,,
+LTI Link Migration Audit,RegistrationDomain,9,nvarchar,2083,false,false,,
+LTI Link Migration Audit,DeploymentId,10,uniqueidentifier,16,false,false,,
+LTI Link Migration Audit,JobId,11,bigint,8,false,false,,
+LTI Link Migration Audit,Status,12,smallint,2,false,false,,
+LTI Link Migration Audit,FailureCode,13,smallint,2,false,false,,
+LTI Link Migration Audit,MigrationType,14,smallint,2,false,false,,
+LTI Link Migration Audit,LegacyURL,15,nvarchar,2083,false,false,,

@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Checklist Completions,UserId,1,int,4,true,true,users,UserId
+Checklist Completions,DateCompleted,2,datetime2,8,false,false,,
+Checklist Completions,ItemId,3,bigint,8,true,true,checklist-item-details,ItemId
+Checklist Completions,LastModified,4,datetime2,8,false,false,,
+Checklist Completions,IsCompleted,5,bit,1,false,false,,
+Checklist Completions,DateDeleted,6,datetime2,8,false,false,,
+Checklist Completions,DeletedBy,7,int,4,false,true,users,UserId
+Checklist Completions,Version,8,bigint,8,false,false,,

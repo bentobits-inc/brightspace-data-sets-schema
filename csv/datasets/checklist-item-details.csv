@@ -1,0 +1,14 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Checklist Item Details,ItemId,1,bigint,8,true,false,,
+Checklist Item Details,CategoryId,2,bigint,8,false,true,checklist-category-details,CategoryId
+Checklist Item Details,Name,3,nvarchar,512,false,false,,
+Checklist Item Details,Description,4,nvarchar,1000,false,false,,
+Checklist Item Details,DescriptionIsHtml,5,bit,1,false,false,,
+Checklist Item Details,DueDate,6,datetime2,8,false,false,,
+Checklist Item Details,ScheduleId,7,int,4,false,true,,
+Checklist Item Details,SortOrder,8,int,4,false,false,,
+Checklist Item Details,IsAutoChecked,9,bit,1,false,false,,
+Checklist Item Details,LastModifiedUtc,10,datetime2,8,false,false,,
+Checklist Item Details,DateDeleted,11,datetime2,8,false,false,,
+Checklist Item Details,DeletedBy,12,int,4,false,true,users,UserId
+Checklist Item Details,Version,13,bigint,8,false,false,,

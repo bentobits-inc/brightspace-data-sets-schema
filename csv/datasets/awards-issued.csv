@@ -1,0 +1,17 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Awards Issued,AwardId,1,bigint,8,false,true,award-objects,AwardId
+Awards Issued,OrgUnitId,2,bigint,8,false,true,organizational-units,OrgUnitId
+Awards Issued,UserId,3,bigint,8,false,true,users,UserId
+Awards Issued,IssuedBy,4,int,4,false,true,users,UserId
+Awards Issued,IssueDate,5,datetime2,8,false,false,,
+Awards Issued,ExpiryDate,6,datetime2,8,false,false,,
+Awards Issued,IssuedId,7,bigint,8,true,false,,
+Awards Issued,Criteria,8,nvarchar,1000,false,false,,
+Awards Issued,Evidence,9,nvarchar,1000,false,false,,
+Awards Issued,RevokedDate,10,datetime2,8,false,false,,
+Awards Issued,RevokedReason,11,nvarchar,1000,false,false,,
+Awards Issued,RevokedBy,12,bigint,8,false,true,users,UserId
+Awards Issued,LastModifiedBy,13,bigint,8,false,true,users,UserId
+Awards Issued,LastModifiedDate,14,datetime2,8,false,false,,
+Awards Issued,Version,15,bigint,8,false,false,,
+Awards Issued,CertificateId,16,nvarchar,12,false,false,,

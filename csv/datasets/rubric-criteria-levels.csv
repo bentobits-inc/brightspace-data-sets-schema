@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Rubric Criteria Levels,RubricId,1,bigint,8,true,false,,
+Rubric Criteria Levels,CriterionId,2,bigint,8,true,false,,
+Rubric Criteria Levels,Description,3,nvarchar,1000,false,false,,
+Rubric Criteria Levels,Feedback,4,nvarchar,1000,false,false,,
+Rubric Criteria Levels,Value,5,decimal,"19, 9",false,false,,
+Rubric Criteria Levels,LevelId,6,bigint,8,true,false,,
+Rubric Criteria Levels,IsDeleted,7,bit,1,false,false,,
+Rubric Criteria Levels,Version,8,bigint,8,false,false,,

@@ -1,0 +1,145 @@
+name,slug,area,column_count,primary_key,source_article_url
+Accommodations Profile Log,accommodations-profile-log,Accommodations data sets,7,AccommodatedUserId;OrgUnitId;LastModified,https://community.d2l.com/brightspace/kb/articles/4752-accommodations-data-sets
+Activity Exemptions Log,activity-exemptions-log,Exemptions data sets,9,ActivityExemptionsLogId,https://community.d2l.com/brightspace/kb/articles/4526-exemptions-data-sets
+Activity Feed Comment Log,activity-feed-comment-log,Activity Feed data sets,8,LogId,https://community.d2l.com/brightspace/kb/articles/4712-activity-feed-data-sets
+Activity Feed Comment Objects,activity-feed-comment-objects,Activity Feed data sets,8,CommentId,https://community.d2l.com/brightspace/kb/articles/4712-activity-feed-data-sets
+Activity Feed Post Log,activity-feed-post-log,Activity Feed data sets,11,LogId,https://community.d2l.com/brightspace/kb/articles/4712-activity-feed-data-sets
+Activity Feed Post Objects,activity-feed-post-objects,Activity Feed data sets,11,PostId,https://community.d2l.com/brightspace/kb/articles/4712-activity-feed-data-sets
+AI Consumption,ai-consumption,AI Consumption data sets,6,ConsumptionId,https://community.d2l.com/brightspace/kb/articles/34440-ai-consumption-data-sets
+Announcements,announcements,Announcements data sets,16,AnnouncementId,https://community.d2l.com/brightspace/kb/articles/4723-announcements-data-sets
+Assignment Special Access,assignment-special-access,Assignments data sets,10,DropboxId;UserId,https://community.d2l.com/brightspace/kb/articles/4767-assignments-data-sets
+Assignment Submission Details,assignment-submission-details,Assignments data sets,13,SubmissionId,https://community.d2l.com/brightspace/kb/articles/4767-assignments-data-sets
+Assignment Submissions,assignment-submissions,Assignments data sets,17,DropboxId;SubmitterId;SubmitterType,https://community.d2l.com/brightspace/kb/articles/4767-assignments-data-sets
+Assignment Summary,assignment-summary,Assignments data sets,24,DropboxId,https://community.d2l.com/brightspace/kb/articles/4767-assignments-data-sets
+Attendance Registers,attendance-registers,Attendance data sets,11,AttendanceRegisterId,https://community.d2l.com/brightspace/kb/articles/4519-attendance-data-sets
+Attendance Schemes,attendance-schemes,Attendance data sets,10,SchemeId;SchemeSymbolId,https://community.d2l.com/brightspace/kb/articles/4519-attendance-data-sets
+Attendance Sessions,attendance-sessions,Attendance data sets,8,AttendanceSessionId,https://community.d2l.com/brightspace/kb/articles/4519-attendance-data-sets
+Attendance User Sessions,attendance-user-sessions,Attendance data sets,7,UserId;AttendanceSessionId,https://community.d2l.com/brightspace/kb/articles/4519-attendance-data-sets
+Audio Video Processed,audio-video-processed,Content Service data sets,10,ContentId;RevisionId,https://community.d2l.com/brightspace/kb/articles/22812-content-service-data-sets
+Auditor Relationships Log,auditor-relationships-log,Users data sets,6,AuditorId;UserToAuditId;OrgUnitId;ModifiedDate,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+Award Objects,award-objects,Awards data sets,13,AwardId,https://community.d2l.com/brightspace/kb/articles/4520-awards-data-sets
+Awards Issued,awards-issued,Awards data sets,16,IssuedId,https://community.d2l.com/brightspace/kb/articles/4520-awards-data-sets
+Brightspace Email Log,brightspace-email-log,Email data sets,7,MailId;RecipientAddress;RecipientType,https://community.d2l.com/brightspace/kb/articles/34145-email-data-sets
+Calendar Events,calendar-events,Calendar data sets,15,ScheduleId,https://community.d2l.com/brightspace/kb/articles/4521-calendar-data-sets
+Checklist Category Details,checklist-category-details,Checklist data sets,10,CategoryId,https://community.d2l.com/brightspace/kb/articles/4523-checklist-data-sets
+Checklist Completions,checklist-completions,Checklist data sets,8,UserId;ItemId,https://community.d2l.com/brightspace/kb/articles/4523-checklist-data-sets
+Checklist Item Details,checklist-item-details,Checklist data sets,13,ItemId,https://community.d2l.com/brightspace/kb/articles/4523-checklist-data-sets
+Checklist Objects,checklist-objects,Checklist data sets,12,ChecklistId,https://community.d2l.com/brightspace/kb/articles/4523-checklist-data-sets
+Competency Activities,competency-activities,Competency data sets,17,ActivityId,https://community.d2l.com/brightspace/kb/articles/4754-competency-data-sets
+Competency Activity Log,competency-activity-log,Competency data sets,6,ActivityId;ActivityLogId,https://community.d2l.com/brightspace/kb/articles/4754-competency-data-sets
+Competency Activity Results,competency-activity-results,Competency data sets,12,ActivityId;OrgUnitId;UserId;LearningObjectId,https://community.d2l.com/brightspace/kb/articles/4754-competency-data-sets
+Competency Log,competency-log,Competency data sets,13,CompetencyLogId,https://community.d2l.com/brightspace/kb/articles/4754-competency-data-sets
+Competency Objects,competency-objects,Competency data sets,12,ObjectId,https://community.d2l.com/brightspace/kb/articles/4754-competency-data-sets
+Competency Structure,competency-structure,Competency data sets,5,ObjectId;ParentObjectId;BaseObjectID;EntryTime,https://community.d2l.com/brightspace/kb/articles/4754-competency-data-sets
+Content Files Properties Log,content-files-properties-log,Content data sets,10,OrgUnitId;ContentObjectId;LastModified,https://community.d2l.com/brightspace/kb/articles/4713-content-data-sets
+Content Objects,content-objects,Content data sets,26,ContentObjectId,https://community.d2l.com/brightspace/kb/articles/4713-content-data-sets
+Content User Completion,content-user-completion,Content data sets,10,ContentObjectId;UserId,https://community.d2l.com/brightspace/kb/articles/4713-content-data-sets
+Content User Progress,content-user-progress,Content data sets,13,ContentObjectId;UserId,https://community.d2l.com/brightspace/kb/articles/4713-content-data-sets
+Course Access,course-access,Users data sets,3,OrgUnitId;UserId;DayAccessed,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+Course Access Log,course-access-log,Users data sets,4,OrgUnitId;UserId;Timestamp;Source,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+Course Awards,course-awards,Awards data sets,10,AssociationId,https://community.d2l.com/brightspace/kb/articles/4520-awards-data-sets
+Course Copy Logs,course-copy-logs,Course Copy data sets,10,CopyCourseJobId,https://community.d2l.com/brightspace/kb/articles/4725-course-copy-data-sets
+Course Publisher Launches,course-publisher-launches,Course Publisher data sets,10,LaunchId,https://community.d2l.com/brightspace/kb/articles/4524-course-publisher-data-sets
+Course Publisher Recipients,course-publisher-recipients,Course Publisher data sets,4,RecipientID,https://community.d2l.com/brightspace/kb/articles/4524-course-publisher-data-sets
+CPD Categories,cpd-categories,Continuous Professional Development (CPD) data sets,5,CategoryId,https://community.d2l.com/brightspace/kb/articles/26020-continuous-professional-development-cpd-data-sets
+CPD Job Targets,cpd-job-targets,Continuous Professional Development (CPD) data sets,11,PrincipalId;CategoryId,https://community.d2l.com/brightspace/kb/articles/26020-continuous-professional-development-cpd-data-sets
+CPD Methods,cpd-methods,Continuous Professional Development (CPD) data sets,5,MethodId,https://community.d2l.com/brightspace/kb/articles/26020-continuous-professional-development-cpd-data-sets
+CPD Question Answers,cpd-question-answers,Continuous Professional Development (CPD) data sets,9,AnswerId,https://community.d2l.com/brightspace/kb/articles/26020-continuous-professional-development-cpd-data-sets
+CPD Questions,cpd-questions,Continuous Professional Development (CPD) data sets,5,QuestionId,https://community.d2l.com/brightspace/kb/articles/26020-continuous-professional-development-cpd-data-sets
+CPD User Records,cpd-user-records,Continuous Professional Development (CPD) data sets,14,RecordId,https://community.d2l.com/brightspace/kb/articles/26020-continuous-professional-development-cpd-data-sets
+CPD User Targets,cpd-user-targets,Continuous Professional Development (CPD) data sets,11,PrincipalId;CategoryId,https://community.d2l.com/brightspace/kb/articles/26020-continuous-professional-development-cpd-data-sets
+Creator+ Practices Adoption,creator-practices-adoption,Creator+ data sets,8,ActivityInstanceId,https://community.d2l.com/brightspace/kb/articles/26161-creator-data-sets
+Creator+ Practices Engagement,creator-practices-engagement,Creator+ data sets,7,PracticeEngagementId,https://community.d2l.com/brightspace/kb/articles/26161-creator-data-sets
+Discussion Forums,discussion-forums,Discussions data sets,18,ForumId,https://community.d2l.com/brightspace/kb/articles/4525-discussions-data-sets
+Discussion Posts,discussion-posts,Discussions data sets,20,PostId,https://community.d2l.com/brightspace/kb/articles/4525-discussions-data-sets
+Discussion Posts Read Status,discussion-posts-read-status,Discussions data sets,7,UserId;PostId,https://community.d2l.com/brightspace/kb/articles/4525-discussions-data-sets
+Discussion Topic User Scores,discussion-topic-user-scores,Discussions data sets,6,UserId;TopicId,https://community.d2l.com/brightspace/kb/articles/4525-discussions-data-sets
+Discussion Topics,discussion-topics,Discussions data sets,28,TopicId,https://community.d2l.com/brightspace/kb/articles/4525-discussions-data-sets
+Enrollments and Withdrawals,enrollments-and-withdrawals,Users data sets,7,LogId,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+Grade Book Settings,grade-book-settings,Grades data sets,7,OrgUnitId;GradeSchemeId,https://community.d2l.com/brightspace/kb/articles/4527-grades-data-sets
+Grade Objects,grade-objects,Grades data sets,31,GradeObjectId,https://community.d2l.com/brightspace/kb/articles/4527-grades-data-sets
+Grade Objects Log,grade-objects-log,Grades data sets,11,LogId,https://community.d2l.com/brightspace/kb/articles/4527-grades-data-sets
+Grade Results,grade-results,Grades data sets,17,GradeObjectId;OrgUnitId;UserId,https://community.d2l.com/brightspace/kb/articles/4527-grades-data-sets
+Grade Scheme Ranges,grade-scheme-ranges,Grades data sets,7,GradeSchemeRangeId;GradeSchemeId,https://community.d2l.com/brightspace/kb/articles/4527-grades-data-sets
+Grade Schemes,grade-schemes,Grades data sets,5,GradeSchemeId,https://community.d2l.com/brightspace/kb/articles/4527-grades-data-sets
+Intelligent Agent Objects,intelligent-agent-objects,Intelligent Agents data sets,23,AgentId,https://community.d2l.com/brightspace/kb/articles/4528-intelligent-agents-data-sets
+Intelligent Agent Run Log,intelligent-agent-run-log,Intelligent Agents data sets,10,AgentRunId,https://community.d2l.com/brightspace/kb/articles/4528-intelligent-agents-data-sets
+Intelligent Agent Run Users,intelligent-agent-run-users,Intelligent Agents data sets,9,AgentId;AgentRunId;UserId,https://community.d2l.com/brightspace/kb/articles/4528-intelligent-agents-data-sets
+JIT Provisioned Users Log,jit-provisioned-users-log,JIT Provisioning data sets,8,UserId;Timestamp,https://community.d2l.com/brightspace/kb/articles/5782-jit-provisioning-data-sets
+Local Authentication Security Log,local-authentication-security-log,Local Authentication data sets,4,UserId;Action;ModifiedBy;ModifiedDate,https://community.d2l.com/brightspace/kb/articles/4714-local-authentication-data-sets
+LTI Advantage Deployment Audit,lti-advantage-deployment-audit,LTI data sets,32,DeploymentID;Timestamp,https://community.d2l.com/brightspace/kb/articles/4727-lti-data-sets
+LTI Advantage Registration Audit,lti-advantage-registration-audit,LTI data sets,20,ClientId;Timestamp,https://community.d2l.com/brightspace/kb/articles/4727-lti-data-sets
+LTI Launches,lti-launches,LTI data sets,16,LTILaunchId,https://community.d2l.com/brightspace/kb/articles/4727-lti-data-sets
+LTI Link Migration Audit,lti-link-migration-audit,LTI data sets,15,LTIMigrationId,https://community.d2l.com/brightspace/kb/articles/4727-lti-data-sets
+LTI Links,lti-links,LTI data sets,31,LtiLinkId,https://community.d2l.com/brightspace/kb/articles/4727-lti-data-sets
+Media Consumption Log,media-consumption-log,Content Service data sets,8,LogId,https://community.d2l.com/brightspace/kb/articles/22812-content-service-data-sets
+Media Objects,media-objects,Content Service data sets,5,ContentId,https://community.d2l.com/brightspace/kb/articles/22812-content-service-data-sets
+Organizational Unit Ancestors,organizational-unit-ancestors,Organizational Units data sets,4,OrgUnitId;AncestorOrgUnitId,https://community.d2l.com/brightspace/kb/articles/4529-organizational-units-data-sets
+Organizational Unit Descendants,organizational-unit-descendants,Organizational Units data sets,4,OrgUnitId;DescendantOrgUnitId,https://community.d2l.com/brightspace/kb/articles/4529-organizational-units-data-sets
+Organizational Unit Parents,organizational-unit-parents,Organizational Units data sets,4,OrgUnitId;ParentOrgUnitId,https://community.d2l.com/brightspace/kb/articles/4529-organizational-units-data-sets
+Organizational Unit Recent Access,organizational-unit-recent-access,Organizational Units data sets,3,OrgUnitId;UserId,https://community.d2l.com/brightspace/kb/articles/4529-organizational-units-data-sets
+Organizational Units,organizational-units,Organizational Units data sets,14,OrgUnitId,https://community.d2l.com/brightspace/kb/articles/4529-organizational-units-data-sets
+Outcome Details,outcome-details,Outcomes data sets,11,OutcomeId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Aligned to Tool Objects,outcomes-aligned-to-tool-objects,Outcomes data sets,10,ObjectType;ObjectId;OutcomeId;RegistryId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Assessed Checkpoints,outcomes-assessed-checkpoints,Outcomes data sets,14,CheckpointId;DemonstrationId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Course Specific Scales,outcomes-course-specific-scales,Outcomes data sets,8,OrgUnitId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Demonstrations,outcomes-demonstrations,Outcomes data sets,14,DemonstrationId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes in Registries,outcomes-in-registries,Outcomes data sets,7,OutcomeId;RegistryId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Rubric Alignments,outcomes-rubric-alignments,Outcomes data sets,9,RubricId;CriterionId;OutcomeId;RegistryId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Scale Definition,outcomes-scale-definition,Outcomes data sets,10,ScaleId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Scale Level Definition,outcomes-scale-level-definition,Outcomes data sets,10,ScaleLevelId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Set Course,outcomes-set-course,Outcomes data sets,11,RegistryId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Outcomes Set Org,outcomes-set-org,Outcomes data sets,9,OutcomeSetId,https://community.d2l.com/brightspace/kb/articles/4796-outcomes-data-sets
+Portfolio Categories,portfolio-categories,Portfolio data sets,7,CategoryId,https://community.d2l.com/brightspace/kb/articles/4530-portfolio-data-sets
+Portfolio Evidence Categories,portfolio-evidence-categories,Portfolio data sets,6,CategoryId;EvidenceId;Group,https://community.d2l.com/brightspace/kb/articles/4530-portfolio-data-sets
+Portfolio Evidence Log,portfolio-evidence-log,Portfolio data sets,9,LogId,https://community.d2l.com/brightspace/kb/articles/4530-portfolio-data-sets
+Portfolio Evidence Objects,portfolio-evidence-objects,Portfolio data sets,14,EvidenceId,https://community.d2l.com/brightspace/kb/articles/4530-portfolio-data-sets
+PreRequisite Conditions Met,prerequisite-conditions-met,Release Conditions data sets,5,PreRequisiteId;UserId,https://community.d2l.com/brightspace/kb/articles/4533-release-conditions-data-sets
+Question Answer Options,question-answer-options,Questions data sets,6,AnswerId;QuestionId;QuestionVersionId;AnswerOptionId,https://community.d2l.com/brightspace/kb/articles/4531-questions-data-sets
+Question Answers,question-answers,Questions data sets,8,AnswerId;QuestionId;QuestionVersionId,https://community.d2l.com/brightspace/kb/articles/4531-questions-data-sets
+Question Library,question-library,Questions data sets,13,QuestionId;QuestionVersionId,https://community.d2l.com/brightspace/kb/articles/4531-questions-data-sets
+Question Pools,question-pools,Questions data sets,5,SectionId;QuestionId;QuestionVersionId,https://community.d2l.com/brightspace/kb/articles/4531-questions-data-sets
+Question Relationships,question-relationships,Questions data sets,17,ObjectId,https://community.d2l.com/brightspace/kb/articles/4531-questions-data-sets
+Quiz Attempts,quiz-attempts,Quizzes data sets,20,AttemptId,https://community.d2l.com/brightspace/kb/articles/4532-quizzes-data-sets
+Quiz Attempts Log,quiz-attempts-log,Quizzes data sets,9,LogId,https://community.d2l.com/brightspace/kb/articles/4532-quizzes-data-sets
+Quiz Objects,quiz-objects,Quizzes data sets,39,QuizId,https://community.d2l.com/brightspace/kb/articles/4532-quizzes-data-sets
+Quiz Survey Sections,quiz-survey-sections,Quizzes data sets,18,SectionId,https://community.d2l.com/brightspace/kb/articles/4532-quizzes-data-sets
+Quiz User Answer Responses,quiz-user-answer-responses,Quizzes data sets,12,AttemptId;QuestionId;QuestionVersionId;AnswerId,https://community.d2l.com/brightspace/kb/articles/4532-quizzes-data-sets
+Quiz User Answers,quiz-user-answers,Quizzes data sets,18,AttemptId;ObjectId,https://community.d2l.com/brightspace/kb/articles/4532-quizzes-data-sets
+Release Condition Objects,release-condition-objects,Release Conditions data sets,14,PreRequisiteId;ResultId;OrgUnitId,https://community.d2l.com/brightspace/kb/articles/4533-release-conditions-data-sets
+Release Condition Results,release-condition-results,Release Conditions data sets,5,ResultId;UserId,https://community.d2l.com/brightspace/kb/articles/4533-release-conditions-data-sets
+Reoffer Course,reoffer-course,Reoffer Course data sets,4,CourseOfferingId;SourceCourseId,https://community.d2l.com/brightspace/kb/articles/33182-reoffer-course-data-sets
+Role Details,role-details,Role Details data sets,30,RoleId,https://community.d2l.com/brightspace/kb/articles/4534-role-details-data-sets
+Rubric Assessment,rubric-assessment,Rubrics data sets,15,UserId;AssessmentId;ActivityId,https://community.d2l.com/brightspace/kb/articles/4535-rubrics-data-sets
+Rubric Assessment Criteria,rubric-assessment-criteria,Rubrics data sets,8,AssessmentId;CriterionId,https://community.d2l.com/brightspace/kb/articles/4535-rubrics-data-sets
+Rubric Criteria Levels,rubric-criteria-levels,Rubrics data sets,8,RubricId;CriterionId;LevelId,https://community.d2l.com/brightspace/kb/articles/4535-rubrics-data-sets
+Rubric Object Criteria,rubric-object-criteria,Rubrics data sets,9,CriterionId,https://community.d2l.com/brightspace/kb/articles/4535-rubrics-data-sets
+Rubric Object Levels,rubric-object-levels,Rubrics data sets,10,LevelId,https://community.d2l.com/brightspace/kb/articles/4535-rubrics-data-sets
+Rubric Objects,rubric-objects,Rubrics data sets,10,RubricId,https://community.d2l.com/brightspace/kb/articles/4535-rubrics-data-sets
+Rubrics Edit,rubrics-edit,Rubrics data sets,12,AuditLogId,https://community.d2l.com/brightspace/kb/articles/4535-rubrics-data-sets
+SCORM Activities,scorm-activities,SCORM data sets,12,ActivityId,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+SCORM Activity Attempts,scorm-activity-attempts,SCORM data sets,10,VisitId;ActivityId;AttemptNumber,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+SCORM Interaction Attempts,scorm-interaction-attempts,SCORM data sets,10,VisitId;InteractionId;AttemptNumber,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+SCORM Interaction Objectives,scorm-interaction-objectives,SCORM data sets,3,InteractionId;ObjectiveId,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+SCORM Interactions,scorm-interactions,SCORM data sets,8,InteractionId,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+SCORM Objective Attempts,scorm-objective-attempts,SCORM data sets,9,VisitId;ObjectiveId;AttemptNumber,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+SCORM Objectives,scorm-objectives,SCORM data sets,10,ObjectiveId,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+SCORM Objects,scorm-objects,SCORM data sets,11,ScormObjectId,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+SCORM Visits,scorm-visits,SCORM data sets,13,VisitId,https://community.d2l.com/brightspace/kb/articles/4536-scorm-data-sets
+Session History,session-history,Sessions and System Access data sets,8,HistoryID,https://community.d2l.com/brightspace/kb/articles/4537-sessions-and-system-access-data-sets
+SIS Course Merge Log,sis-course-merge-log,SIS Course Merge data sets,10,BatchId;OriginalSourceOrgUnitId;Timestamp,https://community.d2l.com/brightspace/kb/articles/19147-sis-course-merge-data-sets
+Source Course Deploy History,source-course-deploy-history,Source Course Deploy data sets,7,SourceCourseDeployId;SourceCourseOrgUnitId;TargetCourseOrgUnitId,https://community.d2l.com/brightspace/kb/articles/33427-source-course-deploy-data-sets
+Survey Attempts,survey-attempts,Surveys data sets,11,AttemptId,https://community.d2l.com/brightspace/kb/articles/4538-surveys-data-sets
+Survey Objects,survey-objects,Surveys data sets,24,SurveyId,https://community.d2l.com/brightspace/kb/articles/4538-surveys-data-sets
+Survey User Answer Responses,survey-user-answer-responses,Surveys data sets,12,AttemptId;QuestionId;QuestionVersionId;AnswerId,https://community.d2l.com/brightspace/kb/articles/4538-surveys-data-sets
+Survey User Answers,survey-user-answers,Surveys data sets,14,AttemptId;QuestionId;QuestionVersionId,https://community.d2l.com/brightspace/kb/articles/4538-surveys-data-sets
+System Access Log,system-access-log,Sessions and System Access data sets,9,SessionId;UserId;Timestamp;State,https://community.d2l.com/brightspace/kb/articles/4537-sessions-and-system-access-data-sets
+System Access Summary,system-access-summary,Sessions and System Access data sets,4,UserId,https://community.d2l.com/brightspace/kb/articles/4537-sessions-and-system-access-data-sets
+Tools,tools,Tools data sets,4,ToolId,https://community.d2l.com/brightspace/kb/articles/4540-tools-data-sets
+TurnItIn Submissions,turnitin-submissions,Assignments data sets,10,SubmissionId;FileId,https://community.d2l.com/brightspace/kb/articles/4767-assignments-data-sets
+User Attribute Definitions,user-attribute-definitions,Users data sets,9,AttributeId,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+User Attribute Values,user-attribute-values,Users data sets,7,UserId;AttributeId,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+User Enrollments,user-enrollments,Users data sets,6,OrgUnitId;UserId,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+User Logins,user-logins,Users data sets,9,LoginAttemptId,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+Users,users,Users data sets,12,UserId,https://community.d2l.com/brightspace/kb/articles/4740-users-data-sets
+Virtual Classroom Usage,virtual-classroom-usage,Virtual Classroom data sets,15,MeetingId,https://community.d2l.com/brightspace/kb/articles/4541-virtual-classroom-data-sets

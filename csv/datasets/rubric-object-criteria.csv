@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Rubric Object Criteria,RubricId,1,bigint,8,false,true,rubric-objects,RubricId
+Rubric Object Criteria,CriterionId,2,bigint,8,true,false,,
+Rubric Object Criteria,Name,3,nvarchar,500,false,false,,
+Rubric Object Criteria,SortOrder,4,int,4,false,false,,
+Rubric Object Criteria,CriteriaGroupId,5,bigint,8,false,false,,
+Rubric Object Criteria,GroupName,6,nvarchar,256,false,false,,
+Rubric Object Criteria,GroupSortOrder,7,int,4,false,false,,
+Rubric Object Criteria,LevelSetId,8,bigint,8,false,true,,
+Rubric Object Criteria,IsDeleted,9,bit,1,false,false,,

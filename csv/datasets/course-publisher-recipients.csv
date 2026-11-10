@@ -1,0 +1,5 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Course Publisher Recipients,RecipientID,1,uniqueidentifier,16,true,false,,
+Course Publisher Recipients,Name,2,nvarchar,256,false,false,,
+Course Publisher Recipients,CreatedAt,3,datetime2,8,false,false,,
+Course Publisher Recipients,LastModified,4,datetime2,8,false,false,,

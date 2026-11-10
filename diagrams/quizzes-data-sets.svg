@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="718" viewBox="0 0 1500 718" font-family="monospace" fill="#172c44">
+<title>Quizzes data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="718" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Quizzes data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="quiz-attempts-log" data-from-column="AttemptId" data-to-dataset="quiz-attempts" data-to-column="AttemptId" data-join-kind="key" d="M 970 202 H 982 V 92 H 28 V 220 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-attempts-log.AttemptId to quiz-attempts.AttemptId (key)</title></path>
+<path data-from-dataset="quiz-attempts-log" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 970 202 H 985 V 89 H 515 V 632 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-attempts-log.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="quiz-attempts" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 220 H 498 V 86 H 22 V 632 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-attempts.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="quiz-attempts" data-from-column="QuizId" data-to-dataset="quiz-objects" data-to-column="QuizId" data-join-kind="key" d="M 480 220 H 501 V 83 H 999 V 256 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-attempts.QuizId to quiz-objects.QuizId (key)</title></path>
+<path data-from-dataset="quiz-attempts" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 480 220 H 504 V 80 H 506 V 632 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-attempts.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="quiz-objects" data-from-column="CreatedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 1460 256 H 1487 V 77 H 503 V 632 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-objects.CreatedBy to users.UserId (user)</title></path>
+<path data-from-dataset="quiz-objects" data-from-column="LastModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 1460 256 H 1472 V 92 H 518 V 632 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-objects.LastModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="quiz-objects" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 1460 256 H 1475 V 89 H 25 V 632 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-objects.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="quiz-survey-sections" data-from-column="CreatedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 444 H 498 V 310 H 512 V 632 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-survey-sections.CreatedBy to users.UserId (user)</title></path>
+<path data-from-dataset="quiz-survey-sections" data-from-column="LastModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 444 H 501 V 307 H 509 V 632 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-survey-sections.LastModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="quiz-user-answer-responses" data-from-column="AttemptId" data-to-dataset="quiz-attempts" data-to-column="AttemptId" data-join-kind="key" d="M 970 444 H 994 V 304 H 16 V 220 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-user-answer-responses.AttemptId to quiz-attempts.AttemptId (key)</title></path>
+<path data-from-dataset="quiz-user-answers" data-from-column="AttemptId" data-to-dataset="quiz-attempts" data-to-column="AttemptId" data-join-kind="key" d="M 1460 480 H 1487 V 301 H 13 V 220 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-user-answers.AttemptId to quiz-attempts.AttemptId (key)</title></path>
+<path data-from-dataset="quiz-user-answers" data-from-column="LastModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 1460 480 H 1472 V 316 H 518 V 632 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-user-answers.LastModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="quiz-user-answers" data-from-column="SectionId" data-to-dataset="quiz-survey-sections" data-to-column="SectionId" data-join-kind="key" d="M 1460 480 H 1475 V 313 H 25 V 444 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>quiz-user-answers.SectionId to quiz-survey-sections.SectionId (key)</title></path>
+<rect data-kind="full" data-dataset="quiz-attempts" x="40" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="quiz-attempts" x="54" y="132" font-size="14" font-weight="bold">Quiz Attempts</text>
+<text data-box-dataset="quiz-attempts" data-row-dataset="quiz-attempts" data-row-column="AttemptId" x="54" y="150" font-size="12">PK AttemptId</text>
+<text data-box-dataset="quiz-attempts" data-row-dataset="quiz-attempts" data-row-column="QuizId" x="54" y="168" font-size="12">FK QuizId &gt; Quiz Objects</text>
+<text data-box-dataset="quiz-attempts" data-row-dataset="quiz-attempts" data-row-column="UserId" x="54" y="186" font-size="12">FK UserId &gt; Users</text>
+<text data-box-dataset="quiz-attempts" data-row-dataset="quiz-attempts" data-row-column="OrgUnitId" x="54" y="204" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<rect data-kind="full" data-dataset="quiz-attempts-log" x="530" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="quiz-attempts-log" x="544" y="132" font-size="14" font-weight="bold">Quiz Attempts Log</text>
+<text data-box-dataset="quiz-attempts-log" data-row-dataset="quiz-attempts-log" data-row-column="LogId" x="544" y="150" font-size="12">PK LogId</text>
+<text data-box-dataset="quiz-attempts-log" data-row-dataset="quiz-attempts-log" data-row-column="AttemptId" x="544" y="168" font-size="12">FK AttemptId &gt; Quiz Attempts</text>
+<text data-box-dataset="quiz-attempts-log" data-row-dataset="quiz-attempts-log" data-row-column="UserId" x="544" y="186" font-size="12">FK UserId &gt; Users</text>
+<rect data-kind="full" data-dataset="quiz-objects" x="1020" y="108" width="440" height="160" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="quiz-objects" x="1034" y="132" font-size="14" font-weight="bold">Quiz Objects</text>
+<text data-box-dataset="quiz-objects" data-row-dataset="quiz-objects" data-row-column="QuizId" x="1034" y="150" font-size="12">PK QuizId</text>
+<text data-box-dataset="quiz-objects" data-row-dataset="quiz-objects" data-row-column="OrgUnitId" x="1034" y="168" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="quiz-objects" data-row-dataset="quiz-objects" data-row-column="CreatedBy" x="1034" y="186" font-size="12">FK CreatedBy &gt; Users</text>
+<text data-box-dataset="quiz-objects" data-row-dataset="quiz-objects" data-row-column="LastModifiedBy" x="1034" y="204" font-size="12">FK LastModifiedBy &gt; Users</text>
+<text data-box-dataset="quiz-objects" data-row-dataset="quiz-objects" data-row-column="GradeObjectId" x="1034" y="222" font-size="12">FK GradeObjectId</text>
+<text data-box-dataset="quiz-objects" data-row-dataset="quiz-objects" data-row-column="ResultId" x="1034" y="240" font-size="12">FK ResultId</text>
+<rect data-kind="full" data-dataset="quiz-survey-sections" x="40" y="332" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="quiz-survey-sections" x="54" y="356" font-size="14" font-weight="bold">Quiz Survey Sections</text>
+<text data-box-dataset="quiz-survey-sections" data-row-dataset="quiz-survey-sections" data-row-column="CollectionId" x="54" y="374" font-size="12">FK CollectionId</text>
+<text data-box-dataset="quiz-survey-sections" data-row-dataset="quiz-survey-sections" data-row-column="SectionId" x="54" y="392" font-size="12">PK SectionId</text>
+<text data-box-dataset="quiz-survey-sections" data-row-dataset="quiz-survey-sections" data-row-column="CreatedBy" x="54" y="410" font-size="12">FK CreatedBy &gt; Users</text>
+<text data-box-dataset="quiz-survey-sections" data-row-dataset="quiz-survey-sections" data-row-column="LastModifiedBy" x="54" y="428" font-size="12">FK LastModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="quiz-user-answer-responses" x="530" y="332" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="quiz-user-answer-responses" x="544" y="356" font-size="14" font-weight="bold">Quiz User Answer Responses</text>
+<text data-box-dataset="quiz-user-answer-responses" data-row-dataset="quiz-user-answer-responses" data-row-column="AttemptId" x="544" y="374" font-size="12">PK FK AttemptId &gt; Quiz Attempts</text>
+<text data-box-dataset="quiz-user-answer-responses" data-row-dataset="quiz-user-answer-responses" data-row-column="QuestionId" x="544" y="392" font-size="12">PK FK QuestionId</text>
+<text data-box-dataset="quiz-user-answer-responses" data-row-dataset="quiz-user-answer-responses" data-row-column="QuestionVersionId" x="544" y="410" font-size="12">PK FK QuestionVersionId</text>
+<text data-box-dataset="quiz-user-answer-responses" data-row-dataset="quiz-user-answer-responses" data-row-column="AnswerId" x="544" y="428" font-size="12">PK FK AnswerId</text>
+<rect data-kind="full" data-dataset="quiz-user-answers" x="1020" y="332" width="440" height="160" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="quiz-user-answers" x="1034" y="356" font-size="14" font-weight="bold">Quiz User Answers</text>
+<text data-box-dataset="quiz-user-answers" data-row-dataset="quiz-user-answers" data-row-column="AttemptId" x="1034" y="374" font-size="12">PK FK AttemptId &gt; Quiz Attempts</text>
+<text data-box-dataset="quiz-user-answers" data-row-dataset="quiz-user-answers" data-row-column="QuestionId" x="1034" y="392" font-size="12">FK QuestionId</text>
+<text data-box-dataset="quiz-user-answers" data-row-dataset="quiz-user-answers" data-row-column="QuestionVersionId" x="1034" y="410" font-size="12">FK QuestionVersionId</text>
+<text data-box-dataset="quiz-user-answers" data-row-dataset="quiz-user-answers" data-row-column="SectionId" x="1034" y="428" font-size="12">FK SectionId &gt; Quiz Survey Sections</text>
+<text data-box-dataset="quiz-user-answers" data-row-dataset="quiz-user-answers" data-row-column="ObjectId" x="1034" y="446" font-size="12">PK ObjectId</text>
+<text data-box-dataset="quiz-user-answers" data-row-dataset="quiz-user-answers" data-row-column="LastModifiedBy" x="1034" y="464" font-size="12">FK LastModifiedBy &gt; Users</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="40" y="556" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="54" y="580" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="54" y="598" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="54" y="616" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="users" x="530" y="556" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="544" y="580" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="544" y="598" font-size="12">External table</text>
+<text data-box-dataset="users" x="544" y="616" font-size="12">See its own area for columns</text>
+</svg>

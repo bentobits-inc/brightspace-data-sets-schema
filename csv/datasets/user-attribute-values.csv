@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+User Attribute Values,UserId,1,int,4,true,true,users,UserId
+User Attribute Values,AttributeId,2,nvarchar,128,true,true,user-attribute-definitions,AttributeId
+User Attribute Values,Value,3,nvarchar,4000,false,false,,
+User Attribute Values,LastModified,4,datetime2,8,false,false,,
+User Attribute Values,ModifiedBy,5,int,4,false,true,users,UserId
+User Attribute Values,IsDeleted,6,bit,1,false,false,,
+User Attribute Values,Version,7,int,4,false,false,,

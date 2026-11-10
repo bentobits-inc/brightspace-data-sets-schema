@@ -1,0 +1,13 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Competency Activity Results,ActivityId,1,bigint,8,true,true,competency-activities,ActivityId
+Competency Activity Results,OrgUnitId,2,int,4,true,true,organizational-units,OrgUnitId
+Competency Activity Results,UserId,3,int,4,true,true,users,UserId
+Competency Activity Results,LearningObjectId,4,bigint,8,true,true,,
+Competency Activity Results,IsAchieved,5,bit,1,false,false,,
+Competency Activity Results,PercentAchieved,6,decimal,"19, 9",false,false,,
+Competency Activity Results,RubricScore,7,decimal,"19, 9",false,false,,
+Competency Activity Results,RubricLevelAchieved,8,nvarchar,256,false,false,,
+Competency Activity Results,RubricId,9,bigint,8,false,false,,
+Competency Activity Results,RubricCriterionId,10,bigint,8,false,false,,
+Competency Activity Results,AchievedDate,11,datetime2,8,false,false,,
+Competency Activity Results,Version,12,bigint,8,false,false,,

@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Content Files Properties Log,OrgUnitId,1,int,4,true,true,organizational-units,OrgUnitId
+Content Files Properties Log,ContentObjectId,2,int,4,true,true,content-objects,ContentObjectId
+Content Files Properties Log,Action,3,nvarchar,10,false,false,,
+Content Files Properties Log,FilePath,4,nvarchar,10000,false,false,,
+Content Files Properties Log,FileName,5,nvarchar,512,false,false,,
+Content Files Properties Log,FileExtension,6,nvarchar,512,false,false,,
+Content Files Properties Log,FileSizeBytes,7,bigint,8,false,false,,
+Content Files Properties Log,UploadDate,8,datetime2,8,false,false,,
+Content Files Properties Log,LastModifiedBy,9,int,4,false,true,users,UserId
+Content Files Properties Log,LastModified,10,datetime2,8,true,false,,

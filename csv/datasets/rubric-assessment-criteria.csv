@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Rubric Assessment Criteria,AssessmentId,1,bigint,8,true,true,,
+Rubric Assessment Criteria,RubricId,2,bigint,8,false,true,rubric-objects,RubricId
+Rubric Assessment Criteria,Score,3,decimal,"19, 9",false,false,,
+Rubric Assessment Criteria,Feedback,4,nvarchar,4000,false,false,,
+Rubric Assessment Criteria,IsScoreOverridden,5,bit,1,false,false,,
+Rubric Assessment Criteria,CriterionId,6,bigint,8,true,true,rubric-object-criteria,CriterionId
+Rubric Assessment Criteria,LevelAchievedId,7,bigint,8,false,true,,
+Rubric Assessment Criteria,Version,8,bigint,8,false,false,,

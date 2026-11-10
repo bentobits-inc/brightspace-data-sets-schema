@@ -1,0 +1,6 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Question Pools,SectionId,1,bigint,8,true,true,,
+Question Pools,QuestionId,2,bigint,8,true,true,,
+Question Pools,QuestionVersionId,3,bigint,8,true,true,,
+Question Pools,IsDeleted,4,bit,1,false,false,,
+Question Pools,Version,5,bigint,8,false,false,,

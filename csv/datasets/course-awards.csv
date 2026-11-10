@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Course Awards,AssociationId,1,bigint,8,true,false,,
+Course Awards,AwardId,2,bigint,8,false,true,award-objects,AwardId
+Course Awards,OrgUnitId,3,bigint,8,false,true,organizational-units,OrgUnitId
+Course Awards,DateCreated,4,datetime2,8,false,false,,
+Course Awards,HiddenAward,5,bit,1,false,false,,
+Course Awards,ConditionSetId,6,bigint,8,false,false,,
+Course Awards,LastModified,7,datetime2,8,false,false,,
+Course Awards,Credits,8,decimal,"9, 2",false,false,,
+Course Awards,IsAssociated,9,bit,1,false,false,,
+Course Awards,Version,10,bigint,8,false,false,,

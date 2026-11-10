@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+SIS Course Merge Log,BatchId,1,uniqueidentifier,16,true,false,,
+SIS Course Merge Log,JobType,2,nvarchar,32,false,false,,
+SIS Course Merge Log,Status,3,nvarchar,32,false,false,,
+SIS Course Merge Log,OriginalTargetOrgUnitId,4,bigint,8,false,true,,
+SIS Course Merge Log,OriginalSourceOrgUnitId,5,bigint,8,true,true,,
+SIS Course Merge Log,SourceSystemId,6,bigint,8,false,false,,
+SIS Course Merge Log,NumberOfCoursesInBatch,7,int,4,false,false,,
+SIS Course Merge Log,UserId,8,bigint,8,false,true,users,UserId
+SIS Course Merge Log,ErrorType,9,nvarchar,48,false,false,,
+SIS Course Merge Log,Timestamp,10,datetime2,8,true,false,,

@@ -1,0 +1,15 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Survey User Answers,AttemptId,1,bigint,8,true,true,survey-attempts,AttemptId
+Survey User Answers,QuestionId,2,bigint,8,true,true,,
+Survey User Answers,QuestionVersionId,3,bigint,8,true,true,,
+Survey User Answers,TimeCompleted,4,datetime2,8,false,false,,
+Survey User Answers,QuestionNumber,5,int,4,false,false,,
+Survey User Answers,Comment,6,nvarchar,1000,false,false,,
+Survey User Answers,SortOrder,7,int,4,false,false,,
+Survey User Answers,Score,8,decimal,"19, 9",false,false,,
+Survey User Answers,Page,9,int,4,false,false,,
+Survey User Answers,Assigned,10,bit,1,false,false,,
+Survey User Answers,IsDeleted,11,bit,1,false,false,,
+Survey User Answers,LastModified,12,datetime2,8,false,false,,
+Survey User Answers,LastModifiedBy,13,int,4,false,true,users,UserId
+Survey User Answers,SurveyTimeCompleted,14,datetime2,8,false,false,,

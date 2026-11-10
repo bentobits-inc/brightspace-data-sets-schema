@@ -1,0 +1,7 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Portfolio Evidence Categories,CategoryId,1,uniqueidentifier,16,true,true,portfolio-categories,CategoryId
+Portfolio Evidence Categories,EvidenceId,2,uniqueidentifier,16,true,true,portfolio-evidence-objects,EvidenceId
+Portfolio Evidence Categories,Group,3,nvarchar,30,true,false,,
+Portfolio Evidence Categories,IsDeleted,4,bit,1,false,false,,
+Portfolio Evidence Categories,LastModified,5,datetime2,8,false,false,,
+Portfolio Evidence Categories,LastModifiedBy,6,int,4,false,true,users,UserId

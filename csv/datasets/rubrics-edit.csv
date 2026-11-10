@@ -1,0 +1,13 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Rubrics Edit,AuditLogId,1,uniqueidentifier,16,true,false,,
+Rubrics Edit,RubricId,2,bigint,8,false,true,rubric-objects,RubricId
+Rubrics Edit,CriterionId,3,bigint,8,false,true,rubric-object-criteria,CriterionId
+Rubrics Edit,LevelId,4,bigint,8,false,true,rubric-object-levels,LevelId
+Rubrics Edit,ModifiedBy,5,int,4,false,false,,
+Rubrics Edit,ModifiedObjectType,6,int,4,false,false,,
+Rubrics Edit,CriteriaGroupId,7,bigint,8,false,false,,
+Rubrics Edit,ModifiedDate,8,datetime2,8,false,false,,
+Rubrics Edit,PreviousValue,9,nvarchar,4000,false,false,,
+Rubrics Edit,ModifiedValue,10,nvarchar,4000,false,false,,
+Rubrics Edit,IsLocked,11,bit,1,false,false,,
+Rubrics Edit,Version,12,int,4,false,false,,

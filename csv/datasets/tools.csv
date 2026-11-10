@@ -1,0 +1,5 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Tools,ToolId,1,int,4,true,false,,
+Tools,Name,2,nvarchar,50,false,false,,
+Tools,DisplayName,3,nvarchar,200,false,false,,
+Tools,Version,4,bigint,8,false,false,,

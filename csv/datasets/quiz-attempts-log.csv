@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Quiz Attempts Log,LogId,1,bigint,8,true,false,,
+Quiz Attempts Log,AttemptId,2,bigint,8,false,true,quiz-attempts,AttemptId
+Quiz Attempts Log,EventTypeId,3,int,4,false,false,,
+Quiz Attempts Log,Name,4,nvarchar,256,false,false,,
+Quiz Attempts Log,Description,5,nvarchar,256,false,false,,
+Quiz Attempts Log,EventTime,6,datetime2,8,false,false,,
+Quiz Attempts Log,IPAddress,7,varchar,45,false,false,,
+Quiz Attempts Log,UserId,8,int,4,false,true,users,UserId
+Quiz Attempts Log,IsDeleted,9,bit,1,false,false,,

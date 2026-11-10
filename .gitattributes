@@ -1,0 +1,4 @@
+* text=auto eol=lf
+/schema-source/*.json text eol=lf
+/csv/** text eol=lf
+/diagrams/** text eol=lf

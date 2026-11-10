@@ -1,0 +1,13 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Quiz User Answer Responses,AttemptId,1,bigint,8,true,true,quiz-attempts,AttemptId
+Quiz User Answer Responses,AttemptNumber,2,int,4,false,false,,
+Quiz User Answer Responses,QuestionId,3,bigint,8,true,true,,
+Quiz User Answer Responses,QuestionVersionId,4,bigint,8,true,true,,
+Quiz User Answer Responses,AnswerId,5,bigint,8,true,true,,
+Quiz User Answer Responses,SortOrder,6,int,4,false,false,,
+Quiz User Answer Responses,IsCorrect,7,bit,1,false,false,,
+Quiz User Answer Responses,UserSelection,8,bigint,8,false,false,,
+Quiz User Answer Responses,UserAnswer,9,nvarchar,1000,false,false,,
+Quiz User Answer Responses,FileSetId,10,bigint,8,false,false,,
+Quiz User Answer Responses,LastModified,11,datetime2,8,false,false,,
+Quiz User Answer Responses,IsDeleted,12,bit,1,false,false,,

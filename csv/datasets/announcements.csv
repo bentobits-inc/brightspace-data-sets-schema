@@ -1,0 +1,17 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Announcements,AnnouncementId,1,bigint,8,true,false,,
+Announcements,OrgUnitId,2,bigint,8,false,true,organizational-units,OrgUnitId
+Announcements,Title,3,nvarchar,400,false,false,,
+Announcements,StartDate,4,datetime2,8,false,false,,
+Announcements,EndDate,5,datetime2,8,false,false,,
+Announcements,IsGlobal,6,bit,1,false,false,,
+Announcements,IsDraft,7,bit,1,false,false,,
+Announcements,NumAttachments,8,int,4,false,false,,
+Announcements,DeletedDate,9,datetime2,8,false,false,,
+Announcements,DeletedByUserId,10,int,4,false,true,users,UserId
+Announcements,LastModified,11,datetime2,8,false,false,,
+Announcements,LastModifiedBy,12,int,4,false,false,,
+Announcements,CreatedBy,13,int,4,false,false,,
+Announcements,IsAuthorInfoShown,14,bit,1,false,false,,
+Announcements,CreatedDate,15,datetime2,8,false,false,,
+Announcements,ResultId,16,bigint,8,false,true,,

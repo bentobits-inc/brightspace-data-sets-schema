@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+TurnItIn Submissions,DropboxId,1,bigint,8,false,true,assignment-summary,DropboxId
+TurnItIn Submissions,SubmissionId,2,bigint,8,true,true,assignment-submission-details,SubmissionId
+TurnItIn Submissions,FileId,3,bigint,8,true,false,,
+TurnItIn Submissions,LastSubmissionDate,4,datetime2,8,false,false,,
+TurnItIn Submissions,SubmissionStatus,5,smallint,2,false,false,,
+TurnItIn Submissions,SubmissionErrorType,6,smallint,2,false,false,,
+TurnItIn Submissions,ErrorMessage,7,nvarchar,255,false,false,,
+TurnItIn Submissions,SubmittedBy,8,int,4,false,true,,
+TurnItIn Submissions,LastRefreshDate,9,datetime2,8,false,false,,
+TurnItIn Submissions,LastModified,10,datetime2,8,false,false,,

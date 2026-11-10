@@ -1,0 +1,4 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Course Access,OrgUnitId,1,int,4,true,true,organizational-units,OrgUnitId
+Course Access,UserId,2,int,4,true,true,users,UserId
+Course Access,DayAccessed,3,datetime2,8,true,false,,

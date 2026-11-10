@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes Rubric Alignments,RubricId,1,bigint,8,true,true,,
+Outcomes Rubric Alignments,CriterionId,2,bigint,8,true,true,,
+Outcomes Rubric Alignments,OutcomeId,3,uniqueidentifier,16,true,true,outcome-details,OutcomeId
+Outcomes Rubric Alignments,RegistryId,4,uniqueidentifier,16,true,true,outcomes-set-course,RegistryId
+Outcomes Rubric Alignments,CreatedDate,5,datetime2,8,false,false,,
+Outcomes Rubric Alignments,CreatedBy,6,int,4,false,true,users,UserId
+Outcomes Rubric Alignments,LastModifiedDate,7,datetime2,8,false,false,,
+Outcomes Rubric Alignments,LastModifiedBy,8,int,4,false,true,users,UserId
+Outcomes Rubric Alignments,IsDeleted,9,bit,1,false,false,,

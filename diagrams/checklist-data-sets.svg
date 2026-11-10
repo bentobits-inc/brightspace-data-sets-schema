@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="512" viewBox="0 0 1500 512" font-family="monospace" fill="#172c44">
+<title>Checklist data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="512" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Checklist data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="checklist-category-details" data-from-column="ChecklistId" data-to-dataset="checklist-objects" data-to-column="ChecklistId" data-join-kind="key" d="M 480 202 H 492 V 92 H 28 V 426 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-category-details.ChecklistId to checklist-objects.ChecklistId (key)</title></path>
+<path data-from-dataset="checklist-category-details" data-from-column="DeletedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 202 H 495 V 89 H 1005 V 372 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-category-details.DeletedBy to users.UserId (user)</title></path>
+<path data-from-dataset="checklist-completions" data-from-column="DeletedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 202 H 988 V 86 H 1002 V 372 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-completions.DeletedBy to users.UserId (user)</title></path>
+<path data-from-dataset="checklist-completions" data-from-column="ItemId" data-to-dataset="checklist-item-details" data-to-column="ItemId" data-join-kind="key" d="M 970 202 H 991 V 83 H 999 V 220 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-completions.ItemId to checklist-item-details.ItemId (key)</title></path>
+<path data-from-dataset="checklist-completions" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 970 202 H 994 V 80 H 996 V 372 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-completions.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="checklist-item-details" data-from-column="CategoryId" data-to-dataset="checklist-category-details" data-to-column="CategoryId" data-join-kind="key" d="M 1460 220 H 1487 V 77 H 13 V 202 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-item-details.CategoryId to checklist-category-details.CategoryId (key)</title></path>
+<path data-from-dataset="checklist-item-details" data-from-column="DeletedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 1460 220 H 1472 V 92 H 1008 V 372 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-item-details.DeletedBy to users.UserId (user)</title></path>
+<path data-from-dataset="checklist-objects" data-from-column="DeletedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 426 H 495 V 277 H 1005 V 372 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-objects.DeletedBy to users.UserId (user)</title></path>
+<path data-from-dataset="checklist-objects" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 426 H 498 V 274 H 512 V 372 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>checklist-objects.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<rect data-kind="full" data-dataset="checklist-category-details" x="40" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="checklist-category-details" x="54" y="132" font-size="14" font-weight="bold">Checklist Category Details</text>
+<text data-box-dataset="checklist-category-details" data-row-dataset="checklist-category-details" data-row-column="CategoryId" x="54" y="150" font-size="12">PK CategoryId</text>
+<text data-box-dataset="checklist-category-details" data-row-dataset="checklist-category-details" data-row-column="ChecklistId" x="54" y="168" font-size="12">FK ChecklistId &gt; Checklist Objects</text>
+<text data-box-dataset="checklist-category-details" data-row-dataset="checklist-category-details" data-row-column="DeletedBy" x="54" y="186" font-size="12">FK DeletedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="checklist-completions" x="530" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="checklist-completions" x="544" y="132" font-size="14" font-weight="bold">Checklist Completions</text>
+<text data-box-dataset="checklist-completions" data-row-dataset="checklist-completions" data-row-column="UserId" x="544" y="150" font-size="12">PK FK UserId &gt; Users</text>
+<text data-box-dataset="checklist-completions" data-row-dataset="checklist-completions" data-row-column="ItemId" x="544" y="168" font-size="12">PK FK ItemId &gt; Checklist Item Details</text>
+<text data-box-dataset="checklist-completions" data-row-dataset="checklist-completions" data-row-column="DeletedBy" x="544" y="186" font-size="12">FK DeletedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="checklist-item-details" x="1020" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="checklist-item-details" x="1034" y="132" font-size="14" font-weight="bold">Checklist Item Details</text>
+<text data-box-dataset="checklist-item-details" data-row-dataset="checklist-item-details" data-row-column="ItemId" x="1034" y="150" font-size="12">PK ItemId</text>
+<text data-box-dataset="checklist-item-details" data-row-dataset="checklist-item-details" data-row-column="CategoryId" x="1034" y="168" font-size="12">FK CategoryId &gt; Checklist Category Details</text>
+<text data-box-dataset="checklist-item-details" data-row-dataset="checklist-item-details" data-row-column="ScheduleId" x="1034" y="186" font-size="12">FK ScheduleId</text>
+<text data-box-dataset="checklist-item-details" data-row-dataset="checklist-item-details" data-row-column="DeletedBy" x="1034" y="204" font-size="12">FK DeletedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="checklist-objects" x="40" y="296" width="440" height="142" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="checklist-objects" x="54" y="320" font-size="14" font-weight="bold">Checklist Objects</text>
+<text data-box-dataset="checklist-objects" data-row-dataset="checklist-objects" data-row-column="ChecklistId" x="54" y="338" font-size="12">PK ChecklistId</text>
+<text data-box-dataset="checklist-objects" data-row-dataset="checklist-objects" data-row-column="OrgUnitId" x="54" y="356" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="checklist-objects" data-row-dataset="checklist-objects" data-row-column="SharedUserId" x="54" y="374" font-size="12">FK SharedUserId</text>
+<text data-box-dataset="checklist-objects" data-row-dataset="checklist-objects" data-row-column="ResultId" x="54" y="392" font-size="12">FK ResultId</text>
+<text data-box-dataset="checklist-objects" data-row-dataset="checklist-objects" data-row-column="DeletedBy" x="54" y="410" font-size="12">FK DeletedBy &gt; Users</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="530" y="296" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="544" y="320" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="544" y="338" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="544" y="356" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="users" x="1020" y="296" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="1034" y="320" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="1034" y="338" font-size="12">External table</text>
+<text data-box-dataset="users" x="1034" y="356" font-size="12">See its own area for columns</text>
+</svg>

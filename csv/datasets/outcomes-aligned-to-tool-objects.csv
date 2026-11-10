@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes Aligned to Tool Objects,ObjectType,1,int,4,true,false,,
+Outcomes Aligned to Tool Objects,ObjectId,2,nvarchar,255,true,true,,
+Outcomes Aligned to Tool Objects,OutcomeId,3,uniqueidentifier,16,true,false,,
+Outcomes Aligned to Tool Objects,RegistryId,4,uniqueidentifier,16,true,false,,
+Outcomes Aligned to Tool Objects,CreatedDate,5,datetime2,8,false,false,,
+Outcomes Aligned to Tool Objects,CreatedBy,6,int,4,false,true,users,UserId
+Outcomes Aligned to Tool Objects,LastModifiedDate,7,datetime2,8,false,false,,
+Outcomes Aligned to Tool Objects,LastModifiedBy,8,int,4,false,true,users,UserId
+Outcomes Aligned to Tool Objects,IsDeleted,9,bit,1,false,false,,
+Outcomes Aligned to Tool Objects,AIUtilization,10,int,4,false,false,,

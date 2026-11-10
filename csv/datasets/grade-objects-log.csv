@@ -1,0 +1,12 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Grade Objects Log,LogId,1,bigint,8,true,false,,
+Grade Objects Log,Name,2,nvarchar,50,false,false,,
+Grade Objects Log,GradeObjectId,3,int,4,false,true,grade-objects,GradeObjectId
+Grade Objects Log,UserId,4,int,4,false,true,users,UserId
+Grade Objects Log,GradeSymbolString,5,nvarchar,50,false,false,,
+Grade Objects Log,PointsDenominator,6,decimal,"19, 9",false,false,,
+Grade Objects Log,PointsNumerator,7,decimal,"19, 9",false,false,,
+Grade Objects Log,WeightedDenominator,8,decimal,"19, 9",false,false,,
+Grade Objects Log,WeightedNumerator,9,decimal,"19, 9",false,false,,
+Grade Objects Log,Modified,10,datetime2,8,false,false,,
+Grade Objects Log,ModifiedBy,11,int,4,false,false,,

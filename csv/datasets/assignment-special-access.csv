@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Assignment Special Access,DropboxId,1,bigint,8,true,true,assignment-summary,DropboxId
+Assignment Special Access,UserId,2,int,4,true,true,users,UserId
+Assignment Special Access,StartDate,3,datetime2,8,false,false,,
+Assignment Special Access,EndDate,4,datetime2,8,false,false,,
+Assignment Special Access,DueDate,5,datetime2,8,false,false,,
+Assignment Special Access,ModifiedBy,6,int,4,false,true,users,UserId
+Assignment Special Access,LastModified,7,datetime2,8,false,false,,
+Assignment Special Access,IsDeleted,8,bit,1,false,false,,
+Assignment Special Access,StartDateAvailabilityType,9,smallint,2,false,false,,
+Assignment Special Access,EndDateAvailabilityType,10,smallint,2,false,false,,

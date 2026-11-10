@@ -1,0 +1,12 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Attendance Registers,AttendanceRegisterId,1,bigint,8,true,false,,
+Attendance Registers,OrgUnitId,2,int,4,false,true,organizational-units,OrgUnitId
+Attendance Registers,Name,3,nvarchar,128,false,false,,
+Attendance Registers,Description,4,nvarchar,1000,false,false,,
+Attendance Registers,SchemeId,5,bigint,8,false,true,,
+Attendance Registers,IsVisible,6,bit,1,false,false,,
+Attendance Registers,IncludeAllUsers,7,bit,1,false,false,,
+Attendance Registers,CauseForConcern,8,decimal,"19, 9",false,false,,
+Attendance Registers,Version,9,bigint,8,false,false,,
+Attendance Registers,DateDeleted,10,datetime2,8,false,false,,
+Attendance Registers,DeletedBy,11,int,4,false,false,,

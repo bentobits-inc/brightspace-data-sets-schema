@@ -1,0 +1,11 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+SCORM Objectives,ObjectiveId,1,uniqueidentifier,16,true,false,,
+SCORM Objectives,ScormObjectId,2,uniqueidentifier,16,false,true,scorm-objects,ScormObjectId
+SCORM Objectives,ObjectiveType,3,nvarchar,100,false,false,,
+SCORM Objectives,ActivityId,4,uniqueidentifier,16,false,true,scorm-activities,ActivityId
+SCORM Objectives,InternalId,5,nvarchar,255,false,false,,
+SCORM Objectives,IsPrimary,6,bit,1,false,false,,
+SCORM Objectives,Description,7,nvarchar,250,false,false,,
+SCORM Objectives,ScoreMin,8,float,24,false,false,,
+SCORM Objectives,ScoreMax,9,float,24,false,false,,
+SCORM Objectives,LastModified,10,datetime2,8,false,false,,

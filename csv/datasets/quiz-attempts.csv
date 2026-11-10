@@ -1,0 +1,21 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Quiz Attempts,AttemptId,1,bigint,8,true,false,,
+Quiz Attempts,QuizId,2,bigint,8,false,true,quiz-objects,QuizId
+Quiz Attempts,UserId,3,int,4,false,true,users,UserId
+Quiz Attempts,OrgUnitId,4,int,4,false,true,organizational-units,OrgUnitId
+Quiz Attempts,AttemptNumber,5,int,4,false,false,,
+Quiz Attempts,TimeStarted,6,datetime2,8,false,false,,
+Quiz Attempts,TimeCompleted,7,datetime2,8,false,false,,
+Quiz Attempts,Score,8,decimal,"19, 9",false,false,,
+Quiz Attempts,IsGraded,9,bit,1,false,false,,
+Quiz Attempts,OldAttemptNumber,10,int,4,false,false,,
+Quiz Attempts,IsDeleted,11,bit,1,false,false,,
+Quiz Attempts,PossibleScore,12,decimal,"19, 9",false,false,,
+Quiz Attempts,IsRetakeIncorrectOnly,13,bit,1,false,false,,
+Quiz Attempts,DueDate,14,datetime2,8,false,false,,
+Quiz Attempts,TimeLimit,15,int,4,false,false,,
+Quiz Attempts,TimeLimitEnforced,16,bit,1,false,false,,
+Quiz Attempts,TimeLimitExceededBehaviour,17,nvarchar,128,false,false,,
+Quiz Attempts,IsSynchronous,18,bit,1,false,false,,
+Quiz Attempts,DeductionPercentage,19,int,4,false,false,,
+Quiz Attempts,Version,20,bigint,8,false,false,,

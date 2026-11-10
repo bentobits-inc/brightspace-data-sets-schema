@@ -1,0 +1,6 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Competency Structure,ObjectId,1,bigint,8,true,true,competency-objects,ObjectId
+Competency Structure,ParentObjectId,2,bigint,8,true,true,,
+Competency Structure,BaseObjectID,3,bigint,8,true,true,,
+Competency Structure,Depth,4,int,4,false,false,,
+Competency Structure,EntryTime,5,int,4,true,false,,

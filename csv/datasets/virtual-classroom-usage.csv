@@ -1,0 +1,16 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Virtual Classroom Usage,OrgUnitId,1,int,4,false,true,organizational-units,OrgUnitId
+Virtual Classroom Usage,CourseName,2,nvarchar,255,false,false,,
+Virtual Classroom Usage,MeetingId,3,nvarchar,36,true,false,,
+Virtual Classroom Usage,MeetingName,4,nvarchar,255,false,false,,
+Virtual Classroom Usage,CreationUserId,5,int,4,false,true,,
+Virtual Classroom Usage,CreationDate,6,datetime2,8,false,false,,
+Virtual Classroom Usage,ScheduledDate,7,datetime2,8,false,false,,
+Virtual Classroom Usage,ScheduledDuration,8,int,4,false,false,,
+Virtual Classroom Usage,IsPublished,9,bit,1,false,false,,
+Virtual Classroom Usage,ExternalLinksEnabled,10,bit,1,false,false,,
+Virtual Classroom Usage,WholeClassInvited,11,bit,1,false,false,,
+Virtual Classroom Usage,IsCancelled,12,bit,1,false,false,,
+Virtual Classroom Usage,StartDateTime,13,datetime2,8,false,false,,
+Virtual Classroom Usage,EndDateTime,14,datetime2,8,false,false,,
+Virtual Classroom Usage,IsRecorded,15,bit,1,false,false,,

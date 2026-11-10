@@ -1,0 +1,5 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Course Access Log,OrgUnitId,1,int,4,true,true,organizational-units,OrgUnitId
+Course Access Log,UserId,2,int,4,true,true,users,UserId
+Course Access Log,Timestamp,3,datetime2,8,true,false,,
+Course Access Log,Source,4,nvarchar,20,true,false,,

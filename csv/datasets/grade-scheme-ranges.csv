@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Grade Scheme Ranges,GradeSchemeRangeId,1,bigint,8,true,true,,
+Grade Scheme Ranges,GradeSchemeId,2,bigint,8,true,true,grade-schemes,GradeSchemeId
+Grade Scheme Ranges,SymbolString,3,nvarchar,100,false,false,,
+Grade Scheme Ranges,AssignedValue,4,decimal,"19, 9",false,false,,
+Grade Scheme Ranges,RangeStart,5,decimal,"19, 9",false,false,,
+Grade Scheme Ranges,IsDeleted,6,bit,1,false,false,,
+Grade Scheme Ranges,Version,7,bigint,8,false,false,,

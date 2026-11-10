@@ -1,0 +1,6 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+CPD Methods,MethodId,1,int,4,true,false,,
+CPD Methods,Name,2,nvarchar,4000,false,false,,
+CPD Methods,LastModified,3,datetime2,8,false,false,,
+CPD Methods,DateDeleted,4,datetime2,8,false,false,,
+CPD Methods,Version,5,bigint,8,false,false,,

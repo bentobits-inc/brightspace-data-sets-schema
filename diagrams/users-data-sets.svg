@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="834" viewBox="0 0 1500 834" font-family="monospace" fill="#172c44">
+<title>Users data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="834" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Users data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="auditor-relationships-log" data-from-column="ModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 238 H 492 V 92 H 1008 V 560 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>auditor-relationships-log.ModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="auditor-relationships-log" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 238 H 495 V 89 H 25 V 748 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>auditor-relationships-log.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="course-access-log" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 1460 220 H 1478 V 86 H 22 V 748 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>course-access-log.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="course-access-log" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 1460 220 H 1481 V 83 H 999 V 560 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>course-access-log.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="course-access" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 970 202 H 994 V 80 H 16 V 748 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>course-access.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="course-access" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 970 202 H 997 V 77 H 993 V 560 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>course-access.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="enrollments-and-withdrawals" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 426 H 492 V 298 H 28 V 748 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>enrollments-and-withdrawals.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="enrollments-and-withdrawals" data-from-column="RoleId" data-to-dataset="role-details" data-to-column="RoleId" data-join-kind="key" d="M 480 426 H 495 V 295 H 515 V 748 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>enrollments-and-withdrawals.RoleId to role-details.RoleId (key)</title></path>
+<path data-from-dataset="enrollments-and-withdrawals" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 480 426 H 498 V 292 H 1002 V 560 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>enrollments-and-withdrawals.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="user-attribute-definitions" data-from-column="ModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 390 H 991 V 289 H 999 V 560 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>user-attribute-definitions.ModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="user-attribute-values" data-from-column="AttributeId" data-to-dataset="user-attribute-definitions" data-to-column="AttributeId" data-join-kind="key" d="M 1460 408 H 1484 V 286 H 506 V 390 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>user-attribute-values.AttributeId to user-attribute-definitions.AttributeId (key)</title></path>
+<path data-from-dataset="user-attribute-values" data-from-column="ModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 1460 408 H 1487 V 283 H 993 V 560 H 1020" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>user-attribute-values.ModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="user-attribute-values" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 1460 408 H 1472 V 298 H 1008 V 560 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>user-attribute-values.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="user-enrollments" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 596 H 495 V 483 H 25 V 748 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>user-enrollments.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="user-enrollments" data-from-column="RoleId" data-to-dataset="role-details" data-to-column="RoleId" data-join-kind="key" d="M 480 596 H 498 V 480 H 512 V 748 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>user-enrollments.RoleId to role-details.RoleId (key)</title></path>
+<path data-from-dataset="user-enrollments" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 480 596 H 501 V 477 H 999 V 560 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>user-enrollments.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="user-logins" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 970 596 H 994 V 474 H 996 V 560 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>user-logins.UserId to users.UserId (key)</title></path>
+<rect data-kind="full" data-dataset="auditor-relationships-log" x="40" y="108" width="440" height="142" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="auditor-relationships-log" x="54" y="132" font-size="14" font-weight="bold">Auditor Relationships Log</text>
+<text data-box-dataset="auditor-relationships-log" data-row-dataset="auditor-relationships-log" data-row-column="AuditorId" x="54" y="150" font-size="12">PK FK AuditorId</text>
+<text data-box-dataset="auditor-relationships-log" data-row-dataset="auditor-relationships-log" data-row-column="UserToAuditId" x="54" y="168" font-size="12">PK FK UserToAuditId</text>
+<text data-box-dataset="auditor-relationships-log" data-row-dataset="auditor-relationships-log" data-row-column="OrgUnitId" x="54" y="186" font-size="12">PK FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="auditor-relationships-log" data-row-dataset="auditor-relationships-log" data-row-column="ModifiedBy" x="54" y="204" font-size="12">FK ModifiedBy &gt; Users</text>
+<text data-box-dataset="auditor-relationships-log" data-row-dataset="auditor-relationships-log" data-row-column="ModifiedDate" x="54" y="222" font-size="12">PK ModifiedDate</text>
+<rect data-kind="full" data-dataset="course-access" x="530" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="course-access" x="544" y="132" font-size="14" font-weight="bold">Course Access</text>
+<text data-box-dataset="course-access" data-row-dataset="course-access" data-row-column="OrgUnitId" x="544" y="150" font-size="12">PK FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="course-access" data-row-dataset="course-access" data-row-column="UserId" x="544" y="168" font-size="12">PK FK UserId &gt; Users</text>
+<text data-box-dataset="course-access" data-row-dataset="course-access" data-row-column="DayAccessed" x="544" y="186" font-size="12">PK DayAccessed</text>
+<rect data-kind="full" data-dataset="course-access-log" x="1020" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="course-access-log" x="1034" y="132" font-size="14" font-weight="bold">Course Access Log</text>
+<text data-box-dataset="course-access-log" data-row-dataset="course-access-log" data-row-column="OrgUnitId" x="1034" y="150" font-size="12">PK FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="course-access-log" data-row-dataset="course-access-log" data-row-column="UserId" x="1034" y="168" font-size="12">PK FK UserId &gt; Users</text>
+<text data-box-dataset="course-access-log" data-row-dataset="course-access-log" data-row-column="Timestamp" x="1034" y="186" font-size="12">PK Timestamp</text>
+<text data-box-dataset="course-access-log" data-row-dataset="course-access-log" data-row-column="Source" x="1034" y="204" font-size="12">PK Source</text>
+<rect data-kind="full" data-dataset="enrollments-and-withdrawals" x="40" y="314" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="enrollments-and-withdrawals" x="54" y="338" font-size="14" font-weight="bold">Enrollments and Withdrawals</text>
+<text data-box-dataset="enrollments-and-withdrawals" data-row-dataset="enrollments-and-withdrawals" data-row-column="LogId" x="54" y="356" font-size="12">PK LogId</text>
+<text data-box-dataset="enrollments-and-withdrawals" data-row-dataset="enrollments-and-withdrawals" data-row-column="UserId" x="54" y="374" font-size="12">FK UserId &gt; Users</text>
+<text data-box-dataset="enrollments-and-withdrawals" data-row-dataset="enrollments-and-withdrawals" data-row-column="OrgUnitId" x="54" y="392" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="enrollments-and-withdrawals" data-row-dataset="enrollments-and-withdrawals" data-row-column="RoleId" x="54" y="410" font-size="12">FK RoleId &gt; Role Details</text>
+<rect data-kind="full" data-dataset="user-attribute-definitions" x="530" y="314" width="440" height="88" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="user-attribute-definitions" x="544" y="338" font-size="14" font-weight="bold">User Attribute Definitions</text>
+<text data-box-dataset="user-attribute-definitions" data-row-dataset="user-attribute-definitions" data-row-column="AttributeId" x="544" y="356" font-size="12">PK AttributeId</text>
+<text data-box-dataset="user-attribute-definitions" data-row-dataset="user-attribute-definitions" data-row-column="ModifiedBy" x="544" y="374" font-size="12">FK ModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="user-attribute-values" x="1020" y="314" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="user-attribute-values" x="1034" y="338" font-size="14" font-weight="bold">User Attribute Values</text>
+<text data-box-dataset="user-attribute-values" data-row-dataset="user-attribute-values" data-row-column="UserId" x="1034" y="356" font-size="12">PK FK UserId &gt; Users</text>
+<text data-box-dataset="user-attribute-values" data-row-dataset="user-attribute-values" data-row-column="AttributeId" x="1034" y="374" font-size="12">PK FK AttributeId &gt; User Attribute Definitions</text>
+<text data-box-dataset="user-attribute-values" data-row-dataset="user-attribute-values" data-row-column="ModifiedBy" x="1034" y="392" font-size="12">FK ModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="user-enrollments" x="40" y="502" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="user-enrollments" x="54" y="526" font-size="14" font-weight="bold">User Enrollments</text>
+<text data-box-dataset="user-enrollments" data-row-dataset="user-enrollments" data-row-column="OrgUnitId" x="54" y="544" font-size="12">PK FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="user-enrollments" data-row-dataset="user-enrollments" data-row-column="UserId" x="54" y="562" font-size="12">PK FK UserId &gt; Users</text>
+<text data-box-dataset="user-enrollments" data-row-dataset="user-enrollments" data-row-column="RoleId" x="54" y="580" font-size="12">FK RoleId &gt; Role Details</text>
+<rect data-kind="full" data-dataset="user-logins" x="530" y="502" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="user-logins" x="544" y="526" font-size="14" font-weight="bold">User Logins</text>
+<text data-box-dataset="user-logins" data-row-dataset="user-logins" data-row-column="UserId" x="544" y="544" font-size="12">FK UserId &gt; Users</text>
+<text data-box-dataset="user-logins" data-row-dataset="user-logins" data-row-column="ImpersonatingUserId" x="544" y="562" font-size="12">FK ImpersonatingUserId</text>
+<text data-box-dataset="user-logins" data-row-dataset="user-logins" data-row-column="LoginAttemptId" x="544" y="580" font-size="12">PK LoginAttemptId</text>
+<rect data-kind="full" data-dataset="users" x="1020" y="502" width="440" height="70" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="users" x="1034" y="526" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" data-row-dataset="users" data-row-column="UserId" x="1034" y="544" font-size="12">PK UserId</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="40" y="672" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="54" y="696" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="54" y="714" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="54" y="732" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="role-details" x="530" y="672" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="role-details" x="544" y="696" font-size="14" font-weight="bold">Role Details</text>
+<text data-box-dataset="role-details" x="544" y="714" font-size="12">External table</text>
+<text data-box-dataset="role-details" x="544" y="732" font-size="12">See its own area for columns</text>
+</svg>

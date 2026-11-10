@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="646" viewBox="0 0 1500 646" font-family="monospace" fill="#172c44">
+<title>Competency data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="646" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">Competency data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="competency-activities" data-from-column="ObjectId" data-to-dataset="competency-objects" data-to-column="ObjectId" data-join-kind="key" d="M 480 202 H 492 V 92 H 518 V 372 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-activities.ObjectId to competency-objects.ObjectId (key)</title></path>
+<path data-from-dataset="competency-activities" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 480 202 H 495 V 89 H 25 V 560 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-activities.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="competency-activity-log" data-from-column="ModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 202 H 988 V 86 H 512 V 560 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-activity-log.ModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="competency-activity-results" data-from-column="ActivityId" data-to-dataset="competency-activities" data-to-column="ActivityId" data-join-kind="key" d="M 1460 220 H 1481 V 83 H 19 V 202 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-activity-results.ActivityId to competency-activities.ActivityId (key)</title></path>
+<path data-from-dataset="competency-activity-results" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 1460 220 H 1484 V 80 H 16 V 560 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-activity-results.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="competency-activity-results" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 1460 220 H 1487 V 77 H 503 V 560 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-activity-results.UserId to users.UserId (key)</title></path>
+<path data-from-dataset="competency-log" data-from-column="ModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 480 390 H 492 V 280 H 518 V 560 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-log.ModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="competency-log" data-from-column="ObjectId" data-to-dataset="competency-objects" data-to-column="ObjectId" data-join-kind="key" d="M 480 390 H 495 V 277 H 515 V 372 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-log.ObjectId to competency-objects.ObjectId (key)</title></path>
+<path data-from-dataset="competency-objects" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 970 372 H 988 V 274 H 22 V 560 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-objects.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="competency-structure" data-from-column="ObjectId" data-to-dataset="competency-objects" data-to-column="ObjectId" data-join-kind="key" d="M 1460 408 H 1481 V 271 H 509 V 372 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>competency-structure.ObjectId to competency-objects.ObjectId (key)</title></path>
+<rect data-kind="full" data-dataset="competency-activities" x="40" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="competency-activities" x="54" y="132" font-size="14" font-weight="bold">Competency Activities</text>
+<text data-box-dataset="competency-activities" data-row-dataset="competency-activities" data-row-column="ActivityId" x="54" y="150" font-size="12">PK ActivityId</text>
+<text data-box-dataset="competency-activities" data-row-dataset="competency-activities" data-row-column="OrgUnitId" x="54" y="168" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="competency-activities" data-row-dataset="competency-activities" data-row-column="ObjectId" x="54" y="186" font-size="12">FK ObjectId &gt; Competency Objects</text>
+<rect data-kind="full" data-dataset="competency-activity-log" x="530" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="competency-activity-log" x="544" y="132" font-size="14" font-weight="bold">Competency Activity Log</text>
+<text data-box-dataset="competency-activity-log" data-row-dataset="competency-activity-log" data-row-column="ActivityId" x="544" y="150" font-size="12">PK ActivityId</text>
+<text data-box-dataset="competency-activity-log" data-row-dataset="competency-activity-log" data-row-column="ActivityLogId" x="544" y="168" font-size="12">PK ActivityLogId</text>
+<text data-box-dataset="competency-activity-log" data-row-dataset="competency-activity-log" data-row-column="ModifiedBy" x="544" y="186" font-size="12">FK ModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="competency-activity-results" x="1020" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="competency-activity-results" x="1034" y="132" font-size="14" font-weight="bold">Competency Activity Results</text>
+<text data-box-dataset="competency-activity-results" data-row-dataset="competency-activity-results" data-row-column="ActivityId" x="1034" y="150" font-size="12">PK FK ActivityId &gt; Competency Activities</text>
+<text data-box-dataset="competency-activity-results" data-row-dataset="competency-activity-results" data-row-column="OrgUnitId" x="1034" y="168" font-size="12">PK FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="competency-activity-results" data-row-dataset="competency-activity-results" data-row-column="UserId" x="1034" y="186" font-size="12">PK FK UserId &gt; Users</text>
+<text data-box-dataset="competency-activity-results" data-row-dataset="competency-activity-results" data-row-column="LearningObjectId" x="1034" y="204" font-size="12">PK FK LearningObjectId</text>
+<rect data-kind="full" data-dataset="competency-log" x="40" y="296" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="competency-log" x="54" y="320" font-size="14" font-weight="bold">Competency Log</text>
+<text data-box-dataset="competency-log" data-row-dataset="competency-log" data-row-column="CompetencyLogId" x="54" y="338" font-size="12">PK CompetencyLogId</text>
+<text data-box-dataset="competency-log" data-row-dataset="competency-log" data-row-column="ObjectId" x="54" y="356" font-size="12">FK ObjectId &gt; Competency Objects</text>
+<text data-box-dataset="competency-log" data-row-dataset="competency-log" data-row-column="ModifiedBy" x="54" y="374" font-size="12">FK ModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="competency-objects" x="530" y="296" width="440" height="88" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="competency-objects" x="544" y="320" font-size="14" font-weight="bold">Competency Objects</text>
+<text data-box-dataset="competency-objects" data-row-dataset="competency-objects" data-row-column="ObjectId" x="544" y="338" font-size="12">PK ObjectId</text>
+<text data-box-dataset="competency-objects" data-row-dataset="competency-objects" data-row-column="OrgUnitId" x="544" y="356" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<rect data-kind="full" data-dataset="competency-structure" x="1020" y="296" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="competency-structure" x="1034" y="320" font-size="14" font-weight="bold">Competency Structure</text>
+<text data-box-dataset="competency-structure" data-row-dataset="competency-structure" data-row-column="ObjectId" x="1034" y="338" font-size="12">PK FK ObjectId &gt; Competency Objects</text>
+<text data-box-dataset="competency-structure" data-row-dataset="competency-structure" data-row-column="ParentObjectId" x="1034" y="356" font-size="12">PK FK ParentObjectId</text>
+<text data-box-dataset="competency-structure" data-row-dataset="competency-structure" data-row-column="BaseObjectID" x="1034" y="374" font-size="12">PK FK BaseObjectID</text>
+<text data-box-dataset="competency-structure" data-row-dataset="competency-structure" data-row-column="EntryTime" x="1034" y="392" font-size="12">PK EntryTime</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="40" y="484" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="54" y="508" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="54" y="526" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="54" y="544" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="users" x="530" y="484" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="544" y="508" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="544" y="526" font-size="12">External table</text>
+<text data-box-dataset="users" x="544" y="544" font-size="12">See its own area for columns</text>
+</svg>

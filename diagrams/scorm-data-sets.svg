@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="816" viewBox="0 0 1500 816" font-family="monospace" fill="#172c44">
+<title>SCORM data sets</title>
+<desc>Keys and relationship columns from the pinned documentation snapshot. External tables have dashed borders.</desc>
+<rect x="0" y="0" width="1500" height="816" fill="white"/>
+<defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M 0 0 L 6 3 L 0 6 Z" fill="#405775"/></marker></defs>
+<text x="40" y="34" font-size="20" font-weight="bold">SCORM data sets</text>
+<text x="40" y="59" font-size="12">PK: primary key; FK: foreign key; >: outgoing join. Dashed boxes: external area.</text>
+<path data-from-dataset="scorm-activities" data-from-column="ScormObjectId" data-to-dataset="scorm-objects" data-to-column="ScormObjectId" data-join-kind="key" d="M 480 202 H 492 V 92 H 518 V 578 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-activities.ScormObjectId to scorm-objects.ScormObjectId (key)</title></path>
+<path data-from-dataset="scorm-activity-attempts" data-from-column="ActivityId" data-to-dataset="scorm-activities" data-to-column="ActivityId" data-join-kind="key" d="M 970 202 H 985 V 89 H 25 V 202 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-activity-attempts.ActivityId to scorm-activities.ActivityId (key)</title></path>
+<path data-from-dataset="scorm-activity-attempts" data-from-column="VisitId" data-to-dataset="scorm-visits" data-to-column="VisitId" data-join-kind="key" d="M 970 202 H 988 V 86 H 1002 V 578 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-activity-attempts.VisitId to scorm-visits.VisitId (key)</title></path>
+<path data-from-dataset="scorm-interaction-attempts" data-from-column="ActivityId" data-to-dataset="scorm-activities" data-to-column="ActivityId" data-join-kind="key" d="M 1460 220 H 1481 V 83 H 19 V 202 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-interaction-attempts.ActivityId to scorm-activities.ActivityId (key)</title></path>
+<path data-from-dataset="scorm-interaction-attempts" data-from-column="InteractionId" data-to-dataset="scorm-interactions" data-to-column="InteractionId" data-join-kind="key" d="M 1460 220 H 1484 V 80 H 506 V 372 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-interaction-attempts.InteractionId to scorm-interactions.InteractionId (key)</title></path>
+<path data-from-dataset="scorm-interaction-attempts" data-from-column="VisitId" data-to-dataset="scorm-visits" data-to-column="VisitId" data-join-kind="key" d="M 1460 220 H 1487 V 77 H 993 V 578 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-interaction-attempts.VisitId to scorm-visits.VisitId (key)</title></path>
+<path data-from-dataset="scorm-interaction-objectives" data-from-column="InteractionId" data-to-dataset="scorm-interactions" data-to-column="InteractionId" data-join-kind="key" d="M 480 372 H 492 V 280 H 518 V 372 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-interaction-objectives.InteractionId to scorm-interactions.InteractionId (key)</title></path>
+<path data-from-dataset="scorm-interaction-objectives" data-from-column="ObjectiveId" data-to-dataset="scorm-objectives" data-to-column="ObjectiveId" data-join-kind="key" d="M 480 372 H 495 V 277 H 25 V 560 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-interaction-objectives.ObjectiveId to scorm-objectives.ObjectiveId (key)</title></path>
+<path data-from-dataset="scorm-interactions" data-from-column="ActivityId" data-to-dataset="scorm-activities" data-to-column="ActivityId" data-join-kind="key" d="M 970 372 H 988 V 274 H 22 V 202 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-interactions.ActivityId to scorm-activities.ActivityId (key)</title></path>
+<path data-from-dataset="scorm-objective-attempts" data-from-column="ObjectiveId" data-to-dataset="scorm-objectives" data-to-column="ObjectiveId" data-join-kind="key" d="M 1460 390 H 1481 V 271 H 19 V 560 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-objective-attempts.ObjectiveId to scorm-objectives.ObjectiveId (key)</title></path>
+<path data-from-dataset="scorm-objective-attempts" data-from-column="VisitId" data-to-dataset="scorm-visits" data-to-column="VisitId" data-join-kind="key" d="M 1460 390 H 1484 V 268 H 996 V 578 H 1020" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-objective-attempts.VisitId to scorm-visits.VisitId (key)</title></path>
+<path data-from-dataset="scorm-objectives" data-from-column="ActivityId" data-to-dataset="scorm-activities" data-to-column="ActivityId" data-join-kind="key" d="M 480 560 H 507 V 435 H 13 V 202 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-objectives.ActivityId to scorm-activities.ActivityId (key)</title></path>
+<path data-from-dataset="scorm-objectives" data-from-column="ScormObjectId" data-to-dataset="scorm-objects" data-to-column="ScormObjectId" data-join-kind="key" d="M 480 560 H 492 V 450 H 518 V 578 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-objectives.ScormObjectId to scorm-objects.ScormObjectId (key)</title></path>
+<path data-from-dataset="scorm-objects" data-from-column="LastModifiedBy" data-to-dataset="users" data-to-column="UserId" data-join-kind="user" d="M 970 578 H 985 V 447 H 515 V 730 H 530" fill="none" stroke="#97531b" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-objects.LastModifiedBy to users.UserId (user)</title></path>
+<path data-from-dataset="scorm-objects" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 970 578 H 988 V 444 H 22 V 730 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-objects.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="scorm-visits" data-from-column="OrgUnitId" data-to-dataset="organizational-units" data-to-column="OrgUnitId" data-join-kind="key" d="M 1460 578 H 1481 V 441 H 19 V 730 H 40" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-visits.OrgUnitId to organizational-units.OrgUnitId (key)</title></path>
+<path data-from-dataset="scorm-visits" data-from-column="ScormObjectId" data-to-dataset="scorm-objects" data-to-column="ScormObjectId" data-join-kind="key" d="M 1460 578 H 1484 V 438 H 506 V 578 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-visits.ScormObjectId to scorm-objects.ScormObjectId (key)</title></path>
+<path data-from-dataset="scorm-visits" data-from-column="UserId" data-to-dataset="users" data-to-column="UserId" data-join-kind="key" d="M 1460 578 H 1487 V 435 H 503 V 730 H 530" fill="none" stroke="#3974a5" stroke-width="1.3" marker-end="url(#arrow)"><title>scorm-visits.UserId to users.UserId (key)</title></path>
+<rect data-kind="full" data-dataset="scorm-activities" x="40" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-activities" x="54" y="132" font-size="14" font-weight="bold">SCORM Activities</text>
+<text data-box-dataset="scorm-activities" data-row-dataset="scorm-activities" data-row-column="ActivityId" x="54" y="150" font-size="12">PK ActivityId</text>
+<text data-box-dataset="scorm-activities" data-row-dataset="scorm-activities" data-row-column="ScormObjectId" x="54" y="168" font-size="12">FK ScormObjectId &gt; SCORM Objects</text>
+<text data-box-dataset="scorm-activities" data-row-dataset="scorm-activities" data-row-column="ParentActivityId" x="54" y="186" font-size="12">FK ParentActivityId</text>
+<rect data-kind="full" data-dataset="scorm-activity-attempts" x="530" y="108" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-activity-attempts" x="544" y="132" font-size="14" font-weight="bold">SCORM Activity Attempts</text>
+<text data-box-dataset="scorm-activity-attempts" data-row-dataset="scorm-activity-attempts" data-row-column="VisitId" x="544" y="150" font-size="12">PK FK VisitId &gt; SCORM Visits</text>
+<text data-box-dataset="scorm-activity-attempts" data-row-dataset="scorm-activity-attempts" data-row-column="ActivityId" x="544" y="168" font-size="12">PK FK ActivityId &gt; SCORM Activities</text>
+<text data-box-dataset="scorm-activity-attempts" data-row-dataset="scorm-activity-attempts" data-row-column="AttemptNumber" x="544" y="186" font-size="12">PK AttemptNumber</text>
+<rect data-kind="full" data-dataset="scorm-interaction-attempts" x="1020" y="108" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-interaction-attempts" x="1034" y="132" font-size="14" font-weight="bold">SCORM Interaction Attempts</text>
+<text data-box-dataset="scorm-interaction-attempts" data-row-dataset="scorm-interaction-attempts" data-row-column="VisitId" x="1034" y="150" font-size="12">PK FK VisitId &gt; SCORM Visits</text>
+<text data-box-dataset="scorm-interaction-attempts" data-row-dataset="scorm-interaction-attempts" data-row-column="InteractionId" x="1034" y="168" font-size="12">PK FK InteractionId &gt; SCORM Interactions</text>
+<text data-box-dataset="scorm-interaction-attempts" data-row-dataset="scorm-interaction-attempts" data-row-column="AttemptNumber" x="1034" y="186" font-size="12">PK AttemptNumber</text>
+<text data-box-dataset="scorm-interaction-attempts" data-row-dataset="scorm-interaction-attempts" data-row-column="ActivityId" x="1034" y="204" font-size="12">FK ActivityId &gt; SCORM Activities</text>
+<rect data-kind="full" data-dataset="scorm-interaction-objectives" x="40" y="296" width="440" height="88" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-interaction-objectives" x="54" y="320" font-size="14" font-weight="bold">SCORM Interaction Objectives</text>
+<text data-box-dataset="scorm-interaction-objectives" data-row-dataset="scorm-interaction-objectives" data-row-column="InteractionId" x="54" y="338" font-size="12">PK FK InteractionId &gt; SCORM Interactions</text>
+<text data-box-dataset="scorm-interaction-objectives" data-row-dataset="scorm-interaction-objectives" data-row-column="ObjectiveId" x="54" y="356" font-size="12">PK FK ObjectiveId &gt; SCORM Objectives</text>
+<rect data-kind="full" data-dataset="scorm-interactions" x="530" y="296" width="440" height="88" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-interactions" x="544" y="320" font-size="14" font-weight="bold">SCORM Interactions</text>
+<text data-box-dataset="scorm-interactions" data-row-dataset="scorm-interactions" data-row-column="InteractionId" x="544" y="338" font-size="12">PK InteractionId</text>
+<text data-box-dataset="scorm-interactions" data-row-dataset="scorm-interactions" data-row-column="ActivityId" x="544" y="356" font-size="12">FK ActivityId &gt; SCORM Activities</text>
+<rect data-kind="full" data-dataset="scorm-objective-attempts" x="1020" y="296" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-objective-attempts" x="1034" y="320" font-size="14" font-weight="bold">SCORM Objective Attempts</text>
+<text data-box-dataset="scorm-objective-attempts" data-row-dataset="scorm-objective-attempts" data-row-column="VisitId" x="1034" y="338" font-size="12">PK FK VisitId &gt; SCORM Visits</text>
+<text data-box-dataset="scorm-objective-attempts" data-row-dataset="scorm-objective-attempts" data-row-column="ObjectiveId" x="1034" y="356" font-size="12">PK FK ObjectiveId &gt; SCORM Objectives</text>
+<text data-box-dataset="scorm-objective-attempts" data-row-dataset="scorm-objective-attempts" data-row-column="AttemptNumber" x="1034" y="374" font-size="12">PK AttemptNumber</text>
+<rect data-kind="full" data-dataset="scorm-objectives" x="40" y="466" width="440" height="106" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-objectives" x="54" y="490" font-size="14" font-weight="bold">SCORM Objectives</text>
+<text data-box-dataset="scorm-objectives" data-row-dataset="scorm-objectives" data-row-column="ObjectiveId" x="54" y="508" font-size="12">PK ObjectiveId</text>
+<text data-box-dataset="scorm-objectives" data-row-dataset="scorm-objectives" data-row-column="ScormObjectId" x="54" y="526" font-size="12">FK ScormObjectId &gt; SCORM Objects</text>
+<text data-box-dataset="scorm-objectives" data-row-dataset="scorm-objectives" data-row-column="ActivityId" x="54" y="544" font-size="12">FK ActivityId &gt; SCORM Activities</text>
+<rect data-kind="full" data-dataset="scorm-objects" x="530" y="466" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-objects" x="544" y="490" font-size="14" font-weight="bold">SCORM Objects</text>
+<text data-box-dataset="scorm-objects" data-row-dataset="scorm-objects" data-row-column="ScormObjectId" x="544" y="508" font-size="12">PK ScormObjectId</text>
+<text data-box-dataset="scorm-objects" data-row-dataset="scorm-objects" data-row-column="OrgUnitId" x="544" y="526" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<text data-box-dataset="scorm-objects" data-row-dataset="scorm-objects" data-row-column="ContentObjectId" x="544" y="544" font-size="12">FK ContentObjectId</text>
+<text data-box-dataset="scorm-objects" data-row-dataset="scorm-objects" data-row-column="LastModifiedBy" x="544" y="562" font-size="12">FK LastModifiedBy &gt; Users</text>
+<rect data-kind="full" data-dataset="scorm-visits" x="1020" y="466" width="440" height="124" rx="6" fill="#f1f6fc" stroke="#405775"/>
+<text data-box-dataset="scorm-visits" x="1034" y="490" font-size="14" font-weight="bold">SCORM Visits</text>
+<text data-box-dataset="scorm-visits" data-row-dataset="scorm-visits" data-row-column="VisitId" x="1034" y="508" font-size="12">PK VisitId</text>
+<text data-box-dataset="scorm-visits" data-row-dataset="scorm-visits" data-row-column="ScormObjectId" x="1034" y="526" font-size="12">FK ScormObjectId &gt; SCORM Objects</text>
+<text data-box-dataset="scorm-visits" data-row-dataset="scorm-visits" data-row-column="UserId" x="1034" y="544" font-size="12">FK UserId &gt; Users</text>
+<text data-box-dataset="scorm-visits" data-row-dataset="scorm-visits" data-row-column="OrgUnitId" x="1034" y="562" font-size="12">FK OrgUnitId &gt; Organizational Units</text>
+<rect data-kind="stub" data-dataset="organizational-units" x="40" y="654" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="organizational-units" x="54" y="678" font-size="14" font-weight="bold">Organizational Units</text>
+<text data-box-dataset="organizational-units" x="54" y="696" font-size="12">External table</text>
+<text data-box-dataset="organizational-units" x="54" y="714" font-size="12">See its own area for columns</text>
+<rect data-kind="stub" data-dataset="users" x="530" y="654" width="440" height="88" rx="6" fill="#fff8ea" stroke="#405775" stroke-dasharray="6 4"/>
+<text data-box-dataset="users" x="544" y="678" font-size="14" font-weight="bold">Users</text>
+<text data-box-dataset="users" x="544" y="696" font-size="12">External table</text>
+<text data-box-dataset="users" x="544" y="714" font-size="12">See its own area for columns</text>
+</svg>

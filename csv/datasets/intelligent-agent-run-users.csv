@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Intelligent Agent Run Users,AgentId,1,bigint,8,true,true,intelligent-agent-objects,AgentId
+Intelligent Agent Run Users,AgentRunId,2,bigint,8,true,true,intelligent-agent-run-log,AgentRunId
+Intelligent Agent Run Users,UserId,3,int,4,true,true,users,UserId
+Intelligent Agent Run Users,OrgUnitId,4,int,4,false,true,organizational-units,OrgUnitId
+Intelligent Agent Run Users,ActionTypeName,5,nvarchar,50,false,false,,
+Intelligent Agent Run Users,ActionHasError,6,bit,1,false,false,,
+Intelligent Agent Run Users,ActionHasInfo,7,bit,1,false,false,,
+Intelligent Agent Run Users,ActionHasWarning,8,bit,1,false,false,,
+Intelligent Agent Run Users,ShouldRetry,9,bit,1,false,false,,

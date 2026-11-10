@@ -1,0 +1,13 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Competency Objects,ObjectId,1,bigint,8,true,false,,
+Competency Objects,OrgUnitId,2,int,4,false,true,organizational-units,OrgUnitId
+Competency Objects,Name,3,nvarchar,256,false,false,,
+Competency Objects,Type,4,varchar,256,false,false,,
+Competency Objects,ReadyForEvaluation,5,bit,1,false,false,,
+Competency Objects,Status,6,varchar,9,false,false,,
+Competency Objects,Description,7,nvarchar,1000,false,false,,
+Competency Objects,NeedReevaluation,8,bit,1,false,false,,
+Competency Objects,ReevaluationIfAchieved,9,bit,1,false,false,,
+Competency Objects,ReevaluationIfNotAchieved,10,bit,1,false,false,,
+Competency Objects,AdditionalIdentifier,11,nvarchar,512,false,false,,
+Competency Objects,IsHidden,12,bit,1,false,false,,

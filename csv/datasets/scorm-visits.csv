@@ -1,0 +1,14 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+SCORM Visits,VisitId,1,uniqueidentifier,16,true,false,,
+SCORM Visits,ScormObjectId,2,uniqueidentifier,16,false,true,scorm-objects,ScormObjectId
+SCORM Visits,UserId,3,int,4,false,true,users,UserId
+SCORM Visits,OrgUnitId,4,int,4,false,true,organizational-units,OrgUnitId
+SCORM Visits,FirstAccessDate,5,datetime2,8,false,false,,
+SCORM Visits,LastAccessDate,6,datetime2,8,false,false,,
+SCORM Visits,CompletedDate,7,datetime2,8,false,false,,
+SCORM Visits,Completion,8,nvarchar,100,false,false,,
+SCORM Visits,Success,9,nvarchar,100,false,false,,
+SCORM Visits,Score,10,float,24,false,false,,
+SCORM Visits,TimeSpent,11,int,4,false,false,,
+SCORM Visits,Progress,12,float,24,false,false,,
+SCORM Visits,LastModified,13,datetime2,8,false,false,,

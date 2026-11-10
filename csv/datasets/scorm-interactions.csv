@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+SCORM Interactions,InteractionId,1,uniqueidentifier,16,true,false,,
+SCORM Interactions,ActivityId,2,uniqueidentifier,16,false,true,scorm-activities,ActivityId
+SCORM Interactions,InternalId,3,nvarchar,255,false,false,,
+SCORM Interactions,InteractionType,4,nvarchar,100,false,false,,
+SCORM Interactions,Description,5,nvarchar,250,false,false,,
+SCORM Interactions,Weighting,6,float,24,false,false,,
+SCORM Interactions,CorrectResponses,7,nvarchar,2000,false,false,,
+SCORM Interactions,LastModified,8,datetime2,8,false,false,,

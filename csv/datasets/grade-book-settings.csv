@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Grade Book Settings,OrgUnitId,1,int,4,true,true,organizational-units,OrgUnitId
+Grade Book Settings,GradeSchemeId,2,bigint,8,true,false,,
+Grade Book Settings,GradingSystem,3,varchar,8,false,false,,
+Grade Book Settings,UngradedItems,4,varchar,25,false,false,,
+Grade Book Settings,IsAdjustedFinalGradeReleased,5,bit,1,false,false,,
+Grade Book Settings,IsCalculatedFinalGradeReleased,6,bit,1,false,false,,
+Grade Book Settings,LastModified,7,datetime2,8,false,false,,

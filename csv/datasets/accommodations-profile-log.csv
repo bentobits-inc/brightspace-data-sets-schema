@@ -1,0 +1,8 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Accommodations Profile Log,AccommodatedUserId,1,bigint,8,true,true,,
+Accommodations Profile Log,OrgUnitId,2,bigint,8,true,true,organizational-units,OrgUnitId
+Accommodations Profile Log,QuizTimeLimitMultiplier,3,decimal,"5,2",false,false,,
+Accommodations Profile Log,QuizTimeLimitExtraTime,4,int,4,false,false,,
+Accommodations Profile Log,QuizControlAlwaysAllowRightClick,5,bit,1,false,false,,
+Accommodations Profile Log,ModifiedBy,6,bigint,8,false,true,users,UserId
+Accommodations Profile Log,LastModified,7,datetime2,8,true,false,,

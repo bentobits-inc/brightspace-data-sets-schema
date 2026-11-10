@@ -1,0 +1,10 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+System Access Log,SessionId,1,nvarchar,36,true,false,,
+System Access Log,UserId,2,int,4,true,true,users,UserId
+System Access Log,Timestamp,3,datetime2,8,true,false,,
+System Access Log,State,4,nvarchar,20,true,false,,
+System Access Log,Source,5,nvarchar,20,false,false,,
+System Access Log,AppVersion,6,nvarchar,20,false,false,,
+System Access Log,Device,7,nvarchar,50,false,false,,
+System Access Log,IsOfflineMode,8,bit,1,false,false,,
+System Access Log,IPAddress,9,nvarchar,45,false,false,,

@@ -1,0 +1,16 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Calendar Events,ScheduleId,1,bigint,8,true,false,,
+Calendar Events,OrgUnitId,2,bigint,8,false,true,organizational-units,OrgUnitId
+Calendar Events,UserId,3,bigint,8,false,true,users,UserId
+Calendar Events,Title,4,nvarchar,256,false,false,,
+Calendar Events,StartDate,5,datetime2,8,false,false,,
+Calendar Events,EndDate,6,datetime2,8,false,false,,
+Calendar Events,TimeZoneIdentifier,7,varchar,256,false,false,,
+Calendar Events,IsAllDayEvent,8,bit,1,false,false,,
+Calendar Events,RecurrenceType,9,varchar,7,false,false,,
+Calendar Events,RecurrenceInterval,10,int,4,false,false,,
+Calendar Events,CreatedByUserId,11,int,4,false,true,users,UserId
+Calendar Events,LastModified,12,datetime2,8,false,false,,
+Calendar Events,EventObjectTypeName,13,nvarchar,200,false,false,,
+Calendar Events,ObjectLookupId1,14,bigint,8,false,false,,
+Calendar Events,ObjectLookupId2,15,bigint,8,false,false,,

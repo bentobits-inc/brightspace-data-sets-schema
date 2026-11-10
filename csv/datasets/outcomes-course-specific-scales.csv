@@ -1,0 +1,9 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Outcomes Course Specific Scales,OrgUnitId,1,int,4,true,true,organizational-units,OrgUnitId
+Outcomes Course Specific Scales,RegistryId,2,uniqueidentifier,16,false,true,outcomes-set-course,RegistryId
+Outcomes Course Specific Scales,ScaleId,3,uniqueidentifier,16,false,true,outcomes-scale-definition,ScaleId
+Outcomes Course Specific Scales,AchievementThreshold,4,uniqueidentifier,16,false,true,,
+Outcomes Course Specific Scales,CreatedDate,5,datetime2,8,false,false,,
+Outcomes Course Specific Scales,LastModifiedDate,6,datetime2,8,false,false,,
+Outcomes Course Specific Scales,LastModifiedBy,7,int,4,false,true,users,UserId
+Outcomes Course Specific Scales,IsDeleted,8,bit,1,false,false,,

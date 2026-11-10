@@ -1,0 +1,5 @@
+dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
+Organizational Unit Ancestors,OrgUnitId,1,int,4,true,true,organizational-units,OrgUnitId
+Organizational Unit Ancestors,AncestorOrgUnitId,2,int,4,true,true,,
+Organizational Unit Ancestors,LastModified,3,datetime2,8,false,false,,
+Organizational Unit Ancestors,DateDeleted,4,datetime2,8,false,false,,
