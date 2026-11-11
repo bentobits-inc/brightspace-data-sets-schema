@@ -5,6 +5,7 @@
 
 -- Primary key (informational, not enforced): RubricId
 -- BDS keys can repeat across differential files, so no constraints are created.
+-- Join (informational): OrgUnitID -> OrganizationalUnits.OrgUnitId
 IF OBJECT_ID(N'[dbo].[RubricObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricObjects] (
     [RubricId] bigint NULL,

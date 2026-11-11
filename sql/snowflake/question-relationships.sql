@@ -1,0 +1,27 @@
+-- Question Relationships
+-- Brightspace Data Sets table script, Copyright (c) 2026 BentoBits Inc., licensed under the MIT licence.
+-- Schema metadata was transcribed from D2L's public Brightspace Data Sets documentation (snapshot checked on 2026-10-31).
+-- Brightspace is a trademark of D2L Corporation; not affiliated with or endorsed by D2L.
+-- Target: Snowflake (current).
+
+-- Primary key (informational, not enforced): ObjectId
+-- BDS keys can repeat across differential files, so no constraints are created.
+CREATE TABLE IF NOT EXISTS "QuestionRelationships" (
+    "CollectionId" BIGINT,
+    "QuestionId" BIGINT,
+    "QuestionVersionId" BIGINT,
+    "Order" BIGINT,
+    "SectionId" BIGINT,
+    "IsQuestionPool" BOOLEAN,
+    "CreationDate" TIMESTAMP_NTZ,
+    "CreatedBy" BIGINT,
+    "LastModified" TIMESTAMP_NTZ,
+    "LastModifiedBy" BIGINT,
+    "Points" NUMBER(19,9),
+    "Difficulty" INT,
+    "IsBonus" BOOLEAN,
+    "IsMandatory" BOOLEAN,
+    "IsDeleted" BOOLEAN,
+    "Version" BIGINT,
+    "ObjectId" BIGINT
+);

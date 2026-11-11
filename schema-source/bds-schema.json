@@ -13916,6 +13916,13 @@
     },
     {
       "from": "course-publisher-launches",
+      "column": "RecipientId",
+      "to": "course-publisher-recipients",
+      "toColumn": "RecipientID",
+      "kind": "key"
+    },
+    {
+      "from": "course-publisher-launches",
       "column": "RoleId",
       "to": "role-details",
       "toColumn": "RoleId",
@@ -14291,6 +14298,13 @@
       "to": "users",
       "toColumn": "UserId",
       "kind": "user"
+    },
+    {
+      "from": "lti-launches",
+      "column": "LTILinkId",
+      "to": "lti-links",
+      "toColumn": "LtiLinkId",
+      "kind": "key"
     },
     {
       "from": "lti-link-migration-audit",
@@ -14818,6 +14832,13 @@
       "kind": "key"
     },
     {
+      "from": "rubric-objects",
+      "column": "OrgUnitID",
+      "to": "organizational-units",
+      "toColumn": "OrgUnitId",
+      "kind": "key"
+    },
+    {
       "from": "rubrics-edit",
       "column": "CriterionId",
       "to": "rubric-object-criteria",
@@ -15222,10 +15243,6 @@
       "column": "SourceOrgUnitId"
     },
     {
-      "dataset": "course-publisher-launches",
-      "column": "RecipientId"
-    },
-    {
       "dataset": "cpd-user-records",
       "column": "Category"
     },
@@ -15272,10 +15289,6 @@
     {
       "dataset": "lti-advantage-deployment-audit",
       "column": "ClientID"
-    },
-    {
-      "dataset": "lti-launches",
-      "column": "LTILinkId"
     },
     {
       "dataset": "lti-link-migration-audit",
@@ -15480,10 +15493,6 @@
     {
       "dataset": "rubric-object-levels",
       "column": "LevelSetId"
-    },
-    {
-      "dataset": "rubric-objects",
-      "column": "OrgUnitID"
     },
     {
       "dataset": "scorm-activities",

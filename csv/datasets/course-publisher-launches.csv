@@ -1,7 +1,7 @@
 dataset,column,position,type,size,primary_key,foreign_key,references_dataset,references_column
 Course Publisher Launches,LaunchId,1,uniqueidentifier,16,true,false,,
 Course Publisher Launches,OrgUnitId,2,int,8,false,true,organizational-units,OrgUnitId
-Course Publisher Launches,RecipientId,3,uniqueidentifier,16,false,true,,
+Course Publisher Launches,RecipientId,3,uniqueidentifier,16,false,true,course-publisher-recipients,RecipientID
 Course Publisher Launches,UserId,4,int,8,false,true,users,UserId
 Course Publisher Launches,RoleId,5,int,8,false,true,role-details,RoleId
 Course Publisher Launches,LaunchMethod,6,nvarchar,256,false,false,,

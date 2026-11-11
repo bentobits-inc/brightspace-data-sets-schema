@@ -6,7 +6,7 @@ LTI Launches,ImpersonatingUserId,4,bigint,8,false,false,,
 LTI Launches,ImpersonatingUserIMSRoleNames,5,nvarchar,10000,false,false,,
 LTI Launches,LaunchDate,6,datetime2,8,false,false,,
 LTI Launches,OrgUnitId,7,bigint,8,false,false,,
-LTI Launches,LTILinkId,8,bigint,8,false,true,,
+LTI Launches,LTILinkId,8,bigint,8,false,true,lti-links,LtiLinkId
 LTI Launches,DeploymentId,9,uniqueidentifier,16,false,false,,
 LTI Launches,ClientId,10,uniqueidentifier,16,false,false,,
 LTI Launches,ToolProviderId,11,nvarchar,300,false,false,,

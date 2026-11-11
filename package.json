@@ -2,13 +2,14 @@
   "name": "brightspace-data-sets-schema",
   "version": "0.1.0",
   "private": true,
-  "description": "Brightspace Data Sets schema as CSV, SQL Server table scripts and diagrams",
+  "description": "Brightspace Data Sets schema as CSV, SQL Server, Postgres, Snowflake, BigQuery, Databricks and DuckDB table scripts and diagrams",
   "license": "MIT",
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/build.mjs --check && node scripts/check-schema.mjs && node scripts/check-svg.mjs && node scripts/check-leaks.mjs",
+    "check:duckdb": "node scripts/check-duckdb.mjs",
     "check:sqlserver": "node scripts/check-sqlserver.mjs",
     "test": "npm run check"
   }

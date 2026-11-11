@@ -5,6 +5,7 @@
 
 -- Primary key (informational, not enforced): LTILaunchId
 -- BDS keys can repeat across differential files, so no constraints are created.
+-- Join (informational): LTILinkId -> LTILinks.LtiLinkId
 IF OBJECT_ID(N'[dbo].[LTILaunches]', N'U') IS NULL
 CREATE TABLE [dbo].[LTILaunches] (
     [LTILaunchId] uniqueidentifier NULL,

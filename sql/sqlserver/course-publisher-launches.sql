@@ -6,6 +6,7 @@
 -- Primary key (informational, not enforced): LaunchId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
+-- Join (informational): RecipientId -> CoursePublisherRecipients.RecipientID
 -- Join (informational): RoleId -> RoleDetails.RoleId
 -- Join (informational): UserId -> Users.UserId
 IF OBJECT_ID(N'[dbo].[CoursePublisherLaunches]', N'U') IS NULL

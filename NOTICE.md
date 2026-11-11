@@ -12,7 +12,7 @@ Executable scripts (`scripts/`, `package.json` and the generated SQL in `sql/`) 
 
 ## Accuracy
 
-Joins are not separated by evidence in this snapshot (documented, inferred or otherwise) and are not verified. 102 foreign key flags have no known target. Generation checks prove consistency with the snapshot, not factual correctness. See the README for known inconsistencies in published types and sizes.
+Joins are not separated by evidence in this snapshot (documented, inferred or otherwise) and are not verified. 99 foreign key flags have no known target. Generation checks prove consistency with the snapshot, not factual correctness. See the README for known inconsistencies in published types and sizes.
 
 ## Trademarks
 

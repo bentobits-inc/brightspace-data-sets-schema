@@ -82,6 +82,7 @@ course-awards,AwardId,award-objects,AwardId,key
 course-awards,OrgUnitId,organizational-units,OrgUnitId,key
 course-copy-logs,UserId,users,UserId,key
 course-publisher-launches,OrgUnitId,organizational-units,OrgUnitId,key
+course-publisher-launches,RecipientId,course-publisher-recipients,RecipientID,key
 course-publisher-launches,RoleId,role-details,RoleId,key
 course-publisher-launches,UserId,users,UserId,key
 cpd-job-targets,CategoryId,cpd-categories,CategoryId,key
@@ -136,6 +137,7 @@ local-authentication-security-log,ModifiedBy,users,UserId,user
 local-authentication-security-log,UserId,users,UserId,key
 lti-advantage-deployment-audit,ModifiedBy,users,UserId,user
 lti-advantage-registration-audit,ModifiedBy,users,UserId,user
+lti-launches,LTILinkId,lti-links,LtiLinkId,key
 lti-link-migration-audit,OrgUnitId,organizational-units,OrgUnitId,key
 lti-link-migration-audit,UserId,users,UserId,key
 lti-links,LastModifiedBy,users,UserId,user
@@ -211,6 +213,7 @@ rubric-assessment,RubricId,rubric-objects,RubricId,key
 rubric-assessment,UserId,users,UserId,key
 rubric-object-criteria,RubricId,rubric-objects,RubricId,key
 rubric-object-levels,RubricId,rubric-objects,RubricId,key
+rubric-objects,OrgUnitID,organizational-units,OrgUnitId,key
 rubrics-edit,CriterionId,rubric-object-criteria,CriterionId,key
 rubrics-edit,LevelId,rubric-object-levels,LevelId,key
 rubrics-edit,RubricId,rubric-objects,RubricId,key

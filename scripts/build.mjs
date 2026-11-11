@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { root, read, snapshot, sorted, joinKey, csv, files } from './lib/common.mjs';
 import { diagramFiles } from './lib/diagrams.mjs';
+import { engineOutputs } from './lib/engines.mjs';
 import { sqlServerOutputs } from './lib/sqlserver.mjs';
 
 async function verifySource() {
@@ -41,7 +42,7 @@ function outputs(schema) {
     ...joins.map((j) => [j.from, j.column, j.to, j.toColumn, j.kind])]));
   result.set('csv/unresolved-foreign-keys.csv', csv([['dataset', 'column'],
     ...sorted(schema.unresolvedFks, (u) => `${u.dataset}|${u.column}`).map((u) => [u.dataset, u.column])]));
-  return new Map([...result, ...diagramFiles(schema), ...sqlServerOutputs(schema).files]);
+  return new Map([...result, ...diagramFiles(schema), ...sqlServerOutputs(schema).files, ...engineOutputs(schema)]);
 }
 
 async function build(check) {
@@ -56,6 +57,8 @@ async function build(check) {
       const actual = await read(path).catch((e) => { if (e.code === 'ENOENT') return null; throw e; });
       if (actual !== content) mismatches.push(path);
     } else {
+      const actual = await read(path).catch((e) => { if (e.code === 'ENOENT') return null; throw e; });
+      if (actual === content) continue;
       await mkdir(dirname(join(root, path)), { recursive: true });
       await writeFile(join(root, path), content, 'utf8');
     }

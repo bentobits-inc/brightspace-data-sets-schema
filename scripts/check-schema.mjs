@@ -1,3 +1,4 @@
+import { checkEngines } from './lib/check-engines.mjs';
 import assert from 'node:assert/strict';
 import { read, snapshot, files } from './lib/common.mjs';
 import { parseCsv } from './lib/parse-csv.mjs';
@@ -32,7 +33,7 @@ async function checkCsv() {
     ['from_dataset', 'from_column', 'to_dataset', 'to_column', 'kind'],
     ...joins.map((j) => [j.from, j.column, j.to, j.toColumn, j.kind])]);
   assert.equal(all.length-1, 1601);
-  assert.equal(joins.length, 258);
+  assert.equal(joins.length, 261);
 }
 
 async function checkUnresolved() {
@@ -46,7 +47,7 @@ async function checkUnresolved() {
     assert.equal(row[6], 'true');
     assert.equal(row[7], ''); assert.equal(row[8], '');
   }
-  assert.equal(unresolved.length, 102);
+  assert.equal(unresolved.length, 99);
 }
 
 async function checkSqlServer() {
@@ -80,4 +81,5 @@ assert.throws(() => parseCsv('a\n"unfinished'));
 await checkCsv();
 await checkUnresolved();
 await checkSqlServer();
-console.log('Schema fidelity verified: 144 dataset CSVs, 1601 columns, 258 joins, 102 unresolved foreign keys, 144 SQL Server table scripts.');
+await checkEngines(schema);
+console.log('Schema fidelity verified: 144 dataset CSVs, 1601 columns, 261 joins, 99 unresolved foreign keys, 864 table scripts across six engines.');

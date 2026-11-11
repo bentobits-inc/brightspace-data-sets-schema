@@ -806,6 +806,7 @@ CREATE TABLE [dbo].[CourseCopyLogs] (
 -- Primary key (informational, not enforced): LaunchId
 -- BDS keys can repeat across differential files, so no constraints are created.
 -- Join (informational): OrgUnitId -> OrganizationalUnits.OrgUnitId
+-- Join (informational): RecipientId -> CoursePublisherRecipients.RecipientID
 -- Join (informational): RoleId -> RoleDetails.RoleId
 -- Join (informational): UserId -> Users.UserId
 IF OBJECT_ID(N'[dbo].[CoursePublisherLaunches]', N'U') IS NULL
@@ -1429,6 +1430,7 @@ CREATE TABLE [dbo].[LTIAdvantageRegistrationAudit] (
 -- LTI Launches
 -- Primary key (informational, not enforced): LTILaunchId
 -- BDS keys can repeat across differential files, so no constraints are created.
+-- Join (informational): LTILinkId -> LTILinks.LtiLinkId
 IF OBJECT_ID(N'[dbo].[LTILaunches]', N'U') IS NULL
 CREATE TABLE [dbo].[LTILaunches] (
     [LTILaunchId] uniqueidentifier NULL,
@@ -2352,6 +2354,7 @@ CREATE TABLE [dbo].[RubricObjectLevels] (
 -- Rubric Objects
 -- Primary key (informational, not enforced): RubricId
 -- BDS keys can repeat across differential files, so no constraints are created.
+-- Join (informational): OrgUnitID -> OrganizationalUnits.OrgUnitId
 IF OBJECT_ID(N'[dbo].[RubricObjects]', N'U') IS NULL
 CREATE TABLE [dbo].[RubricObjects] (
     [RubricId] bigint NULL,

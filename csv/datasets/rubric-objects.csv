@@ -6,6 +6,6 @@ Rubric Objects,Description,4,nvarchar,1000,false,false,,
 Rubric Objects,RubricType,5,nvarchar,256,false,false,,
 Rubric Objects,ScoringMethods,6,nvarchar,256,false,false,,
 Rubric Objects,IsScoreVisible,7,bit,1,false,false,,
-Rubric Objects,OrgUnitID,8,int,4,false,true,,
+Rubric Objects,OrgUnitID,8,int,4,false,true,organizational-units,OrgUnitId
 Rubric Objects,IsShared,9,bit,1,false,false,,
 Rubric Objects,IsDeleted,10,bit,1,false,false,,
